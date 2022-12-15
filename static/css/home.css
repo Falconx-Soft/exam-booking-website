@@ -1,0 +1,25 @@
+.dropdown-section{
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown-section-inner-div{
+    max-width: 950px;
+    width: 100%;
+}
+
+.dropdown-div{
+    margin-top: 50px;
+    padding: 0px 10%;
+}
+
+.dropdown-inner-div{
+    margin-bottom: 50px;
+}
+
+select,
+select>option{
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
