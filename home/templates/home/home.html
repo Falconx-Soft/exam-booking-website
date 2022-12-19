@@ -13,7 +13,7 @@
 
 <section class="dropdown-section">
     <div class="dropdown-section-inner-div">
-        <h1>Search Availability</h1>
+        <h1 class="search-title">Search Availability</h1>
         <div class="dropdown-div">
             <div class="dropdown-inner-div">
                 <h2>Select a Test Sponsor</h2>
@@ -625,8 +625,8 @@
                     <option value="大力教育">
                         大力教育
                     </option>
-                    <option value="巨量认证 (OMC)">
-                        巨量认证 (OMC)
+                    <option value="巨量认证（OMC)">
+                        巨量认证（OMC)
                     </option>
                     <option value="特许私人财富管理师认证标准指导委员会(CPWMSC)">
                         特许私人财富管理师认证标准指导委员会(CPWMSC)
@@ -639,9 +639,10 @@
             <div class="dropdown-inner-div">
                 <h2>Select a Program</h2>
                 <select id="test_program">
-                    
+
                 </select>
             </div>
+
             <div class="dropdown-inner-div">
                 <h2>Select a Test</h2>
                 <select id="test_test">
@@ -650,8 +651,10 @@
             </div>
         </div>
     </div>
-</section>
 
+</section>
+<a href="{% url 'testCenter'%}"> <button type="submit" name="button" class="next_button">Next</button>
+</a>
 {% endblock %}
 
 

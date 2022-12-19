@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+header{
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-bottom-style: solid;
+  border-bottom-color: #8CC63F;
+}
+
+header > img{
+   width:150px;
+
+}
+
+.next_button{
+  float:right;
+  margin-right: 190px;
+  padding: 7px 15px;
+  font-size: 15px;
+  color: white;
+  background-color: #8CC63F;
+  border-radius: none;
+}

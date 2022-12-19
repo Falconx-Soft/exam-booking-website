@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{% static 'css/test_center.css' %}">
+{% endblock %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<section>
+  <div>
+      <h1>Search Availability</h1>
+      <h3>Find a Test Center</h3>
+
+      <p class="one">
+          Enter your preferred location and date range to find a test center. Until your appointment is <br>scheduled, availability is
+          subject to change.
+      </p>
+      <p class="two">
+        The location and date range can be updated on the next page if the available dates and times <br> returned are not suitable
+        to your schedule.
+      </p>
+  </div>
+
+<div>
+  <form class="forms" action="" method="post">
+    {% csrf_token %}
+    <div class="input1">
+      <label for="">Scheduling For: <b></b></label><br>
+      <input type="text" name="" value="" placeholder="Address, City or Zip/Postal Code">
+    </div>
+<br>
+    <div class="input2">
+          <div class="start">
+            <label for="">Start Date</b></label><br>
+            <input type="date" name="" value="" placeholder="MM/DD/YYYY" width="100%">
+          </div>
+          <div class="start">
+            <label for="">End Date</b></label><br>
+            <input type="date" name="" value="" placeholder="MM/DD/YYYY">
+          </div>
+    </div>
+
+  </form>
+
+</div>
+
+</section>
+<p class="note">Note: You must select an end date that is within 2 weeks of <br>the selected start date. </p>
+
+
+{% endblock %}

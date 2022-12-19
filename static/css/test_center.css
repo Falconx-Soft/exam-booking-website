@@ -1,0 +1,44 @@
+h1{
+
+  padding:20px 0px 0px 100px;
+}
+h3{
+  padding:20px 0px 0px 180px;
+}
+p{
+  padding:10px 0px 0px 180px;
+  line-height: 30px;
+  font-size: 18px;
+  word-spacing: 1px;
+}
+
+form{
+  padding: 10px 0px 0px 182px;
+
+}
+input{
+  width:70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.input2{
+  width:100%;
+  display: flex;
+}
+.start{
+  width:100%;
+}
+.note{
+  margin: 0px 0px 0px 530px;
+
+  line-height: 16px;
+  font-size: 12px;
+  word-spacing: 1px;
+}
+.img1{
+  width: 40px;
+  height: 40px;
+  margin:-45px 0px 0px 360px;
+
+}

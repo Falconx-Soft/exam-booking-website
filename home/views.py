@@ -123,14 +123,14 @@ def automation():
 
 
 def run_script(request):
-    
     automation.delay()
-
     context = {
         'title': 'home'
     }
-
     return render(request,'home/home.html',context)
+
+def test_center(request):
+    return render(request, 'home/testCenter.html')
 
 def home(request):
 
