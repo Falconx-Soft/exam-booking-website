@@ -1,5 +1,6 @@
 const test_sponsor = document.getElementById('test_sponsor');
 const test_program = document.getElementById('test_program');
+const test_test    = document.getElementById('test_test');
 
 function rest_dropdown(dropdown_element, title){
     dropdown_element.innerHTML = "";
@@ -20,6 +21,7 @@ function set_options(value){
 test_sponsor.addEventListener("change", function(event){
 
     rest_dropdown(test_program,"Select a Program");
+    rest_dropdown(test_test,"Select a Test");
 
     if(event.target.value == "AAPC"){
         test_program.appendChild(set_options("AAPC"));
@@ -751,14 +753,190 @@ test_sponsor.addEventListener("change", function(event){
     else if(event.target.value == "大力教育"){
         test_program.appendChild(set_options("UX设计测评"));
     }
-    else if(event.target.value == "巨量认证（OMC)"){
+    else if(event.target.value == "巨量认证 (OMC)"){
         test_program.appendChild(set_options("巨量引擎数字营销职业能力认证"));
-        test_program.appendChild(set_options("巨量引擎数字营销职业能力认证（双认证）"));
+        test_program.appendChild(set_options("巨量引擎数字营销职业能力认证（双认证)"));
     }
     else if(event.target.value == "特许私人财富管理师认证标准指导委员会(CPWMSC)"){
-        test_program.appendChild(set_options("特许私人财富管理师（CPWM®）认证考试"));
+        test_program.appendChild(set_options("特许私人财富管理师 (CPWM®) 认证考试"));
     }
     else if(event.target.value == "阿里云全球培训中心"){
         test_program.appendChild(set_options("阿里云认证"));
+    }
+});
+
+test_program.addEventListener("change", function(event){
+
+    rest_dropdown(test_test,"Select a Test");
+
+    if(event.target.value == "AAPC"){
+        test_test.appendChild(set_options("CPC (Certified Professional Coder)"));
+        test_test.appendChild(set_options("CPC (Certified Professional Coder) Voucher Transfer"));
+    }else if(event.target.value == "ABPS"){
+        test_test.appendChild(set_options("Plastic Surgery Written Exam"));
+    }
+
+    
+
+    else if(event.target.value == "Uniform CPA Exam"){
+        test_test.appendChild(set_options("AUDITING AND ATTESTATION"));
+        test_test.appendChild(set_options("AUDITING AND ATTESTATION (GUAM ONLY)"));
+        test_test.appendChild(set_options("Auditing and Attestation (International)"));
+        test_test.appendChild(set_options("Auditing and Attestation (International)"));
+        test_test.appendChild(set_options("Auditing and Attestation (International)"));
+        test_test.appendChild(set_options("Auditing and Attestation (International)"));
+        test_test.appendChild(set_options("Auditing and Attestation (International)"));
+        test_test.appendChild(set_options("Auditing and Attestation Exam (For TA Use only)"));
+        test_test.appendChild(set_options("BUSINESS ENVIRONMENT AND CONCEPTS"));
+        test_test.appendChild(set_options("BUSINESS ENVIRONMENT AND CONCEPTS (GUAM ONLY)"));
+        test_test.appendChild(set_options("Business Environment and Concepts (International)"));
+        test_test.appendChild(set_options("Business Environment and Concepts (International)"));
+        test_test.appendChild(set_options("Business Environment and Concepts (International)"));
+        test_test.appendChild(set_options("Business Environment and Concepts (International)"));
+        test_test.appendChild(set_options("Business Environment and Concepts (International)"));
+        test_test.appendChild(set_options("Business Environment and Concepts Exam (For TA Use only)"));
+        test_test.appendChild(set_options("CPA Exam Preview"));
+        test_test.appendChild(set_options("FINANCIAL ACCOUNTING AND REPORTING"));
+        test_test.appendChild(set_options("FINANCIAL ACCOUNTING AND REPORTING (GUAM ONLY)"));
+        test_test.appendChild(set_options("Financial Accounting and Reporting (International)"));
+        test_test.appendChild(set_options("Financial Accounting and Reporting (International)"));
+        test_test.appendChild(set_options("Financial Accounting and Reporting (International)"));
+        test_test.appendChild(set_options("Financial Accounting and Reporting (International)"));
+        test_test.appendChild(set_options("Financial Accounting and Reporting (International)"));
+        test_test.appendChild(set_options("Financial Accounting and Reporting Exam (For TA Use only)"));
+        test_test.appendChild(set_options("International Qualification Exam"));
+        test_test.appendChild(set_options("REGULATION"));
+        test_test.appendChild(set_options("REGULATION (GUAM ONLY)"));
+        test_test.appendChild(set_options("Regulation (International)"));
+        test_test.appendChild(set_options("Regulation (International)"));
+        test_test.appendChild(set_options("Regulation (International)"));
+        test_test.appendChild(set_options("Regulation (International)"));
+        test_test.appendChild(set_options("Regulation Exam (For TA Use Only)"));
+    }else if(event.target.value == "UP2"){
+        test_test.appendChild(set_options("Apprentice Diesel Electrician and Diesel Electrician"));
+        test_test.appendChild(set_options("Apprentice Diesel Mechanic and Diesel Mechanic"));
+        test_test.appendChild(set_options("Apprentice Freight Car Repairer, Freight Car Repairer"));
+        test_test.appendChild(set_options("Clerical Test Battery"));
+        test_test.appendChild(set_options("Coach Cleaner"));
+        test_test.appendChild(set_options("Electronic Technician/Installation Technician"));
+        test_test.appendChild(set_options("Mechanical Service Operator (Car)"));
+        test_test.appendChild(set_options("Mechanical Service Operator (Locomotive)"));
+    }else if(event.target.value == "United States Marshals Service"){
+        test_test.appendChild(set_options("THE US MARSHALS SERVICE MERIT PROMOTION EXAM"));
+    }else if(event.target.value == "Universal Public Procurement Certification Council"){
+        test_test.appendChild(set_options("Certified Professional Public Buyer"));
+        test_test.appendChild(set_options("Certified Professional Public Buyer French"));
+        test_test.appendChild(set_options("Certified Professional Public Buyer Practice Exams"));
+        test_test.appendChild(set_options("Certified Public Procurement Officer"));
+        test_test.appendChild(set_options("Certified Public Procurement Officer French"));
+        test_test.appendChild(set_options("Certified Public Procurement Officer Practice Exam"));
+    }else if(event.target.value == "Pearl Community OR Building Rating System Exam"){
+        test_test.appendChild(set_options("Pearl Building Rating System Exam"));
+        test_test.appendChild(set_options("Pearl Community Rating System Exam"));
+    }else if(event.target.value == "Utah Insurance Department"){
+        test_test.appendChild(set_options("Adjusters Accident and Health Exam"));
+        test_test.appendChild(set_options("Adjusters Crop Exam"));
+        test_test.appendChild(set_options("Adjusters Workers Compensation Exam"));
+        test_test.appendChild(set_options("Adjuster’s Property and Casualty Exam"));
+        test_test.appendChild(set_options("Consultants Accident and Health Exam"));
+        test_test.appendChild(set_options("Consultants Casualty Exam"));
+        test_test.appendChild(set_options("Consultants Combined Life, Accident and Health Exam"));
+        test_test.appendChild(set_options("Consultants Combined Property and Casualty Exam"));
+        test_test.appendChild(set_options("Consultants Life Exam"));
+        test_test.appendChild(set_options("Consultants Property Exam"));
+        test_test.appendChild(set_options("Fingerprint"));
+        test_test.appendChild(set_options("Producers Accident and Health Exam"));
+        test_test.appendChild(set_options("Producers Casualty Exam"));
+        test_test.appendChild(set_options("Producers Combined Life, Accident and Health Exam"));
+        test_test.appendChild(set_options("Producers Combined Property and Casualty Exam"));
+        test_test.appendChild(set_options("Producers Life Exam"));
+        test_test.appendChild(set_options("Producers Personal Lines Exam"));
+        test_test.appendChild(set_options("Producers Property Exam"));
+        test_test.appendChild(set_options("Producers Title Escrow Exam"));
+        test_test.appendChild(set_options("Producers Title Examination Exam"));
+        test_test.appendChild(set_options("Producers Title Marketing Representative Exam"));
+        test_test.appendChild(set_options("Surplus Lines Producer Exam"));
+        test_test.appendChild(set_options("Utah Laws and Regulations Exam"));
+    }else if(event.target.value == "Vascular Access Certification Corporation"){
+        test_test.appendChild(set_options("Vascular Access Certification"));
+    }else if(event.target.value == "Vermont Insurance"){
+        test_test.appendChild(set_options("1425 - PROD LIFE"));
+        test_test.appendChild(set_options("1427 - PROD ACC, HLTH & HMO"));
+        test_test.appendChild(set_options("1429 - PROD LIFE, ACC, HLTH & HMO"));
+        test_test.appendChild(set_options("1431 - PROD PC"));
+        test_test.appendChild(set_options("1433 - ADJ PC"));
+        test_test.appendChild(set_options("1434 - ADJ WORK COMP"));
+        test_test.appendChild(set_options("1435 - PROD BAIL BOND"));
+        test_test.appendChild(set_options("1437 - MOTOR VEH DMG APPR"));
+        test_test.appendChild(set_options("1438 - TITLE"));
+        test_test.appendChild(set_options("1439 - PROD PERS LINES"));
+        test_test.appendChild(set_options("1441 - PRODUCER'S PROPERTY"));
+        test_test.appendChild(set_options("1442 - PRODUCER'S CASUALTY"));
+    }else if(event.target.value == "Virginia Department of Insurance"){
+        test_test.appendChild(set_options("VA Health Insurance"));
+        test_test.appendChild(set_options("VA Life and Annuities Insurance"));
+        test_test.appendChild(set_options("VA Life, Annuities and Health Insurance"));
+        test_test.appendChild(set_options("VA Personal Lines Insurance"));
+        test_test.appendChild(set_options("VA Property and Casualty Insurance"));
+        test_test.appendChild(set_options("VA Public Adjuster"));
+        test_test.appendChild(set_options("VA Title Insurance"));
+    }else if(event.target.value == "Licensing School"){
+        test_test.appendChild(set_options("Microsoft Licensing Body of Knowledge 2021"));
+    }else if(event.target.value == "TXADj"){
+        test_test.appendChild(set_options("TX180"));
+    }else if(event.target.value == "WebCE, lnc."){
+        test_test.appendChild(set_options("WebCE 180 minute exam"));
+        test_test.appendChild(set_options("WebCE 30 minute exam"));
+        test_test.appendChild(set_options("WebCE 60 minute exam"));
+        test_test.appendChild(set_options("WebCE 90 minute exam"));
+    }else if(event.target.value == "EDGE"){
+        test_test.appendChild(set_options("EDGE Bahasa"));
+        test_test.appendChild(set_options("EDGE Chinese"));
+        test_test.appendChild(set_options("EDGE English"));
+        test_test.appendChild(set_options("EDGE Spanish"));
+        test_test.appendChild(set_options("EDGE Vietnamese"));
+    }else if(event.target.value == "Western Regional Examining Board"){
+        test_test.appendChild(set_options("Comprehensive Treatment Plan 2022"));
+        test_test.appendChild(set_options("Local Anesthesia Exam 2022"));
+    }else if(event.target.value == "UX设计测评"){
+        test_test.appendChild(set_options("2022 UX招聘测评"));
+    }else if(event.target.value == "巨量引擎数字营销职业能力认证"){
+        test_test.appendChild(set_options("信息流广告（中级）营销师"));
+        test_test.appendChild(set_options("信息流广告（初级）营销师"));
+        test_test.appendChild(set_options("初级信息流广告营销师(II类)"));
+        test_test.appendChild(set_options("初级店铺运营认证"));
+        test_test.appendChild(set_options("初级直播运营认证"));
+        test_test.appendChild(set_options("初级短视频运营认证"));
+        test_test.appendChild(set_options("巨量创意（中级）营销师"));
+        test_test.appendChild(set_options("巨量创意（初级）营销师"));
+        test_test.appendChild(set_options("巨量千川广告（中级）营销师"));
+        test_test.appendChild(set_options("巨量千川广告（初级）营销师"));
+        test_test.appendChild(set_options("搜索广告（初级）营销师"));
+        test_test.appendChild(set_options("网络主播（初级）营销师"));
+        test_test.appendChild(set_options("营销科学（初级）分析师"));
+    }else if(event.target.value == "巨量引擎数字营销职业能力认证（双认证)"){
+        test_test.appendChild(set_options("直播销售员职业技能等级认定 （理论四级)"));
+        test_test.appendChild(set_options("视频创推-员职业技能等级认定 （理论四级)"));
+    }else if(event.target.value == "特许私人财富管理师 (CPWM®) 认证考试"){
+        test_test.appendChild(set_options("特许私人财富管理师 (CPWM®) 认证考试"));
+    }else if(event.target.value == "阿里云认证"){
+        test_test.appendChild(set_options("阿里云上云规划师ACP认证"));
+        test_test.appendChild(set_options("阿里云云原生容器工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云云原生微服务工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云云安全工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云云网络工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云云计算工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云云计算架构师ACE认证"));
+        test_test.appendChild(set_options("阿里云人工智能工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云关系型数据库工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云大数据分析师ACP认证"));
+        test_test.appendChild(set_options("阿里云大数据工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云工业视觉智能工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云数据中心IT高级运维工程师认证"));
+        test_test.appendChild(set_options("阿里云数据中心弱电高级运维工程师认证"));
+        test_test.appendChild(set_options("阿里云数据中心暖通高级运维工程师认证"));
+        test_test.appendChild(set_options("阿里云数据中心电气高级运维工程师认证"));
+        test_test.appendChild(set_options("阿里云数据仓库工程师ACP认证"));
+        test_test.appendChild(set_options("阿里云物联网工程师ACP认证"));
     }
 });
