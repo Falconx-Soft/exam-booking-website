@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 import selenium
 from selenium.webdriver.common.keys import Keys
@@ -12,16 +12,18 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import os
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 from celery import shared_task
 
 # Create your views here.
 @shared_task(name="automation")
-def automation():
-    driver = webdriver.Chrome()
+def automation(test_sponsor,test_program,test_test,address,start_date,end_date):
+    print("<-----------------")
+    options = Options()
+    options.headless = False
+
+    driver = webdriver.Firefox(options=options)
     time.sleep(3)
 
     driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
@@ -30,20 +32,20 @@ def automation():
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'test_sponsor')))
     select = Select(driver.find_element(By.ID,'test_sponsor'))
     # select by visible text
-    select.select_by_visible_text('American Society of Mechanical Engineers')
+    select.select_by_visible_text(test_sponsor)
 
     # select dropdown element testProgram
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testProgram')))
     select = Select(driver.find_element(By.ID,'testProgram'))
     # select by visible text
-    select.select_by_visible_text('American Society of Mechanical Engineers')
+    select.select_by_visible_text(test_program)
 
 
     # select dropdown element testSelector
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
     select = Select(driver.find_element(By.ID,'testSelector'))
     # select by visible text
-    select.select_by_visible_text('ASME NON DESTRUCTIVE EXAMINATION')
+    select.select_by_visible_text(test_test)
 
     # next button
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'nextBtn')))
@@ -52,16 +54,16 @@ def automation():
     # next page
     # You must select an end date that is within 2 weeks of the selected start date. MM-DD-YYYY
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH,'//*[@id="google-maps"]/div/app-geo-locator/input')))
-    driver.find_element(By.XPATH,'//*[@id="google-maps"]/div/app-geo-locator/input').send_keys("54840")
+    driver.find_element(By.XPATH,'//*[@id="google-maps"]/div/app-geo-locator/input').send_keys(address)
 
     time.sleep(3)
 
-    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys("12/17/2022")
+    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys(start_date)
 
     time.sleep(3)
 
     driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').clear()
-    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys("12/31/2022")
+    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys(end_date)
 
     time.sleep(3)
     next_btn = driver.find_element(By.ID,'nextBtn')
@@ -130,9 +132,36 @@ def run_script(request):
     return render(request,'home/home.html',context)
 
 def test_center(request):
+
+    if request.method == "POST":
+        test_sponsor = request.POST.get('test_sponsor')
+        test_program = request.POST.get('test_program')
+        test_test = request.POST.get('test_test')
+        address = request.POST.get('address')
+        start_date = request.POST.get('start-date')
+        end_date = request.POST.get('end-date')
+
+        print("----------------->")
+        automation.delay(test_sponsor,test_program,test_test,address,start_date,end_date)
+        print("----------------->")
+        
+        return redirect('home')
+
     return render(request, 'home/testCenter.html')
 
 def home(request):
+
+    if request.method == "POST":
+        test_sponsor = request.POST.get('test_sponsor')
+        test_program = request.POST.get('test_program')
+        test_test = request.POST.get('test_test')
+        context = {
+            'title': 'Info',
+            'test_sponsor': test_sponsor,
+            'test_program': test_program,
+            'test_test': test_test,
+        }
+        return render(request,'home/testCenter.html',context)
 
     context = {
         'title': 'home'

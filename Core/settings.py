@@ -139,4 +139,6 @@ CELERY_TIMEZONE = 'Asia/Kolkata'
 
 CELERY_RESULT_BACKEND = 'django-db'
 
+DATE_INPUT_FORMATS = ('%m-%d-%Y')
+
 
