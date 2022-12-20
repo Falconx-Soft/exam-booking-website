@@ -34,18 +34,23 @@ def automation(test_sponsor,test_program,test_test,address,start_date,end_date):
     # select by visible text
     select.select_by_visible_text(test_sponsor)
 
+    time.sleep(3)
+
     # select dropdown element testProgram
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testProgram')))
     select = Select(driver.find_element(By.ID,'testProgram'))
     # select by visible text
     select.select_by_visible_text(test_program)
 
+    time.sleep(3)
 
     # select dropdown element testSelector
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
     select = Select(driver.find_element(By.ID,'testSelector'))
     # select by visible text
     select.select_by_visible_text(test_test)
+
+    time.sleep(3)
 
     # next button
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'nextBtn')))
@@ -144,7 +149,7 @@ def test_center(request):
         print("----------------->")
         automation.delay(test_sponsor,test_program,test_test,address,start_date,end_date)
         print("----------------->")
-        
+
         return redirect('home')
 
     return render(request, 'home/testCenter.html')

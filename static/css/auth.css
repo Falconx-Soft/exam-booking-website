@@ -1,0 +1,53 @@
+.aut-form-div{
+    padding: 20px 10%;
+}
+
+.auth-form{
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(rgb(230 230 230 / 40%), rgb(233 233 233 / 37%));
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.aut-label{
+    margin: 20px 0px 10px 0px;
+}
+
+.aut-field{
+    padding: 10px;
+    width: 100%;
+}
+
+.auth-btn-div{
+    display: flex;
+    justify-content: end;
+    align-items: baseline;
+    gap: 20px;
+}
+
+.auth-error{
+    color: red;
+    margin-top: 10px;
+}
+
+.errorlist{
+    color: red;
+}
+
+.sign-up-btn{
+    text-decoration: none;
+    color: #8CC63F;
+    border: solid 1px #8CC63F;
+    padding: 7px 15px;
+    font-size: 15px;
+}
+
+.submit_button{
+    padding: 7px 15px;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background-color: #8CC63F;
+    margin-top: 20px;
+    cursor: pointer;
+}

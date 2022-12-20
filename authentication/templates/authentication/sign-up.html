@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+
+{% endblock %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<section class="dropdown-section">
+    <div class="dropdown-section-inner-div">
+        <h1 class="search-title">Login</h1>
+        <div class="aut-form-div">
+            <form method="post" class="auth-form">
+                {% csrf_token %}
+
+                <div class="aut-input-div">
+                    <h3 class="aut-label">Username:</h3>
+                    <input class="aut-field" type="text" name="username" placeholder="Enter username" required>
+                    <p class="auth-error">{{ form.username.errors }}</p>
+                </div>
+
+                <div class="aut-input-div">
+                    <h3 class="aut-label">Email:</h3>
+                    <input class="aut-field" type="email" name="email" placeholder="Enter email" required>
+                    <p class="auth-error">{{ form.email.errors }}</p>
+                </div>
+
+                <div class="aut-input-div">
+                    <h3 class="aut-label">Password:</h3>
+                    <input class="aut-field" type="password" name="password1" placeholder="Enter password" required>
+                    <p class="auth-error">{{ form.password1.errors }}</p>
+                </div>
+
+                <div class="aut-input-div">
+                    <h3 class="aut-label">Confirm Password:</h3>
+                    <input class="aut-field" type="password" name="password2" placeholder="Confirm password" required>
+                    <p class="auth-error">{{ form.password2.errors }}</p>
+                </div>
+            
+                <div class="auth-btn-div">
+                    <a class="sign-up-btn" href="{% url 'login' %}">Login</a>
+                    <button type="submit" class="submit_button">Sign-up</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block js %}
+
+    <script src="{% static 'js/home.js' %}" ></script>
+
+{% endblock %}

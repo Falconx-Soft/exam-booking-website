@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'authentication',
     'django_celery_results',
 ]
 
@@ -138,7 +139,4 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'Asia/Kolkata'
 
 CELERY_RESULT_BACKEND = 'django-db'
-
-DATE_INPUT_FORMATS = ('%m-%d-%Y')
-
 

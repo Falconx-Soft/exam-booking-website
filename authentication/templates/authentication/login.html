@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+
+{% endblock %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<section class="dropdown-section">
+    <div class="dropdown-section-inner-div">
+        <h1 class="search-title">Login</h1>
+        <div class="aut-form-div">
+            <form method="post" class="auth-form">
+                {% csrf_token %}
+
+                <div class="aut-input-div">
+                    <h3 class="aut-label">Username:</h3>
+                    <input class="aut-field" type="text" name="username" placeholder="Enter username">
+                </div>
+
+                <div class="aut-input-div">
+                    <h3 class="aut-label">Password:</h3>
+                    <input class="aut-field" type="password" name="password" placeholder="Enter password">
+                </div>
+
+                {% if msg %}
+                    <p class="auth-error">Your username or password is incorrect</p>
+                {% endif %}
+            
+                <div class="auth-btn-div">
+                    <a class="sign-up-btn" href="{% url 'sign_up' %}">Sign-up</a>
+                    <button type="submit" class="submit_button">Login</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block js %}
+
+    <script src="{% static 'js/home.js' %}" ></script>
+
+{% endblock %}
