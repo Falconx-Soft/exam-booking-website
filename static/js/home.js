@@ -1933,31 +1933,471 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Respiratory Therapist"));
         test_test.appendChild(set_options("Rheumatology"));
         test_test.appendChild(set_options("Urology"));
+    }else if(event.target.value == "ECOTEST Quality Certificates Issuing Services Program"){
+        test_test.appendChild(set_options("Ecotest Pest Control Operator Test - Arabic"));
+        test_test.appendChild(set_options("Ecotest Pest Control Operator Test - English"));
+        test_test.appendChild(set_options("Ecotest Pest Control Supervisor Test - Arabic"));
+        test_test.appendChild(set_options("Ecotest Pest Control Supervisor Test - English"));
+    }
+    else if(event.target.value == "Educational Records Bureau"){
+        test_test.appendChild(set_options("ISEE Lower Level"));
+        test_test.appendChild(set_options("ISEE Moddle Level"));
+        test_test.appendChild(set_options("ISEE Upper Level"));
+    }
+    else if(event.target.value == "Food Managers Certification"){
+        test_test.appendChild(set_options("Certified Food Manager Exam English"));
+        test_test.appendChild(set_options("Certified Food Manager Exam Spanish"));
+    }
+    else if(event.target.value == "Elsevier"){
+        test_test.appendChild(set_options("APN Adult Nurse Practitioner"));
+        test_test.appendChild(set_options("APN Family Nurse Practitioner"));
+        test_test.appendChild(set_options("APRN Exit Acute Care Exam"));
+        test_test.appendChild(set_options("APRN Specialty Pathophysiology"));
+        test_test.appendChild(set_options("APRN Specialty Pharmocotherapeutics"));
+        test_test.appendChild(set_options("APRN Specialty Physical Assessment"));
+        test_test.appendChild(set_options("Admission Assessment Grammar"));
+        test_test.appendChild(set_options("Admission Assessment With Critical Thinking"));
+        test_test.appendChild(set_options("Admissions Assessment"));
+        test_test.appendChild(set_options("Custom 100 Question Exam"));
+        test_test.appendChild(set_options("Custom 20 Question Exam"));
+        test_test.appendChild(set_options("Custom 50 Question Exam"));
+        test_test.appendChild(set_options("Custom 75 Question Exam"));
+        test_test.appendChild(set_options("Developmental Dis Nursing Assoc Licensed Practical Nurse"));
+        test_test.appendChild(set_options("Developmental Disabilities Nursing Assoc. Registered Nurse"));
+        test_test.appendChild(set_options("HP Advanced EMT Exit Exam V1"));
+        test_test.appendChild(set_options("HP Dental Assisting Exit Exam V1"));
+        test_test.appendChild(set_options("HP Dental Hygiene Exit Exam V1"));
+        test_test.appendChild(set_options("HP Dental Hygiene Exit Exam V2"));
+        test_test.appendChild(set_options("HP Dental Hygiene Exit Exam V2"));
+        test_test.appendChild(set_options("HP EMT Exit Exam V1"));
+        test_test.appendChild(set_options("HP EMT Exit Exam V2"));
+        test_test.appendChild(set_options("HP Massage Therapy Exit Exam MBLEX V1"));
+        test_test.appendChild(set_options("HP Massage Therapy Exit Exam MBLEX V2"));
+        test_test.appendChild(set_options("HP Massage Therapy Exit Exam MBLEX V3"));
+        test_test.appendChild(set_options("HP Massage Therapy Exit Exam NCETMB  V1"));
+        test_test.appendChild(set_options("HP Massage Therapy Exit Exam NCETMB  V2"));
+        test_test.appendChild(set_options("HP Massage Therapy Exit Exam NCETMB  V3"));
+        test_test.appendChild(set_options("HP Medical Assisting Exit Exam V1"));
+        test_test.appendChild(set_options("HP Medical Assisting Exit Exam V2"));
+        test_test.appendChild(set_options("HP Respiratory Care Exit Exam V1"));
+        test_test.appendChild(set_options("HP Veterinary Technology Exit Exam V1"));
+        test_test.appendChild(set_options("Health Profession Admission Assessment Version 1"));
+        test_test.appendChild(set_options("Health Profession Admission Assessment Version 2"));
+        test_test.appendChild(set_options("Health Professions Paramedic"));
+        test_test.appendChild(set_options("Health Professions Radiology"));
+        test_test.appendChild(set_options("International RN Admission Assessment Version One"));
+        test_test.appendChild(set_options("Medical Office Administration Exit Exam V1"));
+        test_test.appendChild(set_options("PN Admission Assessment Version 1"));
+        test_test.appendChild(set_options("PN Admission Assessment Version 2"));
+        test_test.appendChild(set_options("PN Admission Assessment with Critical Thinking Version 1"));
+        test_test.appendChild(set_options("PN Admission Assessment with Critical Thinking Version 2"));
+        test_test.appendChild(set_options("PN Exit Exam Version 1"));
+        test_test.appendChild(set_options("PN Exit Exam Version 2"));
+        test_test.appendChild(set_options("PN Exit Exam Version 3"));
+        test_test.appendChild(set_options("Practical Nurse Exit Exam"));
+        test_test.appendChild(set_options("Practical Nursing Critical Thinking Test"));
+        test_test.appendChild(set_options("Practical Nursing Fundamentals"));
+        test_test.appendChild(set_options("Practical Nursing Maternity"));
+        test_test.appendChild(set_options("Practical Nursing Maternity & Pediatric"));
+        test_test.appendChild(set_options("Practical Nursing Med/Surg"));
+        test_test.appendChild(set_options("Practical Nursing Pediatric"));
+        test_test.appendChild(set_options("Practical Nursing Pharmacology"));
+        test_test.appendChild(set_options("Practical Nursing Psy/Mental Health"));
+        test_test.appendChild(set_options("RN Admission Assessment Version 1"));
+        test_test.appendChild(set_options("RN Admission Assessment Version 2"));
+        test_test.appendChild(set_options("RN Admission Assessment with Critical Thinking Version 1"));
+        test_test.appendChild(set_options("RN Admission Assessment with Critical Thinking Version 2"));
+        test_test.appendChild(set_options("RN Entrance EMS-ADN Exam"));
+        test_test.appendChild(set_options("RN Exit Exam Version 1"));
+        test_test.appendChild(set_options("RN Exit Exam Version 2"));
+        test_test.appendChild(set_options("RN Exit Exam Version 3"));
+        test_test.appendChild(set_options("RN Exit Exam Version 4"));
+        test_test.appendChild(set_options("RN Exit Exam Version 5"));
+        test_test.appendChild(set_options("RN Exit Exam Version 6"));
+        test_test.appendChild(set_options("RN Exit Exam Version 7"));
+        test_test.appendChild(set_options("Registered Nurse Exit Exam"));
+        test_test.appendChild(set_options("Registered Nursing Biology Entrance Exam"));
+        test_test.appendChild(set_options("Registered Nursing Community Health"));
+        test_test.appendChild(set_options("Registered Nursing Critical Care"));
+        test_test.appendChild(set_options("Registered Nursing Critical Thinking Test"));
+        test_test.appendChild(set_options("Registered Nursing Fundamentals"));
+        test_test.appendChild(set_options("Registered Nursing Gerontology"));
+        test_test.appendChild(set_options("Registered Nursing Health Assessment"));
+        test_test.appendChild(set_options("Registered Nursing Management"));
+        test_test.appendChild(set_options("Registered Nursing Management/Community Health"));
+        test_test.appendChild(set_options("Registered Nursing Maternity"));
+        test_test.appendChild(set_options("Registered Nursing Maternity & Pediatric"));
+        test_test.appendChild(set_options("Registered Nursing Med/Surg"));
+        test_test.appendChild(set_options("Registered Nursing Nutritional"));
+        test_test.appendChild(set_options("Registered Nursing PN-ADN"));
+        test_test.appendChild(set_options("Registered Nursing Pathophysiology"));
+        test_test.appendChild(set_options("Registered Nursing Pediatric"));
+        test_test.appendChild(set_options("Registered Nursing Pharmacology"));
+        test_test.appendChild(set_options("Registered Nursing Psy/Mental Health"));
+        test_test.appendChild(set_options("Registered Nursing RN-BSN"));
+        test_test.appendChild(set_options("Registered Nursing Research"));
+    }
+    else if(event.target.value == "GACE ParaProfessional"){
+        test_test.appendChild(set_options("GACE ParaProfessional"));
+    }
+    else if(event.target.value == "ParaPro"){
+        test_test.appendChild(set_options("ParaPro"));
+    }
+    else if(event.target.value == "389/21(AD6) - field of sustainable agriculture + rural devel"){
+        test_test.appendChild(set_options("EPSO/AD/389/21"));
+        test_test.appendChild(set_options("EPSO/AD/389/21"));
+    }
+    else if(event.target.value == "CAST JRC"){
+        test_test.appendChild(set_options("COM/1/2015/GFIV"));
+        test_test.appendChild(set_options("COM/1/2015/GFIV"));
+        test_test.appendChild(set_options("COM/1/2015/GFIV"));
+    }
+    else if(event.target.value == "COM/AD/01/20 Internal Competition"){
+        test_test.appendChild(set_options("COM/AD/01/20"));
+        test_test.appendChild(set_options("COM/AD/01/20"));
+    }
+    else if(event.target.value == "COM/AD/02/21 Internal Competition AD5"){
+        test_test.appendChild(set_options("COM/AD/02/21"));
+        test_test.appendChild(set_options("COM/AD/02/21"));
+        test_test.appendChild(set_options("COM/AD/02/21"));
+    }
+    else if(event.target.value == "COM/TA/AD/01-04/21 Translators"){
+        test_test.appendChild(set_options("COM/TA/AD/01-04/21"));
+        test_test.appendChild(set_options("COM/TA/AD/01-04/21"));
+        test_test.appendChild(set_options("COM/TA/AD/01-04/21"));
+        test_test.appendChild(set_options("COM/TA/AD/01-04/21"));
+    }
+    else if(event.target.value == "COM/TA/AD01-AD04/21"){
+        test_test.appendChild(set_options("COM/TA/AD01-AD04/21"));
+    }
+    else if(event.target.value == "EPSO Certification Examination"){
+        test_test.appendChild(set_options("Examen Écrit, E2, De La Procédure de Certification"));
+        test_test.appendChild(set_options("Examen Écrit, E2, De La Procédure de Certification"));
+        test_test.appendChild(set_options("Examen Écrit, E2, De La Procédure de Certification"));
+        test_test.appendChild(set_options("Written Examination, E2, of Certification Procedure"));
+        test_test.appendChild(set_options("Written Examination, E2, of Certification Procedure"));
+        test_test.appendChild(set_options("Written Examination, E2, of Certification Procedure"));
+    }
+    else if(event.target.value == "EPSO/AD/375-379/20 Lawyer Linguists"){
+        test_test.appendChild(set_options("EPSO/AD/375-379/20"));
+        test_test.appendChild(set_options("EPSO/AD/375-379/20"));
+        test_test.appendChild(set_options("EPSO/AD/375-379/20"));
+    }
+    else if(event.target.value == "EPSO/AD/375-379/20 Lawyer Linguists (AD7)"){
+        test_test.appendChild(set_options("EPSO/AD/375-379/20"));
+    }
+    else if(event.target.value == "EPSO/AD/380/19"){
+        test_test.appendChild(set_options("EPSO/AD/380/19"));
+        test_test.appendChild(set_options("EPSO/AD/380/19"));
+    }
+    else if(event.target.value == "EPSO/AD/381/20"){
+        test_test.appendChild(set_options("EPSO/AD/381/20"));
+        test_test.appendChild(set_options("EPSO/AD/381/20"));
+        test_test.appendChild(set_options("EPSO/AD/381/20"));
+    }
+    else if(event.target.value == "EPSO/AD/381/20 Administration in the field of European Law"){
+        test_test.appendChild(set_options("EPSO/AD/381/20"));
+        test_test.appendChild(set_options("EPSO/AD/381/20"));
+    }
+    else if(event.target.value == "EPSO/AD/382/20"){
+        test_test.appendChild(set_options("EPSO/AD/382/20"));
+        test_test.appendChild(set_options("EPSO/AD/382/20"));
+    }
+    else if(event.target.value == "EPSO/AD/382/20 EEAS"){
+        test_test.appendChild(set_options("EPSO/AD/382/20"));
+        test_test.appendChild(set_options("EPSO/AD/382/20"));
+    }
+    else if(event.target.value == "EPSO/AD/383-388/21 LL OT"){
+        test_test.appendChild(set_options("EPSO/AD/383-388/21"));
+    }
+    else if(event.target.value == "EPSO/AD/383-388/21 LL OT Translation test"){
+        test_test.appendChild(set_options("EPSO/AD/383/21 - Translation test"));
+        test_test.appendChild(set_options("EPSO/AD/383/21 - Translation test"));
+        test_test.appendChild(set_options("EPSO/AD/384/21 - Translation test"));
+        test_test.appendChild(set_options("EPSO/AD/385/21 - Translation test"));
+        test_test.appendChild(set_options("EPSO/AD/386/21 - Translation test"));
+        test_test.appendChild(set_options("EPSO/AD/387/21 - Translation test"));
+        test_test.appendChild(set_options("EPSO/AD/388/21 - Translation test"));
+    }
+    else if(event.target.value == "EPSO/AD/389/21 - field of sustainable agriculture + rural de"){
+        test_test.appendChild(set_options("EPSO/AD/389/21"));
+        test_test.appendChild(set_options("EPSO/AD/389/21"));
+    }
+    else if(event.target.value == "EPSO/AD/390/21 - field of chemicals policy Written Test"){
+        test_test.appendChild(set_options("EPSO/AD/390/21"));
+        test_test.appendChild(set_options("EPSO/AD/390/21"));
+    }
+    else if(event.target.value == "EPSO/AD/390/21 (AD6) - field of chemicals policy"){
+        test_test.appendChild(set_options("EPSO/AD/390/21"));
+        test_test.appendChild(set_options("EPSO/AD/390/21"));
+    }
+    else if(event.target.value == "EPSO/AD/391/21"){
+        test_test.appendChild(set_options("EPSO/AD/391/21"));
+        test_test.appendChild(set_options("EPSO/AD/391/21"));
+    }
+    else if(event.target.value == "EPSO/AD/392/21 - Administrators"){
+        test_test.appendChild(set_options("EPSO/AD/392/21"));
+        test_test.appendChild(set_options("EPSO/AD/392/21"));
+    }
+    else if(event.target.value == "EPSO/AD/392/21 - CO385"){
+        test_test.appendChild(set_options("EPSO/AD/392/21"));
+        test_test.appendChild(set_options("EPSO/AD/392/21"));
+    }
+    else if(event.target.value == "EPSO/AD/393/21 EDPS"){
+        test_test.appendChild(set_options("EPSO/AD/393/21"));
+        test_test.appendChild(set_options("EPSO/AD/393/21"));
+    }
+    else if(event.target.value == "EPSO/AD/393/21 European Data Protection Supervision (EDPS)"){
+        test_test.appendChild(set_options("EPSO/AD/393/21"));
+        test_test.appendChild(set_options("EPSO/AD/393/21"));
+    }
+    else if(event.target.value == "EPSO/AD/394-395/21"){
+        test_test.appendChild(set_options("EPSO/AD/394-395/21"));
+        test_test.appendChild(set_options("EPSO/AD/394-395/21"));
+    }
+    else if(event.target.value == "EPSO/AD/394-395/21 - Case Study"){
+        test_test.appendChild(set_options("EPSO/AD/394-395/21"));
+        test_test.appendChild(set_options("EPSO/AD/394-395/21"));
+    }
+    else if(event.target.value == "EPSO/AD/396/21"){
+        test_test.appendChild(set_options("EPSO/AD/396/21"));
+    }
+    else if(event.target.value == "EPSO/AD/396/21 LL GA Translation"){
+        test_test.appendChild(set_options("EPSO/AD/396/21 - Translation Test"));
+    }
+    else if(event.target.value == "EPSO/AD/397/21"){
+        test_test.appendChild(set_options("EPSO/AD/397/21"));
+    }
+    else if(event.target.value == "EPSO/AD/398/22"){
+        test_test.appendChild(set_options("EPSO/AD/398/22"));
+        test_test.appendChild(set_options("EPSO/AD/398/22"));
+    }
+    else if(event.target.value == "EPSO/AD/399/22"){
+        test_test.appendChild(set_options("EPSO/AD/399/22"));
+        test_test.appendChild(set_options("EPSO/AD/399/22"));
+    }
+    else if(event.target.value == "EPSO/AST/148/21"){
+        test_test.appendChild(set_options("EPSO/AST/148/21"));
+    }
+    else if(event.target.value == "EPSO/AST/149/21 Nuclear Inspectors"){
+        test_test.appendChild(set_options("EPSO/AST/149/21"));
+        test_test.appendChild(set_options("EPSO/AST/149/21"));
+    }
+    else if(event.target.value == "EPSO/AST/149/21 Nuclear Inspectors Case Study"){
+        test_test.appendChild(set_options("EPSO/AST/149/21"));
+        test_test.appendChild(set_options("EPSO/AST/149/21"));
+    }
+    else if(event.target.value == "EPSO/AST/150/21"){
+        test_test.appendChild(set_options("EPSO/AST/150/21"));
+        test_test.appendChild(set_options("EPSO/AST/150/21"));
+    }
+    else if(event.target.value == "EPSO/AST/151/22"){
+        test_test.appendChild(set_options("EPSO/AST/151/22"));
+        test_test.appendChild(set_options("EPSO/AST/151/22"));
+    }
+    else if(event.target.value == "EPSO/AST/152/22"){
+        test_test.appendChild(set_options("EPSO/AST/152/22"));
+        test_test.appendChild(set_options("EPSO/AST/152/22"));
+    }
+    else if(event.target.value == "EPSO/AST/152/22 FRT"){
+        test_test.appendChild(set_options("EPSO/AST/152/22"));
+    }
+    else if(event.target.value == "EPSO/AST/153/22"){
+        test_test.appendChild(set_options("EPSO/AST/153/22"));
+        test_test.appendChild(set_options("EPSO/AST/153/22"));
+    }
+    else if(event.target.value == "EPSO/AST/154/22 (fields: 1-2)"){
+        test_test.appendChild(set_options("EPSO/AST/154/22"));
+    }
+    else if(event.target.value == "EPSO/AST/154/22 (fields: 3-4-5-6)"){
+        test_test.appendChild(set_options("EPSO/AST/154/22"));
+    }
+    else if(event.target.value == "EPSO/AST/155/22"){
+        test_test.appendChild(set_options("EPSO/AST/154/22"));
+        test_test.appendChild(set_options("EPSO/AST/154/22"));
+    }
+    else if(event.target.value == "EPSO/AST-SC/10/20"){
+        test_test.appendChild(set_options("EPSO/AST-SC/10/20"));
+        test_test.appendChild(set_options("EPSO/AST-SC/10/20"));
+    }
+    else if(event.target.value == "EPSO/AST-SC/11/21"){
+        test_test.appendChild(set_options("EPSO/AST-SC/11/21"));
+        test_test.appendChild(set_options("EPSO/AST-SC/11/21"));
+    }
+    else if(event.target.value == "Junior Professionals Programme"){
+        test_test.appendChild(set_options("Junior Professionals Programme"));
+        test_test.appendChild(set_options("Junior Professionals Programme"));
+        test_test.appendChild(set_options("Junior Professionals Programme"));
+    }
+    else if(event.target.value == "Events Industry Council"){
+        test_test.appendChild(set_options("Certified Meeting Professional"));
+        test_test.appendChild(set_options("Certified Meeting Professional-Healthcare"));
+    }
+    else if(event.target.value == "Eversource Energy Service Company-Contractor Employees only"){
+        test_test.appendChild(set_options("1 Hour Test Session"));
+        test_test.appendChild(set_options("2 Hour Test Session"));
+        test_test.appendChild(set_options("3 Hour Test Session"));
+        test_test.appendChild(set_options("4 Hour Test Session"));
+    }
+    else if(event.target.value == "Eversource Energy Service Company-Eversource Employees only"){
+        test_test.appendChild(set_options("1 Hour Test Session"));
+        test_test.appendChild(set_options("2 Hour Test Session"));
+        test_test.appendChild(set_options("3 Hour Test Session"));
+        test_test.appendChild(set_options("4 Hour Test Session"));
+    }
+    else if(event.target.value == "Exam Master Corporation"){
+        test_test.appendChild(set_options("Physician Assistant College Admission Test"));
+    }
+    else if(event.target.value == "F5 Networks"){
+        test_test.appendChild(set_options("101-Application Delivery Fundamentals"));
+        test_test.appendChild(set_options("201-TMOS Administration"));
+        test_test.appendChild(set_options("202-Pre-Sales Fundamentals"));
+        test_test.appendChild(set_options("301a-BIG-IP LTM Specialist: Architect, Setup and Deploy"));
+        test_test.appendChild(set_options("301b-BIG-IP LTM Specialist: Maintain and Troublshoot"));
+        test_test.appendChild(set_options("302-BIG-IP DNS Specialist"));
+        test_test.appendChild(set_options("303-BIG-IP ASM Specialist"));
+        test_test.appendChild(set_options("304-BIG_IP APM Specialist"));
+        test_test.appendChild(set_options("401-Security Solutions"));
+        test_test.appendChild(set_options("402-Cloud Solutions"));
+    }
+    else if(event.target.value == "FINRA"){
+        test_test.appendChild(set_options(""));
+    }
+    else if(event.target.value == "FINRA RP"){
+        test_test.appendChild(set_options("1-24 General Securities Principal Examination"));
+        test_test.appendChild(set_options("Direct Participation Programs Rep"));
+        test_test.appendChild(set_options("Financial and Operations Principal Exam"));
+        test_test.appendChild(set_options("General Securities Principal Exam - Sales Supervisor"));
+        test_test.appendChild(set_options("General Securities Sales Supervisor - General"));
+        test_test.appendChild(set_options("Investment Banking Rep. Exam"));
+        test_test.appendChild(set_options("Investment Company and Variable Contracts Products Principal"));
+        test_test.appendChild(set_options("Municipal Advisor Principal"));
+        test_test.appendChild(set_options("Municipal Advisor Representative Examination"));
+        test_test.appendChild(set_options("Online Demo Exam"));
+        test_test.appendChild(set_options("Operations Professional Exam"));
+        test_test.appendChild(set_options("Research Analyst Exam - Part I - Analysis"));
+        test_test.appendChild(set_options("Research Analyst Exam - Part II - Regulatory"));
+        test_test.appendChild(set_options("SERIES 4 - THE REGISTERED OPTIONS PRINCIPAL EXAMINATION"));
+        test_test.appendChild(set_options("Securities Industry Essentials (SIE)"));
+        test_test.appendChild(set_options("Securities Trader"));
+        test_test.appendChild(set_options("Series 06 - Investment Co./Variable Contracts Rep (S6TO)"));
+        test_test.appendChild(set_options("Series 07 - General Securities Rep (S7TO)"));
+        test_test.appendChild(set_options("Series 09 - General Securities Sales Supervisor/Options (S9)"));
+        test_test.appendChild(set_options("Series 161 - Supervisory Analyst Part I Exam (S161)"));
+        test_test.appendChild(set_options("Series 162 - Supervisory Analyst Part II Exam (S162)"));
+        test_test.appendChild(set_options("Series 3 - National Commodity Futures Examination"));
+        test_test.appendChild(set_options("Series 30 - NFA Branch Manager Examination"));
+        test_test.appendChild(set_options("Series 31 - Futures Managed Funds Examination"));
+        test_test.appendChild(set_options("Series 32 - Limited Futures Exam - Regulations"));
+        test_test.appendChild(set_options("Series 34 - Retail Off-Exchange Forex Examination"));
+        test_test.appendChild(set_options("Series 63 - Uniform Securities Agent State Law Exam (S63)"));
+        test_test.appendChild(set_options("Series 82 - Private Securities Offerings Rep"));
+        test_test.appendChild(set_options("UNIFORM COMBINED STATE LAW EXAMINATION"));
+        test_test.appendChild(set_options("UNIFORM INVESTMENT ADVISORS LAW EXAMINATION"));
+    }
+    else if(event.target.value == "NMLS RP"){
+        test_test.appendChild(set_options("SAFE MLO National Test"));
+    }
+    else if(event.target.value == "Federation of State Boards of Physical Therapy"){
+        test_test.appendChild(set_options("ALABAMA JURISPRUDENCE EXAM"));
+        test_test.appendChild(set_options("ARIZONA JURISPRUDENCE EXAM"));
+        test_test.appendChild(set_options("California Jurisprudence Examination"));
+        test_test.appendChild(set_options("District of Columbia Jurisprudence Examination"));
+        test_test.appendChild(set_options("Florida Jurisprudence Examination"));
+        test_test.appendChild(set_options("GEORGIA LAW EXAM"));
+        test_test.appendChild(set_options("Nebraska Jurisprudence Examination"));
+        test_test.appendChild(set_options("OHIO LAW EXAM"));
+        test_test.appendChild(set_options("PHYSICAL THERAPIST"));
+        test_test.appendChild(set_options("PHYSICAL THERAPIST ASSISTANT"));
+        test_test.appendChild(set_options("PT Scenario Pilot Exam"));
+        test_test.appendChild(set_options("PTA Scenario Pilot Exam"));
+    }
+    else if(event.target.value == "GCC Electrical Testing Laboratory"){
+        test_test.appendChild(set_options("Certified Power System Operator"));
+    }
+    else if(event.target.value == "GISI Professional Qualification"){
+        test_test.appendChild(set_options("Corporate Finance"));
+        test_test.appendChild(set_options("Investment Analysis"));
+        test_test.appendChild(set_options("Risk Management"));
+        test_test.appendChild(set_options("Security Trading"));
+        test_test.appendChild(set_options("Wealth and Portfolio Management"));
+    }
+    else if(event.target.value == "Chartered Fintech Professional"){
+        test_test.appendChild(set_options("Level 1A"));
+        test_test.appendChild(set_options("Level 1AB Foundation"));
+        test_test.appendChild(set_options("Level 1B"));
+        test_test.appendChild(set_options("Level 2A"));
+        test_test.appendChild(set_options("Level 2B"));
+    }
+    else if(event.target.value == "GBCI Test Drive"){
+        test_test.appendChild(set_options("GBCI Test Drive Exam"));
+    }
+    else if(event.target.value == "Green Business Certification lnc"){
+        test_test.appendChild(set_options("LEED AP Building Design & Construction Combined"));
+        test_test.appendChild(set_options("LEED AP Building Design & Construction Stand Alone"));
+        test_test.appendChild(set_options("LEED AP Homes Combined"));
+        test_test.appendChild(set_options("LEED AP Homes Stand Alone"));
+        test_test.appendChild(set_options("LEED AP Interior Design & Construction Combined"));
+        test_test.appendChild(set_options("LEED AP Interior Design & Construction Stand Alone"));
+        test_test.appendChild(set_options("LEED AP Neighborhood Development Combined"));
+        test_test.appendChild(set_options("LEED AP Neighborhood Development Stand Alone"));
+        test_test.appendChild(set_options("LEED AP Operations & Maintenance Combined"));
+        test_test.appendChild(set_options("LEED AP Operations + Maintenance Stand Alone"));
+        test_test.appendChild(set_options("LEED Green Associate"));
+        test_test.appendChild(set_options("LEED Project Reviewer"));
+        test_test.appendChild(set_options("SITES Accredited Professional (SITES AP)"));
+        test_test.appendChild(set_options("Sustainability Excellence Associate"));
+        test_test.appendChild(set_options("Sustainability Excellence Professional"));
+        test_test.appendChild(set_options("Urban Greenhouse Gas Inventory Specialist"));
+    }
+    else if(event.target.value == "Gulf Organisation for Research & Development"){
+        test_test.appendChild(set_options("Global Sustainability Assessment System"));
+    }
+    
+    else if(event.target.value == "Healthcare Sterile Processing Association (Formerly IAHCSMM)"){
+        test_test.appendChild(set_options("Certified Central Service Vendor Partner"));
+        test_test.appendChild(set_options("Certified Endoscope Reprocessor"));
+        test_test.appendChild(set_options("Certified Healthcare Leadership"));
+        test_test.appendChild(set_options("Certified Instrument Specialist"));
+        test_test.appendChild(set_options("Certified Registered Central Service Technician"));
+    }
+    else if(event.target.value == "HelloCode Master Certificate"){
+        test_test.appendChild(set_options("HelloCode Python Advanced"));
+        test_test.appendChild(set_options("HelloCode Python Basic"));
+        test_test.appendChild(set_options("HelloCode Python Intermediate"));
+        test_test.appendChild(set_options("HelloCode SMOOTHY Advanced"));
+        test_test.appendChild(set_options("HelloCode SMOOTHY Basic"));
+        test_test.appendChild(set_options("HelloCode SMOOTHY Intermediate"));
+        test_test.appendChild(set_options("HelloCode Web Advanced"));
+        test_test.appendChild(set_options("HelloCode Web Basic"));
+        test_test.appendChild(set_options("HelloCode Web Intermediate"));
+    }
+    else if(event.target.value == "Contractor Work Permit Receiver Prerequisite"){
+        test_test.appendChild(set_options("Contractor Work Permit Receiver Prerequisite"));
+    }
+    else if(event.target.value == "Human Resources Professional Association"){
+        test_test.appendChild(set_options("CHRL Employment Law Exam"));
+        test_test.appendChild(set_options("CHRL Knowledge Exam"));
+        test_test.appendChild(set_options("CHRP Employment Law Exam"));
+        test_test.appendChild(set_options("CHRP Knowledge Exam"));
+        test_test.appendChild(set_options("Examen des connaissances du conseiller en RH agréé"));
+    }
+    else if(event.target.value == "HydraFacial Connect Certification"){
+        test_test.appendChild(set_options("HydraFacial Connect Certification Expert Level 2 Exam"));
+        test_test.appendChild(set_options("HydraFacial Connect Certification Professional Level 1 Exam"));
     }
 
+
+
+    
+
     
     
 
 
     
-    else if(event.target.value == "Saudi Licencing Examination"){
-        test_test.appendChild(set_options("Anatomic Pathology"));
-        test_test.appendChild(set_options("Anesthesia"));
-        test_test.appendChild(set_options("Biochemistry Technician exams"));
-        test_test.appendChild(set_options("Biomedical Technology Specialist"));
-        test_test.appendChild(set_options("Cardiac Perfusion"));
-        test_test.appendChild(set_options("Cardiology"));
-        test_test.appendChild(set_options("Cardiothoracic Surgery"));
-        test_test.appendChild(set_options("Chinese Acupuncture and Moxibustion Exam"));
-        test_test.appendChild(set_options("Clinical Coding Exam"));
-        test_test.appendChild(set_options("Clinical Pathology"));
-        test_test.appendChild(set_options("Clinical Psychology"));
-        test_test.appendChild(set_options("Critical Care Medicine"));
-        test_test.appendChild(set_options("Dental Hygiene Exam"));
-        test_test.appendChild(set_options("Dental Hygiene Specialist"));
-        
-
-    }else if(event.target.value == "SCHS Promotion Exams"){
+    
+    else if(event.target.value == "SCHS Promotion Exams"){
         test_test.appendChild(set_options("Obstetrics and Gynecology"));
         test_test.appendChild(set_options("Obstetrics and Gynecology"));
     }else if(event.target.value == "Secuencias de cursos verificados de ABA Espana"){
