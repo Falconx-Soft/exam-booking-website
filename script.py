@@ -2,6 +2,7 @@ import selenium
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
+import schedule
 from selenium import webdriver
 
 from selenium.webdriver.support.ui import WebDriverWait
@@ -20,14 +21,14 @@ django.setup()
 from django.conf import settings
 from django.core.mail import send_mail
 
-from home.models import info
+from home.models import info, got_address, got_date, got_time
 
-def automation(driver,test_sponsor,test_program,test_test,address,start_date,end_date,email):
+def automation(driver,db_info,email):
     # select dropdown element test_sponsor
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'test_sponsor')))
     select = Select(driver.find_element(By.ID,'test_sponsor'))
     # select by visible text
-    select.select_by_visible_text(test_sponsor)
+    select.select_by_visible_text(db_info.test_sponsor)
 
     time.sleep(3)
 
@@ -35,7 +36,7 @@ def automation(driver,test_sponsor,test_program,test_test,address,start_date,end
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testProgram')))
     select = Select(driver.find_element(By.ID,'testProgram'))
     # select by visible text
-    select.select_by_visible_text(test_program)
+    select.select_by_visible_text(db_info.test_program)
 
     time.sleep(3)
 
@@ -43,7 +44,7 @@ def automation(driver,test_sponsor,test_program,test_test,address,start_date,end
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
     select = Select(driver.find_element(By.ID,'testSelector'))
     # select by visible text
-    select.select_by_visible_text(test_test)
+    select.select_by_visible_text(db_info.test_test)
 
     time.sleep(3)
 
@@ -54,16 +55,16 @@ def automation(driver,test_sponsor,test_program,test_test,address,start_date,end
     # next page
     # You must select an end date that is within 2 weeks of the selected start date. MM-DD-YYYY
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH,'//*[@id="google-maps"]/div/app-geo-locator/input')))
-    driver.find_element(By.XPATH,'//*[@id="google-maps"]/div/app-geo-locator/input').send_keys(address)
+    driver.find_element(By.XPATH,'//*[@id="google-maps"]/div/app-geo-locator/input').send_keys(db_info.address)
 
     time.sleep(3)
 
-    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys(start_date)
+    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys(db_info.start_date)
 
     time.sleep(3)
 
     driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').clear()
-    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys(end_date)
+    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys(db_info.end_date)
 
     time.sleep(3)
     next_btn = driver.find_element(By.ID,'nextBtn')
@@ -90,6 +91,10 @@ def automation(driver,test_sponsor,test_program,test_test,address,start_date,end
             WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME,'h2')))
 
             print(l.find_element(By.TAG_NAME,'h2').text)
+
+            got_address_obj = got_address.objects.create(info=db_info, address=l.find_element(By.TAG_NAME,'h2').text)
+            got_address_obj.save()
+
             temp_info.append(l.find_element(By.TAG_NAME,'h2').text)
             box_div = l.find_elements(By.TAG_NAME,'div')[7]
             list_btn = box_div.find_elements(By.XPATH,'div[@role = "button"]')
@@ -99,24 +104,34 @@ def automation(driver,test_sponsor,test_program,test_test,address,start_date,end
                 date = btn.text
                 print("-----------> 1")
                 print(date.replace("\n", " "))
+
+                got_date_obj = got_date.objects.create(address=got_address_obj, date=date.replace("\n", " "))
+                got_date_obj.save()
+
                 date_list.append(date.replace("\n", " "))
                 driver.execute_script("arguments[0].scrollIntoView(true);", btn)
                 print("-----------> 2")
                 time.sleep(5)
                 btn.click()
-
-                WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME,'app-slot-card-detail')))
-                print("-----------> 3")
-                time_div = driver.find_element(By.TAG_NAME,'app-slot-card-detail')
-                print("-----------> 4")
-                time_list = time_div.find_elements(By.CLASS_NAME,"testCentreTimeSlot")
-                info_time_list = []
-                for t in time_list:
-                    print("-----------> 5")
-                    print(t.text)
-                    info_time_list.append(t.text)
-                    print("-----------> 6")
-                date_list.append(info_time_list)
+                try:
+                    WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME,'app-slot-card-detail')))
+                    print("-----------> 3")
+                    time_div = driver.find_element(By.TAG_NAME,'app-slot-card-detail')
+                    print("-----------> 4")
+                    time_list = time_div.find_elements(By.CLASS_NAME,"testCentreTimeSlot")
+                    info_time_list = []
+                    for t in time_list:
+                        print("-----------> 5")
+                        print(t.text)
+                        got_time_obj = got_time.objects.create(date=got_date_obj,time=t.text)
+                        got_time_obj.save()
+                        info_time_list.append(t.text)
+                        print("-----------> 6")
+                    date_list.append(info_time_list)
+                except:
+                    info_time_list = []
+                    info_time_list.append("No seat available")
+                    date_list.append(info_time_list)
             temp_info.append(date_list)
             info.append(temp_info)
 
@@ -145,7 +160,7 @@ def run_script():
     for i in info_obj:
         driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
 
-        chk = automation(driver,i.test_sponsor,i.test_program,i.test_test,i.address,i.start_date,i.end_date,i.user.email)
+        chk = automation(driver,i,i.user.email)
 
         if chk == True:
             i.got_result = True
@@ -153,4 +168,11 @@ def run_script():
 
     driver.quit()
 
+
 run_script()
+
+# schedule.every(30).minutes.do(run_script)
+  
+# while True:
+#     schedule.run_pending()
+

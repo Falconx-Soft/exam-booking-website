@@ -38,3 +38,8 @@ def sign_up(request):
 			return redirect('login')
 	context = {'form':form, 'msg':msg}
 	return render(request,'authentication/sign-up.html', context)
+
+def user_logout(request):
+
+    logout(request)
+    return redirect('login')

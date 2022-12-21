@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'home',
     'authentication',
     'django_celery_results',
+    'user_profile',
 ]
 
 MIDDLEWARE = [

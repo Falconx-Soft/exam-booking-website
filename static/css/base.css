@@ -8,6 +8,20 @@ header{
   padding: 30px;
   border-bottom-style: solid;
   border-bottom-color: #8CC63F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links{
+  display: flex;
+  gap: 10px;
+}
+
+.header-links > a{
+  text-decoration: none;
+  color: #8CC63F;
+  font-size: 20px;
 }
 
 header > img{

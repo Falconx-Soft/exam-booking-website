@@ -272,7 +272,7 @@ test_sponsor.addEventListener("change", function(event){
     else if(event.target.value == "ETS TESTING"){
         test_program.appendChild(set_options("GACE ParaProfessional"));
     }
-    else if(event.target.value == "European Personnel Selection Office"){
+    else if(event.target.value == "European Personal Selection Office"){
         test_program.appendChild(set_options("389/21(AD6) - field of sustainable agriculture + rural devel"));
         test_program.appendChild(set_options("CAST JRC"));
         test_program.appendChild(set_options("COM/AD/01/20 Internal Competition"));
@@ -284,7 +284,7 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("EPSO/AD/375-379/20 Lawyer Linguists (AD7)"));
         test_program.appendChild(set_options("EPSO/AD/380/19"));
         test_program.appendChild(set_options("EPSO/AD/381/20"));
-        test_program.appendChild(set_options("EPSO/AD/381/20 Administrators in the field of European Law"));
+        test_program.appendChild(set_options("EPSO/AD/381/20 Administration in the field of European Law"));
         // test_program.appendChild(set_options(""));.........................................................
         test_program.appendChild(set_options("EPSO/AD/382/20"));
         test_program.appendChild(set_options("EPSO/AD/382/20 EEAS"));
@@ -1935,268 +1935,14 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Urology"));
     }
 
-    
-    
 
 
-    
-    else if(event.target.value == "Saudi Licencing Examination"){
-        test_test.appendChild(set_options("Anatomic Pathology"));
-        test_test.appendChild(set_options("Anesthesia"));
-        test_test.appendChild(set_options("Biochemistry Technician exams"));
-        test_test.appendChild(set_options("Biomedical Technology Specialist"));
-        test_test.appendChild(set_options("Cardiac Perfusion"));
-        test_test.appendChild(set_options("Cardiology"));
-        test_test.appendChild(set_options("Cardiothoracic Surgery"));
-        test_test.appendChild(set_options("Chinese Acupuncture and Moxibustion Exam"));
-        test_test.appendChild(set_options("Clinical Coding Exam"));
-        test_test.appendChild(set_options("Clinical Pathology"));
-        test_test.appendChild(set_options("Clinical Psychology"));
-        test_test.appendChild(set_options("Critical Care Medicine"));
-        test_test.appendChild(set_options("Dental Hygiene Exam"));
-        test_test.appendChild(set_options("Dental Hygiene Specialist"));
-        
 
-    }else if(event.target.value == "SCHS Promotion Exams"){
-        test_test.appendChild(set_options("Obstetrics and Gynecology"));
-        test_test.appendChild(set_options("Obstetrics and Gynecology"));
-    }else if(event.target.value == "Secuencias de cursos verificados de ABA Espana"){
-        test_test.appendChild(set_options("Examen Final de ABA Espana"));
-    }else if(event.target.value == "Sharjah Health Authority"){
-        test_test.appendChild(set_options("Acupuncture Practitioner"));
-        test_test.appendChild(set_options("Ayurveda Massage Therapist"));
-        test_test.appendChild(set_options("Ayurveda Practitioner"));
-        test_test.appendChild(set_options("Biochemistry Exam"));
-        test_test.appendChild(set_options("Chinese Massage Therapist"));
-        test_test.appendChild(set_options("Chiropractor Practitioner"));
-        test_test.appendChild(set_options("Cupping (Hijama) Therapist"));
-        test_test.appendChild(set_options("Cupping (Hijama) Therapist (Arabic)"));
-        test_test.appendChild(set_options("Dermatology"));
-        test_test.appendChild(set_options("Family Medicine"));
-        test_test.appendChild(set_options("General Dentist"));
-        test_test.appendChild(set_options("General practitioner"));
-        test_test.appendChild(set_options("Hematology Exam"));
-        test_test.appendChild(set_options("Herbal Medicine/ Oriental Medicine"));
-        test_test.appendChild(set_options("Homeopathy"));
-        test_test.appendChild(set_options("Internal Medicine"));
-        test_test.appendChild(set_options("Lab Specialist"));
-        test_test.appendChild(set_options("Lab Technician"));
-        test_test.appendChild(set_options("Microbiology technologist"));
-        test_test.appendChild(set_options("Naturopathy"));
-        test_test.appendChild(set_options("Nurse Exam"));
-        test_test.appendChild(set_options("Obstetrics & Gynecology"));
-        test_test.appendChild(set_options("Ophthalmology"));
-        test_test.appendChild(set_options("Orthopedics"));
-        test_test.appendChild(set_options("Osteopathy"));
-        test_test.appendChild(set_options("Pediatrics"));
-        test_test.appendChild(set_options("Pharmacist"));
-        test_test.appendChild(set_options("Physiotherapist"));
-        test_test.appendChild(set_options("Radiographer Exam"));
-        test_test.appendChild(set_options("Registered  Midwife"));
-        test_test.appendChild(set_options("Traditional Chinese Medicine"));
-        test_test.appendChild(set_options("Unani Practitioner"));
-    }else if(event.target.value == "Association of Clinical Documentation Integrity Specialists"){
-        test_test.appendChild(set_options("Certified Clinical Documentation Specialist"));
-        test_test.appendChild(set_options("Certified Clinical Documentation Specialist-Outpatient"));
-    }else if(event.target.value == "Association of Home Care Coding & Compliance"){
-        test_test.appendChild(set_options("Home Care Clinical Specialist-OASIS"));
-        test_test.appendChild(set_options("Home Care Coding Specialist-Diagnosis"));
-        test_test.appendChild(set_options("Home Care Coding Specialist-Hospice"));
-    }else if(event.target.value == "National Association of Healthcare Revenue Integrity"){
-        test_test.appendChild(set_options("Certification in Healthcare Revenue Integrity"));
-    }else if(event.target.value == "SOA"){
-        test_test.appendChild(set_options("Advanced Long-Term Actuarial Mathematics"));
-        test_test.appendChild(set_options("Advanced Short-Term Actuarial Mathematics"));
-        test_test.appendChild(set_options("Advanced Topics in General Insurance Exam"));
-        test_test.appendChild(set_options("ERM Exam - General Corporate"));
-        test_test.appendChild(set_options("ERM Exam - General Insurance"));
-        test_test.appendChild(set_options("ERM Exam - Group and Health"));
-        test_test.appendChild(set_options("ERM Exam - Individual Life and Annuities"));
-        test_test.appendChild(set_options("ERM Exam Investment"));
-        test_test.appendChild(set_options("ERM Exam Retirement"));
-        test_test.appendChild(set_options("Enrolled Actuaries Basic Examination"));
-        test_test.appendChild(set_options("Financial Mathematics: English or French/Canada"));
-        test_test.appendChild(set_options("Financial Mathematics: English, U.S./Intl"));
-        test_test.appendChild(set_options("Financial and Regulatory Environment Exam, U.S."));
-        test_test.appendChild(set_options("Foundations of CFE Exam"));
-        test_test.appendChild(set_options("Fundamentals of Actuarial Mathematics"));
-        test_test.appendChild(set_options("Fundamentals of Actuarial Mathematics - Long Term"));
-        test_test.appendChild(set_options("Fundamentals of Actuarial Mathematics - Short Term"));
-        test_test.appendChild(set_options("GH Design and Pricing"));
-        test_test.appendChild(set_options("GH Finance and Valuation Exam - Canada"));
-        test_test.appendChild(set_options("GH Finance and Valuation Exam - U.S."));
-        test_test.appendChild(set_options("Group and Health Specialty Exam"));
-        test_test.appendChild(set_options("ILA Life ALM and Modeling Exam"));
-        test_test.appendChild(set_options("ILA Life Financial Management Exam, Canada"));
-        test_test.appendChild(set_options("ILA Life Financial Management Exam, U.S."));
-        test_test.appendChild(set_options("ILA Life Product Management Exam"));
-        test_test.appendChild(set_options("Investment & Financial Markets: English or French/Canada"));
-        test_test.appendChild(set_options("Investment & Financial Markets: English, U.S./Intl"));
-        test_test.appendChild(set_options("Pension EA-2, Segment F Examination"));
-        test_test.appendChild(set_options("Pension EA-2, Segment L Examination"));
-        test_test.appendChild(set_options("Predictive Analytics: English or French/Canada"));
-        test_test.appendChild(set_options("Predictive Analytics: English, U.S./Intl"));
-        test_test.appendChild(set_options("Probability: English or French/Canada"));
-        test_test.appendChild(set_options("Probability: English, U.S./Intl"));
-        test_test.appendChild(set_options("QFI Investment Risk Management Exam"));
-        test_test.appendChild(set_options("QFI Portfolio Management Exam"));
-        test_test.appendChild(set_options("QFI Quantitative Finance Exam"));
-        test_test.appendChild(set_options("Ratemaking & Reserving Exam"));
-        test_test.appendChild(set_options("Retirement Design & Accounting Exam, Canada"));
-        test_test.appendChild(set_options("Retirement Design & Accounting Exam, U.S."));
-        test_test.appendChild(set_options("Retirement Funding & Regulation Exam, Canada"));
-        test_test.appendChild(set_options("Retirement Plan Investment and Risk Management Exam"));
-        test_test.appendChild(set_options("Statistics for Risk Modeling: English or French/Canada"));
-        test_test.appendChild(set_options("Statistics for Risk Modeling: English, U.S./Intl"));
-        test_test.appendChild(set_options("Strategic Decision-Making Exam"));
-    }else if(event.target.value == "Society for Human Resource Management"){
-        test_test.appendChild(set_options("SHRM Certified Professional (in the US)"));
-        test_test.appendChild(set_options("SHRM Certified Professional (outside the US)"));
-        test_test.appendChild(set_options("SHRM Certified Professional In Person Only"));
-        test_test.appendChild(set_options("SHRM Senior Certified Professional (in the US)"));
-        test_test.appendChild(set_options("SHRM Senior Certified Professional (outside the US)"));
-        test_test.appendChild(set_options("SHRM Senior Certified Professional In Person Only"));
-    }else if(event.target.value == "Society for Worldwide Interbank Financial Telecommunication"){
-        test_test.appendChild(set_options("Alliance Integration Platform Certification"));
-        test_test.appendChild(set_options("SWIFT On-Boarding"));
-        test_test.appendChild(set_options("SWIFTNet Connectivity"));
-        test_test.appendChild(set_options("SWIFTNet Messaging"));
-    }else if(event.target.value == "SSAT by The Enrollment Management Association"){
-        test_test.appendChild(set_options("SSAT Middle Grades"));
-        test_test.appendChild(set_options("SSAT Upper Grades"));
-    }else if(event.target.value == "ELIGIBILITY EXAMS"){
-        test_test.appendChild(set_options("No FEES"));
-    }else if(event.target.value == "NON-ELIG"){
-        test_test.appendChild(set_options("FEES"));
-        test_test.appendChild(set_options("No FEES"));
-    }else if(event.target.value == "VOUCHER_EXAM"){
-        test_test.appendChild(set_options("VOUCHER_EXAM"));
-    }else if(event.target.value == "Abu Dhabi Department of Community Development"){
-        test_test.appendChild(set_options("Counseling Psychology"));
-        test_test.appendChild(set_options("Counseling Psychology (Arabic)"));
-        test_test.appendChild(set_options("Counselling in Social care"));
-        test_test.appendChild(set_options("Counselling in Social care Arabic"));
-        test_test.appendChild(set_options("Educational/Academic Psychology"));
-        test_test.appendChild(set_options("Educational/Academic Psychology (Arabic)"));
-        test_test.appendChild(set_options("Forensic Psychology"));
-        test_test.appendChild(set_options("Forensic Psychology (Arabic)"));
-        test_test.appendChild(set_options("Marriage & Family Psychology"));
-        test_test.appendChild(set_options("Marriage & Family Psychology (Arabic)"));
-        test_test.appendChild(set_options("Psychologist in Social care"));
-        test_test.appendChild(set_options("Psychologist in Social care (Arabic)"));
-        test_test.appendChild(set_options("Psychotherapy"));
-        test_test.appendChild(set_options("Psychotherapy (Arabic)"));
-        test_test.appendChild(set_options("School Psychology"));
-        test_test.appendChild(set_options("School Psychology (Arabic)"));
-        test_test.appendChild(set_options("Social Worker"));
-        test_test.appendChild(set_options("Social Worker (Arabic)"));
-    }else if(event.target.value == "UAE Ministry of Health"){
-        test_test.appendChild(set_options("Anatomical Pathology"));
-        test_test.appendChild(set_options("Anesthesia"));
-        test_test.appendChild(set_options("BIOMEDICAL MEDICANE"));
-        test_test.appendChild(set_options("Biochemistry Technician"));
-        test_test.appendChild(set_options("Biomedical Technology Specialist"));
-        test_test.appendChild(set_options("CARDIAC PROFUSION"));
-        test_test.appendChild(set_options("Cardiology"));
-        test_test.appendChild(set_options("Cardiothoracic Surgery"));
-        test_test.appendChild(set_options("Clinical Nutrition"));
-        test_test.appendChild(set_options("Clinical Pathology"));
-        test_test.appendChild(set_options("Clinical Psychology"));
-        test_test.appendChild(set_options("Community Medicine"));
-        test_test.appendChild(set_options("Dental Assistant"));
-        test_test.appendChild(set_options("Dental Hygiene"));
-        test_test.appendChild(set_options("Dental Hygiene Tech"));
-        test_test.appendChild(set_options("Dental Lab Tech"));
-        test_test.appendChild(set_options("Dental Lab Technologist"));
-        test_test.appendChild(set_options("Dermatologist"));
-        test_test.appendChild(set_options("Diagnostic Radiology"));
-        test_test.appendChild(set_options("Electrocardiography"));
-        test_test.appendChild(set_options("Emergency Med Technician"));
-        test_test.appendChild(set_options("Emergency Medicine"));
-        test_test.appendChild(set_options("Endodontic"));
-        test_test.appendChild(set_options("Family Medicine"));
-        test_test.appendChild(set_options("Forensic Medicine"));
-        test_test.appendChild(set_options("Gastroenterology Doctor"));
-        test_test.appendChild(set_options("General Dentistry"));
-        test_test.appendChild(set_options("General Practice"));
-        test_test.appendChild(set_options("General Surgery"));
-        test_test.appendChild(set_options("Healthcare Assistant Qualifying Exam"));
-        test_test.appendChild(set_options("Implant Dentistry"));
-        test_test.appendChild(set_options("Intensive Care"));
-        test_test.appendChild(set_options("Internal Medicine"));
-        test_test.appendChild(set_options("Lab Technologist"));
-        test_test.appendChild(set_options("Medical Lab Technician"));
-        test_test.appendChild(set_options("Medical Microbiology"));
-        test_test.appendChild(set_options("Medical Record Arabic"));
-        test_test.appendChild(set_options("Microbiology"));
-        test_test.appendChild(set_options("Microbiology Technician Exam"));
-        test_test.appendChild(set_options("MidWifery"));
-        test_test.appendChild(set_options("MidWifery"));
-        test_test.appendChild(set_options("Midwife Assistant"));
-        test_test.appendChild(set_options("Nephrology"));
-        test_test.appendChild(set_options("Neurosurgery"));
-        test_test.appendChild(set_options("Nurse Assistance"));
-        test_test.appendChild(set_options("Obstetrics & Gynaecology"));
-        test_test.appendChild(set_options("Occupational Therapist"));
-        test_test.appendChild(set_options("Occupational Therapy Technician"));
-        test_test.appendChild(set_options("Ophthalmology"));
-        test_test.appendChild(set_options("Oral & Maxillofacial Surgery"));
-        test_test.appendChild(set_options("Orthodontics"));
-        test_test.appendChild(set_options("Orthopedics"));
-        test_test.appendChild(set_options("Orthotics and Prosthetic Technician"));
-        test_test.appendChild(set_options("Otolaryngology"));
-        test_test.appendChild(set_options("Pediatrics"));
-        test_test.appendChild(set_options("Pedodontics"));
-        test_test.appendChild(set_options("Periodontics"));
-        test_test.appendChild(set_options("Pharmacist"));
-        test_test.appendChild(set_options("Pharmacy Tech"));
-        test_test.appendChild(set_options("Physical Medicine and Rehabilitation"));
-        test_test.appendChild(set_options("Physical Therapy Assistant"));
-        test_test.appendChild(set_options("Physiotherapist"));
-        test_test.appendChild(set_options("Plastic Surgery"));
-        test_test.appendChild(set_options("Prosthodontics"));
-        test_test.appendChild(set_options("Psychiatry"));
-        test_test.appendChild(set_options("Pulmonology"));
-        test_test.appendChild(set_options("Radiographer"));
-        test_test.appendChild(set_options("Radiology"));
-        test_test.appendChild(set_options("Radiology Tech"));
-        test_test.appendChild(set_options("Registered Nurse"));
-        test_test.appendChild(set_options("Renal Dialysis Tech"));
-        test_test.appendChild(set_options("Restorative and Protective Doctors"));
-        test_test.appendChild(set_options("Urology"));
-        test_test.appendChild(set_options("Vascular Surgery"));
 
-    }else if(event.target.value == "The Association of Taxation Technicians"){
-        test_test.appendChild(set_options("APS Human Capital Taxes"));
-        test_test.appendChild(set_options("APS IHT Trusts and Estates"));
-        test_test.appendChild(set_options("APS Taxation of Individuals"));
-        test_test.appendChild(set_options("APS Taxation of Larger Companies and Groups"));
-        test_test.appendChild(set_options("APS Taxation of Owner Managed Businesses"));
-        test_test.appendChild(set_options("APS VAT and Other Indirect Taxes"));
-        test_test.appendChild(set_options("Law"));
-        test_test.appendChild(set_options("Law (Scotland)"));
-        test_test.appendChild(set_options("Principles of Accounting CBE"));
-        test_test.appendChild(set_options("Professional Responsibilities & Ethics"));
-    }else if(event.target.value == "The Chartered Institute of Taxation"){
-        test_test.appendChild(set_options("APS Human Capital Taxes"));
-        test_test.appendChild(set_options("APS IHT Trusts and Estates"));
-        test_test.appendChild(set_options("APS Taxation of Individuals"));
-        test_test.appendChild(set_options("APS Taxation of Larger Companies and Groups"));
-        test_test.appendChild(set_options("APS Taxation of Owner Managed Businesses"));
-        test_test.appendChild(set_options("APS VAT and Other Indirect Taxes"));
-        test_test.appendChild(set_options("Law"));
-        test_test.appendChild(set_options("Law (Scotland)"));
-        test_test.appendChild(set_options("Principles of Accounting CBE"));
-        test_test.appendChild(set_options("Professional Responsibilities & Ethics"));
-    }else if(event.target.value == "The State Bar of California"){
-        test_test.appendChild(set_options("First-Year Law Students' Examination"));
-        test_test.appendChild(set_options("First-Year Law Students' Practice Examination"));
-        test_test.appendChild(set_options("First-Year Law Students' Test Center Examination"));
-    }else if(event.target.value == "CELBAN"){
-        test_test.appendChild(set_options("CELBAN"));
-    }else if(event.target.value == "Practice CELBAN"){
-        test_test.appendChild(set_options("Practice CELBAN"));
-    }else if(event.target.value == "Uniform CPA Exam"){
+
+
+
+    else if(event.target.value == "Uniform CPA Exam"){
         test_test.appendChild(set_options("AUDITING AND ATTESTATION"));
         test_test.appendChild(set_options("AUDITING AND ATTESTATION (GUAM ONLY)"));
         test_test.appendChild(set_options("Auditing and Attestation (International)"));

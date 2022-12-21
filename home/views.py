@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import info
+
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def format_date(date):
@@ -8,8 +10,8 @@ def format_date(date):
     new_date = temp[1]+"/"+temp[2]+"/"+temp[0]
     return new_date
 
+@login_required(login_url='login')
 def test_center(request):
-
     if request.method == "POST":
         test_sponsor = request.POST.get('test_sponsor')
         test_program = request.POST.get('test_program')
@@ -35,8 +37,8 @@ def test_center(request):
 
     return render(request, 'home/testCenter.html')
 
+@login_required(login_url='login')
 def home(request):
-
     if request.method == "POST":
         test_sponsor = request.POST.get('test_sponsor')
         test_program = request.POST.get('test_program')

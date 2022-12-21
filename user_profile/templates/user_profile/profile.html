@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+{% endblock %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+
+<section class="dropdown-section">
+    <div class="dropdown-section-inner-div">
+        <h1 class="search-title">Profile</h1>
+        <div class="info-div">
+            {% for info in info_obj %}
+                <div class="info-card">
+                    <p>{{info.test_sponsor}}, {{info.test_program}}, {{info.test_test}}</p>
+                    <p>{{info.address}}, {{info.start_date}}, {{info.end_date}}</p>
+                    <br>
+                    {% for address in got_address_obj %}
+                        {% if address.info.id == info.id %}
+                            <p>{{address.address}}</p>
+                            {% for date in got_date_obj %}
+                                {% if date.address.id == address.id %}
+                                    <p>{{date.date}}</p>
+                                    <div style="display: flex; gap: 10px;">
+                                        {% for time in got_time_obj %}
+                                            {% if time.date.id == date.id %}
+                                                <p>{{time.time}}</p>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+{% block js %}
+
+    <script src="{% static 'js/home.js' %}" ></script>
+
+{% endblock %}
