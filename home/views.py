@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from .models import info
+import datetime
 
 from django.contrib.auth.decorators import login_required
 # Create your views here.
@@ -35,7 +36,12 @@ def test_center(request):
 
         return redirect('home')
 
-    return render(request, 'home/testCenter.html')
+    print(datetime.date.today() + datetime.timedelta(days=1),"**********")
+    context = {
+        'min_date': str(datetime.date.today() + datetime.timedelta(days=1))
+    }
+
+    return render(request, 'home/testCenter.html',context)
 
 @login_required(login_url='login')
 def home(request):

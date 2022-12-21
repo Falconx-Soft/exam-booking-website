@@ -38,16 +38,16 @@
       <div class="input2">
         <div class="start">
           <label for="">Start Date</b></label><br>
-          <input type="date" name="start-date" value="" min="2022-12-21" placeholder="MM/DD/YYYY" required>
+          <input type="date" name="start-date" id="start-date" min="{{min_date}}" placeholder="MM/DD/YYYY" required>
         </div>
         <div class="start">
           <label for="">End Date</b></label><br>
-          <input type="date" name="end-date" value="" placeholder="MM/DD/YYYY" required>
+          <input type="date" name="end-date" id="end-date" min="{{min_date}}" placeholder="MM/DD/YYYY" disabled required>
           <p class="note">Note: You must select an end date that is within 2 weeks of <br>the selected start date. </p>
         </div>
       </div>
 
-      <button type="submit" name="button" class="next_button" style="margin-top: 20px;">Submit</button>
+      <button type="submit" name="button" id="submit-btn" class="next_button" style="margin-top: 20px;" disabled>Submit</button>
 
       <input type="hidden" value="{{test_sponsor}}" name="test_sponsor">
       <input type="hidden" value="{{test_program}}" name="test_program">
@@ -58,5 +58,11 @@
   </div>
 
 </section>
+
+{% endblock %}
+
+{% block js %}
+
+    <script src="{% static 'js/home.js' %}"></script>
 
 {% endblock %}

@@ -649,8 +649,10 @@
                     <select id="test_test" name="test_test" required>
                     </select>
                 </div>
-
-                <button type="submit" name="button" class="next_button">Next</button>
+                <div class="home-btn-div">
+                    <button type="button" id="add-date" name="button" class="next_button">Add</button>
+                    <button type="submit" name="button" class="next_button">Next</button>
+                </div>
             </div>
         </form>
     </div>
@@ -660,6 +662,8 @@
 
 {% block js %}
 
-    <script src="{% static 'js/home.js' %}" ></script>
+    <script src="{% static 'js/dropdown.js' %}" ></script>
+
+    <script src="{% static 'js/home.js' %}"></script>
 
 {% endblock %}

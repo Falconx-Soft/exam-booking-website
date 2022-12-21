@@ -6,6 +6,10 @@ from .forms import CutomUserCreationForm
 # Create your views here.
 
 def user_login(request):
+
+    if request.user.is_authenticated:
+        return redirect('home')
+
     context = {
         'title': 'login'
     }

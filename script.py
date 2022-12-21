@@ -158,13 +158,16 @@ def run_script():
     time.sleep(3)
 
     for i in info_obj:
-        driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
+        try:
+            driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
 
-        chk = automation(driver,i,i.user.email)
+            chk = automation(driver,i,i.user.email)
 
-        if chk == True:
-            i.got_result = True
-            i.save()
+            if chk == True:
+                i.got_result = True
+                i.save()
+        except Exception as e:
+            print("--------------->",e,"<---------------")
 
     driver.quit()
 

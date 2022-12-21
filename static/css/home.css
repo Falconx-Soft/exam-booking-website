@@ -25,3 +25,10 @@ select>option{
     padding: 5px;
     cursor: pointer;
 }
+
+.home-btn-div{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+}
