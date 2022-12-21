@@ -152,12 +152,13 @@ def run_script():
 
     print("<-----------------")
     options = Options()
-    options.headless = True
+    options.headless = False
 
     driver = webdriver.Firefox(options=options)
     time.sleep(3)
 
     for i in info_obj:
+        print("****",i.id,"****")
         try:
             driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
 
@@ -172,10 +173,9 @@ def run_script():
     driver.quit()
 
 
-run_script()
+# run_script()
 
-# schedule.every(30).minutes.do(run_script)
+schedule.every(30).minutes.do(run_script)
   
-# while True:
-#     schedule.run_pending()
-
+while True:
+    schedule.run_pending()

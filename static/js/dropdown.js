@@ -793,7 +793,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Active House Accredited Professional"));
 
     }
-    else if(event.target.value == "American Academy of Nurse Practitioners Certication Board"){
+    else if(event.target.value == "American Academy of Nurse Practitioners Certification Board"){
         test_test.appendChild(set_options("Adult-Gerontology Nurse Practitioner Exam"));
         test_test.appendChild(set_options("Emergency Nurse Practioner Exam"));
         test_test.appendChild(set_options("Family Nurse Practioner Exam"));
@@ -832,7 +832,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Certified Gastroenterology Registered Nurse"));
 
     }
-    else if(event.target.value == "American Board of Ophthalmology "){
+    else if(event.target.value == "American Board of Ophthalmology"){
         test_test.appendChild(set_options("Demonstration of Cognitive Ophthalmic Knowledge"));
         test_test.appendChild(set_options("Writter Qualifying Examination"));
 

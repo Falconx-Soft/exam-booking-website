@@ -3,11 +3,8 @@ const end_date = document.getElementById('end-date');
 const submit_btn = document.getElementById('submit-btn');
 
 start_date.addEventListener('change', function (){
-    end_date.disabled = false;
-    submit_btn.disabled = false;
-
     var firstDay = new Date(start_date.value);
-    var nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
+    var nextWeek = new Date(firstDay.getTime() + 14 * 24 * 60 * 60 * 1000);
 
     var dd = nextWeek.getDate();
     var mm = nextWeek.getMonth() + 1;
@@ -15,5 +12,10 @@ start_date.addEventListener('change', function (){
 
     var max_date = yyyy+"-"+mm+"-"+dd;
 
-    end_date.setAttribute("max", max_date);
+    console.log(start_date.value,max_date)
+    end_date.min = start_date.value;
+    end_date.max = max_date;
+
+    end_date.disabled = false;
+    submit_btn.disabled = false;
 })

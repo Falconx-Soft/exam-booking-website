@@ -3,66 +3,718 @@
 
 {% block head %}
 
-<link rel="stylesheet" href="{% static 'css/test_center.css' %}">
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 {% endblock %}
 
 {% block title %} {{title}} {% endblock %}
 
 {% block content %}
 
-<section>
-  <div class="info-div">
-    <h1 style="margin-top: 50px;">Search Availability</h1>
-    <h3 class="one">Find a Test Center</h3>
+<section class="dropdown-section">
+    <div class="dropdown-section-inner-div">
+        <h1 class="search-title">Search Availability</h1>
+        <div class="dropdown-div">
+            <div class="dropdown-inner-div">
+                <h2>Select a Test Sponsor</h2>
+                <select id="test_sponsor" name="test_sponsor" required>
+                    <option value="">Select a Test Sponsor</option>
+                    <option value="AAPC">
+                        AAPC
+                    </option>
+                    <option value="ABPS">
+                        ABPS
+                    </option>
+                    <option value="Academic Language Therapy Association">
+                        Academic Language Therapy Association
+                    </option>
+                    <option value="AHA- Active House Alliance">
+                        AHA- Active House Alliance
+                    </option>
+                    <option value="Am Assoc for Lab Animal Science">
+                        Am Assoc for Lab Animal Science
+                    </option>
+                    <option value="AM Board Quality Assurance and Utilization Review Physicians">
+                        AM Board Quality Assurance and Utilization Review Physicians
+                    </option>
+                    <option value="American Academy of Nurse Practitioners Certification Board">
+                        American Academy of Nurse Practitioners Certification Board
+                    </option>
+                    <option value="American Association of Heart Failure Nurses">
+                        American Association of Heart Failure Nurses
+                    </option>
+                    <option value="American Board for Certification in O, P&P">
+                        American Board for Certification in O, P&amp;P
+                    </option>
+                    <option value="American Board of Cardiovascular Perfusion">
+                        American Board of Cardiovascular Perfusion
+                    </option>
+                    <option value="American Board of Dermatology">
+                        American Board of Dermatology
+                    </option>
+                    <option value="American Board of Family Medicine">
+                        American Board of Family Medicine
+                    </option>
+                    <option value="American Board of Gastroenterology Nurses">
+                        American Board of Gastroenterology Nurses
+                    </option>
+                    <option value="American Board of Ophthalmology">
+                        American Board of Ophthalmology
+                    </option>
+                    <option value="American Board of Opticianry - National Contact Lens Examine">
+                        American Board of Opticianry - National Contact Lens Examine
+                    </option>
+                    <option value="American Board of Oral and Maxillofacial Radiology">
+                        American Board of Oral and Maxillofacial Radiology
+                    </option>
+                    <option value="American Board of Oral and Maxillofacial Surgery">
+                        American Board of Oral and Maxillofacial Surgery
+                    </option>
+                    <option value="American Board of Pediatrics">
+                        American Board of Pediatrics
+                    </option>
+                    <option value="American Board of Preventive Medicine">
+                        American Board of Preventive Medicine
+                    </option>
+                    <option value="American College of Radiology">
+                        American College of Radiology
+                    </option>
+                    <option value="American College of Veterinary Dermatology">
+                        American College of Veterinary Dermatology
+                    </option>
+                    <option value="American College of Veterinary Internal Medicine">
+                        American College of Veterinary Internal Medicine
+                    </option>
+                    <option value="American College of Veterinary Pathologists">
+                        American College of Veterinary Pathologists
+                    </option>
+                    <option value="American Concrete Institute">
+                        American Concrete Institute
+                    </option>
+                    <option value="American Electrology Association IBEC">
+                        American Electrology Association IBEC
+                    </option>
+                    <option value="American Institute of Certified Planners">
+                        American Institute of Certified Planners
+                    </option>
+                    <option value="American Nurses Credentialing Center">
+                        American Nurses Credentialing Center
+                    </option>
+                    <option value="American Osteopathic Association">
+                        American Osteopathic Association
+                    </option>
+                    <option value="American Petroleum Institute">
+                        American Petroleum Institute
+                    </option>
+                    <option value="American Society for Quality">
+                        American Society for Quality
+                    </option>
+                    <option value="American Society of Mechanical Engineers">
+                        American Society of Mechanical Engineers
+                    </option>
+                    <option value="American Speech-Language-Hearing Association">
+                        American Speech-Language-Hearing Association
+                    </option>
+                    <option value="American Veterinary Medical Association">
+                        American Veterinary Medical Association
+                    </option>
+                    <option value="American Welding Society">
+                        American Welding Society
+                    </option>
+                    <option value="Arkansas Certified Nursing Assistant">
+                        Arkansas Certified Nursing Assistant
+                    </option>
+                    <option value="Arkansas Contractor Licensing Board">
+                        Arkansas Contractor Licensing Board
+                    </option>
+                    <option value="Ascend Learning, LLC">
+                        Ascend Learning, LLC
+                    </option>
+                    <option value="ASIS International">
+                        ASIS International
+                    </option>
+                    <option value="Associated Board Certifications International">
+                        Associated Board Certifications International
+                    </option>
+                    <option value="Association for Clinical Research Professionals">
+                        Association for Clinical Research Professionals
+                    </option>
+                    <option value="Association for Facilities Engineering">
+                        Association for Facilities Engineering
+                    </option>
+                    <option value="Association of Certified Fraud Examiners">
+                        Association of Certified Fraud Examiners
+                    </option>
+                    <option value="Association of Professional Bookkeepers">
+                        Association of Professional Bookkeepers
+                    </option>
+                    <option value="Association of Professional Bookkeepers - PREPAID">
+                        Association of Professional Bookkeepers - PREPAID
+                    </option>
+                    <option value="Association of Workplace Investigators">
+                        Association of Workplace Investigators
+                    </option>
+                    <option value="Australian Council for Educational Research">
+                        Australian Council for Educational Research
+                    </option>
+                    <option value="Bahrain National Health Regulation Authority">
+                        Bahrain National Health Regulation Authority
+                    </option>
+                    <option value="Bangladesh College of Veterinary Surgeons">
+                        Bangladesh College of Veterinary Surgeons
+                    </option>
+                    <option value="Board for Global EHS Credentialing">
+                        Board for Global EHS Credentialing
+                    </option>
+                    <option value="Board of Pharmacy Specialties">
+                        Board of Pharmacy Specialties
+                    </option>
+                    <option value="CA Engineers, Land Surveyors and Geologists">
+                        CA Engineers, Land Surveyors and Geologists
+                    </option>
+                    <option value="Canadian Alliance of Physiotherapy Regulators">
+                        Canadian Alliance of Physiotherapy Regulators
+                    </option>
+                    <option value="Canadian Society for Medical Laboratory Science">
+                        Canadian Society for Medical Laboratory Science
+                    </option>
+                    <option value="Catalyst Futures B.V.">
+                        Catalyst Futures B.V.
+                    </option>
+                    <option value="CDCA-WREB-CITA">
+                        CDCA-WREB-CITA
+                    </option>
+                    <option value="CDISC">
+                        CDISC
+                    </option>
+                    <option value="Certible">
+                        Certible
+                    </option>
+                    <option value="Certification Board of Infection Control and Epidemiology">
+                        Certification Board of Infection Control and Epidemiology
+                    </option>
+                    <option value="Certification Commission for Healthcare Interpreters">
+                        Certification Commission for Healthcare Interpreters
+                    </option>
+                    <option value="Certified Financial Planner">
+                        Certified Financial Planner
+                    </option>
+                    <option value="CFA Institute">
+                        CFA Institute
+                    </option>
+                    <option value="CFA Institute Test Drive (ESG exam only)">
+                        CFA Institute Test Drive (ESG exam only)
+                    </option>
+                    <option value="Chartered Alternative Investment Analyst Association">
+                        Chartered Alternative Investment Analyst Association
+                    </option>
+                    <option value="Client Success">
+                        Client Success
+                    </option>
+                    <option value="CMT Association">
+                        CMT Association
+                    </option>
+                    <option value="CMT Demo (ABC) Program">
+                        CMT Demo (ABC) Program
+                    </option>
+                    <option value="College Board - AP Exams (India)">
+                        College Board - AP Exams (India)
+                    </option>
+                    <option value="College Board - AP Exams (Singapore)">
+                        College Board - AP Exams (Singapore)
+                    </option>
+                    <option value="College of Family Physicians of Canada">
+                        College of Family Physicians of Canada
+                    </option>
+                    <option value="COLLEGE OF PHARMACISTS OF BRITISH COLUMBIA">
+                        COLLEGE OF PHARMACISTS OF BRITISH COLUMBIA
+                    </option>
+                    <option value="Commission for Case Manager Certification">
+                        Commission for Case Manager Certification
+                    </option>
+                    <option value="Confluent">
+                        Confluent
+                    </option>
+                    <option value="Connecticut Department of Public Health">
+                        Connecticut Department of Public Health
+                    </option>
+                    <option value="Construction Specifications Institute">
+                        Construction Specifications Institute
+                    </option>
+                    <option value="Contractor Workforce Qualification Assurance Program">
+                        Contractor Workforce Qualification Assurance Program
+                    </option>
+                    <option value="Council of Interstate Testing Agencies">
+                        Council of Interstate Testing Agencies
+                    </option>
+                    <option value="Council on Licensure, Enforcement and Regulation">
+                        Council on Licensure, Enforcement and Regulation
+                    </option>
+                    <option value="Department of Healthcare Professions - MOPH - State of Qatar">
+                        Department of Healthcare Professions - MOPH - State of Qatar
+                    </option>
+                    <option value="Design-Build Institute of America">
+                        Design-Build Institute of America
+                    </option>
+                    <option value="DSST">
+                        DSST
+                    </option>
+                    <option value="Dubai Health Authority">
+                        Dubai Health Authority
+                    </option>
+                    <option value="Dubai Health Care City Authority">
+                        Dubai Health Care City Authority
+                    </option>
+                    <option value="ECOTEST Quality Certificates Issuing Services">
+                        ECOTEST Quality Certificates Issuing Services
+                    </option>
+                    <option value="Educational Records Bureau">
+                        Educational Records Bureau
+                    </option>
+                    <option value="EduClasses">
+                        EduClasses
+                    </option>
+                    <option value="Elsevier">
+                        Elsevier
+                    </option>
+                    <option value="ETS TESTING">
+                        ETS TESTING
+                    </option>
+                    <option value="European Personnel Selection Office">
+                        European Personnel Selection Office
+                    </option>
+                    <option value="Events Industry Council">
+                        Events Industry Council
+                    </option>
+                    <option value="Eversource Energy Service Company">
+                        Eversource Energy Service Company
+                    </option>
+                    <option value="Exam Master Corporation">
+                        Exam Master Corporation
+                    </option>
+                    <option value="F5 Networks">
+                        F5 Networks
+                    </option>
+                    <option value="FINRA">
+                        FINRA
+                    </option>
+                    <option value="FSBPT">
+                        FSBPT
+                    </option>
+                    <option value="GCC Electrical Testing Laboratory">
+                        GCC Electrical Testing Laboratory
+                    </option>
+                    <option value="Ghana Investment and Securities Institute Limited">
+                        Ghana Investment and Securities Institute Limited
+                    </option>
+                    <option value="Global Fintech Institute">
+                        Global Fintech Institute
+                    </option>
+                    <option value="Green Business Certification Inc">
+                        Green Business Certification Inc
+                    </option>
+                    <option value="Gulf Organisation for Research & Development">
+                        Gulf Organisation for Research &amp; Development
+                    </option>
+                    <option value="Healthcare Sterile Processing Association (Formerly IAHCSMM)">
+                        Healthcare Sterile Processing Association (Formerly IAHCSMM)
+                    </option>
+                    <option value="Hello World Kids">
+                        Hello World Kids
+                    </option>
+                    <option value="Human Assets Training Institute">
+                        Human Assets Training Institute
+                    </option>
+                    <option value="Human Resources Professional Association">
+                        Human Resources Professional Association
+                    </option>
+                    <option value="HydraFacial Connect Certification">
+                        HydraFacial Connect Certification
+                    </option>
+                    <option value="Institute of Certified Management Accountants">
+                        Institute of Certified Management Accountants
+                    </option>
+                    <option value="International Board of Heart Rhythm Examiners">
+                        International Board of Heart Rhythm Examiners
+                    </option>
+                    <option value="International Board of Lactation Consultant Examiners">
+                        International Board of Lactation Consultant Examiners
+                    </option>
+                    <option value="International Board of Specialty Certification">
+                        International Board of Specialty Certification
+                    </option>
+                    <option value="International Council of Shopping Centers">
+                        International Council of Shopping Centers
+                    </option>
+                    <option value="International Facility Management Association">
+                        International Facility Management Association
+                    </option>
+                    <option value="International WELL Building Institute">
+                        International WELL Building Institute
+                    </option>
+                    <option value="IRS Special Enrollment Examination">
+                        IRS Special Enrollment Examination
+                    </option>
+                    <option value="ISA">
+                        ISA
+                    </option>
+                    <option value="ISOGRAD">
+                        ISOGRAD
+                    </option>
+                    <option value="KAPLN">
+                        KAPLN
+                    </option>
+                    <option value="Korean Software Testing Qualifications Board">
+                        Korean Software Testing Qualifications Board
+                    </option>
+                    <option value="Language Testing International">
+                        Language Testing International
+                    </option>
+                    <option value="Law School Admission Council">
+                        Law School Admission Council
+                    </option>
+                    <option value="Lymphology Association of North America">
+                        Lymphology Association of North America
+                    </option>
+                    <option value="Maryland Insurance Administration">
+                        Maryland Insurance Administration
+                    </option>
+                    <option value="Massachusetts Insurance">
+                        Massachusetts Insurance
+                    </option>
+                    <option value="Matrix42">
+                        Matrix42
+                    </option>
+                    <option value="Medical Council of Canada">
+                        Medical Council of Canada
+                    </option>
+                    <option value="Medical Dosimetrist Certification Board">
+                        Medical Dosimetrist Certification Board
+                    </option>
+                    <option value="Medical Surgical Nursing Certification Board">
+                        Medical Surgical Nursing Certification Board
+                    </option>
+                    <option value="Michigan Language Assessment">
+                        Michigan Language Assessment
+                    </option>
+                    <option value="Moody's Analytics">
+                        Moody’s Analytics
+                    </option>
+                    <option value="Moody's">
+                        Moody's
+                    </option>
+                    <option value="National Board for Certification of School Nurses">
+                        National Board for Certification of School Nurses
+                    </option>
+                    <option value="National Board of Medical Examiners">
+                        National Board of Medical Examiners
+                    </option>
+                    <option value="National Board of Osteopathic Medical Examiners">
+                        National Board of Osteopathic Medical Examiners
+                    </option>
+                    <option value="National Commission for Health Education Credentialing">
+                        National Commission for Health Education Credentialing
+                    </option>
+                    <option value="National Council for Certified Personal Trainers">
+                        National Council for Certified Personal Trainers
+                    </option>
+                    <option value="National Council of Architectural Registration Boards">
+                        National Council of Architectural Registration Boards
+                    </option>
+                    <option value="National Council on Strength & Fitness">
+                        National Council on Strength &amp; Fitness
+                    </option>
+                    <option value="National Dental Assisting Examining Board">
+                        National Dental Assisting Examining Board
+                    </option>
+                    <option value="National Dental Examining Board of Canada">
+                        National Dental Examining Board of Canada
+                    </option>
+                    <option value="National Elevator Industry Educational Program">
+                        National Elevator Industry Educational Program
+                    </option>
+                    <option value="National Federation of Paralegal Associations">
+                        National Federation of Paralegal Associations
+                    </option>
+                    <option value="National Fire Protection Assoc">
+                        National Fire Protection Assoc
+                    </option>
+                    <option value="National Football League Players Association">
+                        National Football League Players Association
+                    </option>
+                    <option value="National Inspection Testing and Certification Corporation">
+                        National Inspection Testing and Certification Corporation
+                    </option>
+                    <option value="National Institute for Automotive Service Excellence">
+                        National Institute for Automotive Service Excellence
+                    </option>
+                    <option value="National Registry of Certified Medical Examiners">
+                        National Registry of Certified Medical Examiners
+                    </option>
+                    <option value="National Roofing Contractors Association">
+                        National Roofing Contractors Association
+                    </option>
+                    <option value="NCIDQ">
+                        NCIDQ
+                    </option>
+                    <option value="NCTRC">
+                        NCTRC
+                    </option>
+                    <option value="Nebraska Insurance">
+                        Nebraska Insurance
+                    </option>
+                    <option value="New H3C Technologies Co., Ltd.">
+                        New H3C Technologies Co., Ltd.
+                    </option>
+                    <option value="New Hampshire Insurance">
+                        New Hampshire Insurance
+                    </option>
+                    <option value="New Mexico Insurance">
+                        New Mexico Insurance
+                    </option>
+                    <option value="Nokia Shanghai Bell">
+                        Nokia Shanghai Bell
+                    </option>
+                    <option value="North Dakota Insurance">
+                        North Dakota Insurance
+                    </option>
+                    <option value="Northeast Gas Association">
+                        Northeast Gas Association
+                    </option>
+                    <option value="Nursing Community Assessment Service">
+                        Nursing Community Assessment Service
+                    </option>
+                    <option value="Office of Administration">
+                        Office of Administration
+                    </option>
+                    <option value="Oklahoma Insurance">
+                        Oklahoma Insurance
+                    </option>
+                    <option value="Oman Medical Specialty Board">
+                        Oman Medical Specialty Board
+                    </option>
+                    <option value="Oncology Nursing Certification Corporation">
+                        Oncology Nursing Certification Corporation
+                    </option>
+                    <option value="Ontario College of Pharmacists">
+                        Ontario College of Pharmacists
+                    </option>
+                    <option value="OutSystems">
+                        OutSystems
+                    </option>
+                    <option value="Pediatric Nursing Certification Board">
+                        Pediatric Nursing Certification Board
+                    </option>
+                    <option value="PeopleCert">
+                        PeopleCert
+                    </option>
+                    <option value="Pharmacy Examining Board of Canada">
+                        Pharmacy Examining Board of Canada
+                    </option>
+                    <option value="PROC">
+                        PROC
+                    </option>
+                    <option value="Product Development Management Association">
+                        Product Development Management Association
+                    </option>
+                    <option value="Professional Credentialing Services">
+                        Professional Credentialing Services
+                    </option>
+                    <option value="Professional Testing Corporation">
+                        Professional Testing Corporation
+                    </option>
+                    <option value="Professional Testing Inc">
+                        Professional Testing Inc
+                    </option>
+                    <option value="PROMETRIC">
+                        PROMETRIC
+                    </option>
+                    <option value="Prometric English Language Proficiency">
+                        Prometric English Language Proficiency
+                    </option>
+                    <option value="Public Relations Uni Acrd Board">
+                        Public Relations Uni Acrd Board
+                    </option>
+                    <option value="Qualcomm Technologies, Inc.">
+                        Qualcomm Technologies, Inc.
+                    </option>
+                    <option value="QuantInsti Quantitative Learning Private Limited">
+                        QuantInsti Quantitative Learning Private Limited
+                    </option>
+                    <option value="Rehabilitation Engineering and Assistive Technology Society">
+                        Rehabilitation Engineering and Assistive Technology Society
+                    </option>
+                    <option value="Saudi Commission for Health Specialities">
+                        Saudi Commission for Health Specialities
+                    </option>
+                    <option value="Secuencias de cursos verificados de ABA Espana">
+                        Secuencias de cursos verificados de ABA Espana
+                    </option>
+                    <option value="Sharjah Health Authority">
+                        Sharjah Health Authority
+                    </option>
+                    <option value="Simplify Compliance">
+                        Simplify Compliance
+                    </option>
+                    <option value="SOA">
+                        SOA
+                    </option>
+                    <option value="Society for Human Resource Management">
+                        Society for Human Resource Management
+                    </option>
+                    <option value="Society for Worldwide Interbank Financial Telecommunication">
+                        Society for Worldwide Interbank Financial Telecommunication
+                    </option>
+                    <option value="SSAT by The Enrollment Management Association">
+                        SSAT by The Enrollment Management Association
+                    </option>
+                    <option value="TESTCASES">
+                        TESTCASES
+                    </option>
+                    <option value="The Centre of Excellence for Applied Research & Training">
+                        The Centre of Excellence for Applied Research &amp; Training
+                    </option>
+                    <option value="The Chartered Institute of Taxation">
+                        The Chartered Institute of Taxation
+                    </option>
+                    <option value="The State Bar of California">
+                        The State Bar of California
+                    </option>
+                    <option value="Touchstone Institute">
+                        Touchstone Institute
+                    </option>
+                    <option value="Uniform CPA Exam">
+                        Uniform CPA Exam
+                    </option>
+                    <option value="Union Pacific">
+                        Union Pacific
+                    </option>
+                    <option value="United States Marshals Service">
+                        United States Marshals Service
+                    </option>
+                    <option value="Universal Public Purchasing Certification Council">
+                        Universal Public Purchasing Certification Council
+                    </option>
+                    <option value="Urban Planning Council">
+                        Urban Planning Council
+                    </option>
+                    <option value="Utah Insurance Department">
+                        Utah Insurance Department
+                    </option>
+                    <option value="Vascular Access Certification Corporation">
+                        Vascular Access Certification Corporation
+                    </option>
+                    <option value="Vermont Insurance">
+                        Vermont Insurance
+                    </option>
+                    <option value="Virginia Department of Insurance">
+                        Virginia Department of Insurance
+                    </option>
+                    <option value="Waken Limited">
+                        Waken Limited
+                    </option>
+                    <option value="WebCE, Inc.">
+                        WebCE, Inc.
+                    </option>
+                    <option value="World Bank">
+                        World Bank
+                    </option>
+                    <option value="ZOOM">
+                        ZOOM
+                    </option>
+                    <option value="大力教育">
+                        大力教育
+                    </option>
+                    <option value="巨量认证（OMC)">
+                        巨量认证（OMC)
+                    </option>
+                    <option value="特许私人财富管理师认证标准指导委员会(CPWMSC)">
+                        特许私人财富管理师认证标准指导委员会(CPWMSC)
+                    </option>
+                    <option value="阿里云全球培训中心">
+                        阿里云全球培训中心
+                    </option>
+                </select>
+            </div>
+            <div class="dropdown-inner-div">
+                <h2>Select a Program</h2>
+                <select id="test_program" name="test_program" required>
+                </select>
+            </div>
 
-    <p class="one">
-      Enter your preferred location and date range to find a test center. Until your appointment is <br>scheduled,
-      availability is
-      subject to change.
-    </p>
-    <p class="one">
-      The location and date range can be updated on the next page if the available dates and times <br> returned are not
-      suitable
-      to your schedule.
-    </p>
-  </div>
+            <div class="dropdown-inner-div">
+                <h2>Select a Test</h2>
+                <select id="test_test" name="test_test" required>
+                </select>
+            </div>
+            <div class="home-btn-div">
+                <button type="button" id="add-btn" name="button" class="next_button">Add</button>
+            </div>
 
-  <div class="form-div">
-    <form class="forms" action="{% url 'testCenter' %}" method="post">
-      {% csrf_token %}
-      <div class="input1">
-        <label for="">Scheduling For: <b></b></label><br>
-        <input type="text" name="address" value="" placeholder="Address, City or Zip/Postal Code" required>
-      </div>
-      <br>
-      <div class="input2">
-        <div class="start">
-          <label for="">Start Date</b></label><br>
-          <input type="date" name="start-date" id="start-date" min="{{min_date}}" placeholder="MM/DD/YYYY" required>
+            <!-- Button trigger modal -->
+            <button type="button" style="display: none;" id="modal-btn" class="btn btn-primary" data-toggle="modal"
+                data-target="#exampleModalCenter">
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            You data is submitted successfully shortly we will notify you by email.
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{% url 'home' %}"><button type="button" class="btn btn-danger">Back</button></a>
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Add more</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="start">
-          <label for="">End Date</b></label><br>
-          <input type="date" name="end-date" id="end-date" min="{{min_date}}" placeholder="MM/DD/YYYY" disabled required>
-          <p class="note">Note: You must select an end date that is within 2 weeks of <br>the selected start date. </p>
-        </div>
-      </div>
-
-      <button type="submit" name="button" id="submit-btn" class="next_button" style="margin-top: 20px;" disabled>Submit</button>
-
-      <input type="hidden" value="{{test_sponsor}}" name="test_sponsor">
-      <input type="hidden" value="{{test_program}}" name="test_program">
-      <input type="hidden" value="{{test_test}}" name="test_test">
-
-    </form>
-
-  </div>
-
+    </div>
 </section>
-
 {% endblock %}
+
 
 {% block js %}
 
-    <script src="{% static 'js/home.js' %}"></script>
+<script src="{% static 'js/dropdown.js' %}"></script>
+
+<script>
+    const add_btn = document.getElementById("add-btn");
+
+    add_btn.addEventListener("click", function () {
+        if (
+            document.getElementById("test_sponsor").value != "" &&
+            document.getElementById("test_program").value != "" &&
+            document.getElementById("test_test").value != ""
+
+        ) {
+            $.ajax({
+                method: "GET",
+                url: '{% url "add_date" %}',
+                data: {
+                    'test_sponsor': document.getElementById("test_sponsor").value,
+                    'test_program': document.getElementById("test_program").value,
+                    'test_test': document.getElementById("test_test").value,
+                    'address': '{{address}}',
+                    'start_date': '{{start_date}}',
+                    'end_date': '{{end_date}}',
+                },
+                success: function (response) {
+                    document.getElementById("test_sponsor").value = "";
+                    document.getElementById("test_program").value = "";
+                    document.getElementById("test_test").value = "";
+                    document.getElementById("modal-btn").click();
+                },
+                error: function () {
+                    console.log('Error');
+                }
+            });
+        }
+    });
+
+</script>
 
 {% endblock %}
