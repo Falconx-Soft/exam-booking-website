@@ -32,7 +32,7 @@ test_sponsor.addEventListener("change", function(event){
     }else if(event.target.value == "AHA- Active House Alliance"){
         test_program.appendChild(set_options("AHA- Active House Alliance"));
     }else if(event.target.value == "Am Assoc for Lab Animal Science"){
-        test_program.appendChild(set_options("American Associatioon for Animal Science"));
+        test_program.appendChild(set_options("American Association for Animal Science"));
     }else if(event.target.value == "AM Board Quality Assurance and Utilization Review Physicians"){
         test_program.appendChild(set_options("Health Care Quality & Management"));
     }else if(event.target.value == "American Academy of Nurse Practitioners Certification Board"){
@@ -776,41 +776,42 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Plastic Surgery Written Exam"));
     }
     else if(event.target.value == "Academic Language Therapy Association"){
-        test_test.appendChild(set_options("Certified Academic Language Practioner"));
+        test_test.appendChild(set_options("Certified Academic Language Practitioner"));
         test_test.appendChild(set_options("Certified Academic Language Therapist"));
     }
     else if(event.target.value == "AHA- Active House Alliance"){
         test_test.appendChild(set_options("Active House Accredited Professional"));
 
     }
-    else if(event.target.value == "American Association for Lab Animal Science"){
+    else if(event.target.value == "American Association for Animal Science"){
         test_test.appendChild(set_options("ASSISTANT LAB ANIMAL TECHNICIAN"));
         test_test.appendChild(set_options("LABORATORY ANIMAL TECHNICIAN"));
         test_test.appendChild(set_options("LABORATORY ANIMAL TECHNOLOGIST"));
 
     }
     else if(event.target.value == "Health Care Quality & Management"){
-        test_test.appendChild(set_options("Active House Accredited Professional"));
+        test_test.appendChild(set_options("Health Care Quality & Management"));
 
     }
     else if(event.target.value == "American Academy of Nurse Practitioners Certification Board"){
         test_test.appendChild(set_options("Adult-Gerontology Nurse Practitioner Exam"));
-        test_test.appendChild(set_options("Emergency Nurse Practioner Exam"));
-        test_test.appendChild(set_options("Family Nurse Practioner Exam"));
+        test_test.appendChild(set_options("Emergency Nurse Practitioner Exam"));
+        test_test.appendChild(set_options("Family Nurse Practitioner Exam"));
 
-    }
-    else if(event.target.value == "American Board for Certification in 0, P&P"){
-        test_test.appendChild(set_options("Combines O&P Written Exam"));
+    }else if(event.target.value == "American Association of Heart Failure Nurses"){
+        test_test.appendChild(set_options("CHFN"));
+    }else if(event.target.value == "American Board for Certification in O, P&P"){
+        test_test.appendChild(set_options("Combined O&P Written Exam"));
         test_test.appendChild(set_options("Mastectomy Fitter Written Cert. Exam"));
         test_test.appendChild(set_options("Orthotic Assistant Writter Certification Examination"));
         test_test.appendChild(set_options("Orthotic Fitter Written Cert. Exam"));
-        test_test.appendChild(set_options("Orthotic Practioner Writter Cert. Exam"));
-        test_test.appendChild(set_options("Orthotic Practioner Written Sim. Cert. Exam"));
-        test_test.appendChild(set_options("Orthotics Technician Writter Certification Examination"));
+        test_test.appendChild(set_options("Orthotic Practitioner Written Cert. Exam"));
+        test_test.appendChild(set_options("Orthotic Practitioner Written Sim. Cert. Exam"));
+        test_test.appendChild(set_options("Orthotics Technician Written Certification Examination"));
         test_test.appendChild(set_options("Pedorthic Cert. Exam"));
         test_test.appendChild(set_options("Prosthetic Assistant Written Certification"));
-        test_test.appendChild(set_options("Prosthetic Practioner Written Cert. Exam"));
-        test_test.appendChild(set_options("Prosthetic Practioner Written Sim. Cert. Exam"));
+        test_test.appendChild(set_options("Prosthetic Practitioner Written Cert. Exam"));
+        test_test.appendChild(set_options("Prosthetic Practitioner Written Sim. Cert. Exam"));
         test_test.appendChild(set_options("Prosthetics Technician Written Certification Examination"));
         test_test.appendChild(set_options("Therapeutics Shoe Fitter Written Cert. Exam"));
 
@@ -824,7 +825,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Certification Exam"));
 
     }
-    else if(event.target.value == "American Board of Family Medicinee"){
+    else if(event.target.value == "American Board of Family Medicine"){
         test_test.appendChild(set_options("Primary Certification/Recertification Exam"));
           test_test.appendChild(set_options("Sports Medicine Exam"));
     }
@@ -834,9 +835,10 @@ test_program.addEventListener("change", function(event){
     }
     else if(event.target.value == "American Board of Ophthalmology"){
         test_test.appendChild(set_options("Demonstration of Cognitive Ophthalmic Knowledge"));
-        test_test.appendChild(set_options("Writter Qualifying Examination"));
-
+        test_test.appendChild(set_options("Written Qualifying Examination"));
     }
+
+//  *************************************************************************************   
     else if(event.target.value == "American Board of Opticianry - National Contact Lens Examine"){
         test_test.appendChild(set_options("American Board of Opticianry Mock Exam"));
         test_test.appendChild(set_options("American Board of Opticianry Practical Exam"));
