@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.models import User
+from .models import Account as User
 from .forms import CutomUserCreationForm
 
 # Create your views here.
@@ -14,17 +14,18 @@ def user_login(request):
         'title': 'login'
     }
     if request.method == 'POST':
-        username = request.POST['username']
+        email = request.POST['email']
         password = request.POST['password']
 
         try:
-            user = User.objects.get(username=username)
-            user = authenticate(request, username=username, password=password) # check password
+            user = User.objects.get(email=email)
+            user = authenticate(request, username=email, password=password) # check password
 
             if user is not None:
                 login(request, user)
                 return redirect('home')
         except Exception as e:
+            print(e,"<----- Error message")
             context = {
                 'msg': e,
                 'title': 'login'
@@ -33,15 +34,20 @@ def user_login(request):
 
 
 def sign_up(request):
-	msg = None
-	form = CutomUserCreationForm
-	if request.method == 'POST':
-		form = CutomUserCreationForm(request.POST)
-		if form.is_valid():
-			form.save()
-			return redirect('login')
-	context = {'form':form, 'msg':msg}
-	return render(request,'authentication/sign-up.html', context)
+    if request.method == 'POST':
+        try:
+            email = request.POST['email']
+            password = request.POST['password']
+            user_obj = User.objects.create_user(email=email, password=password)
+            user_obj.save()
+            return redirect('login')
+        except:
+            context = {
+                'msg': 'Email is already in use',
+            }
+            return render(request,'authentication/sign-up.html', context)
+    context = {}
+    return render(request,'authentication/sign-up.html', context)
 
 def user_logout(request):
 

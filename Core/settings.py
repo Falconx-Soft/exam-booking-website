@@ -149,4 +149,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'ibrahim.murad009@gmail.com'
 EMAIL_HOST_PASSWORD = 'cunpwmsexbqbuilj'
 
-
+# setting authantication from abstract model
+AUTH_USER_MODEL = 'authentication.Account'

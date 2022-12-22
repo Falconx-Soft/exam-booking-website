@@ -148,34 +148,38 @@ def automation(driver,db_info,email):
 
 
 def run_script():
-    info_obj = info.objects.filter(got_result = False)
 
-    print("<-----------------")
-    options = Options()
-    options.headless = False
+    try:
+        info_obj = info.objects.filter(got_result = False)
 
-    driver = webdriver.Firefox(options=options)
-    time.sleep(3)
+        print("<-----------------")
+        options = Options()
+        options.headless = False
 
-    for i in info_obj:
-        print("****",i.id,"****")
-        try:
-            driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
+        driver = webdriver.Firefox(options=options)
+        time.sleep(3)
 
-            chk = automation(driver,i,i.user.email)
+        for i in info_obj:
+            print("****",i.id,"****")
+            try:
+                driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
 
-            if chk == True:
-                i.got_result = True
-                i.save()
-        except Exception as e:
-            print("--------------->",e,"<---------------")
+                chk = automation(driver,i,i.user.email)
 
-    driver.quit()
+                if chk == True:
+                    i.got_result = True
+                    i.save()
+            except Exception as e:
+                print("------Inner Except--------->",e,"<---------------")
+
+        driver.quit()
+    except:
+        print("------Outer Except--------->",e,"<---------------")
 
 
-# run_script()
+run_script()
 
-schedule.every(30).minutes.do(run_script)
+#schedule.every(30).minutes.do(run_script)
   
-while True:
-    schedule.run_pending()
+#while True:
+#    schedule.run_pending()

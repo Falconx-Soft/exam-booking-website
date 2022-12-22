@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from authentication.models import Account as User
 # Create your models here.
 
 class info(models.Model):
@@ -13,7 +13,7 @@ class info(models.Model):
     got_result                  = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.user.username)
+        return str(self.user.email)
 
 class got_address(models.Model):
     info                        = models.ForeignKey(info, on_delete=models.CASCADE)
