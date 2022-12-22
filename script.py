@@ -154,7 +154,7 @@ def run_script():
 
         print("<-----------------")
         options = Options()
-        options.headless = False
+        options.headless = True
 
         driver = webdriver.Firefox(options=options)
         time.sleep(3)
@@ -173,7 +173,7 @@ def run_script():
                 print("------Inner Except--------->",e,"<---------------")
 
         driver.quit()
-    except:
+    except Exception as e:
         print("------Outer Except--------->",e,"<---------------")
 
 
