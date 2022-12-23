@@ -150,7 +150,7 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("Board for Global EHS Credentialing"));
     }
     else if(event.target.value == "Board of Pharmacy Specialties"){
-        test_program.appendChild(set_options("Board of Pharmacy Specialties Test Drive"));
+        test_program.appendChild(set_options("Board Of Pharmacy Specialities Test  Drive"));
         test_program.appendChild(set_options("Board of Pharmacy Specialties"));
     }
     else if(event.target.value == "CA Engineers, Land Surveyors and Geologists"){
@@ -176,7 +176,7 @@ test_sponsor.addEventListener("change", function(event){
     else if(event.target.value == "Certible"){
         test_program.appendChild(set_options("Certible"));
         test_program.appendChild(set_options("Certible Certification"));
-        test_program.appendChild(set_options("Certified Customer Experience Professional "));
+        test_program.appendChild(set_options("Certified Customer Experience Professional"));
         test_program.appendChild(set_options("Edinburgh Whisky Academy"));
     }
     else if(event.target.value == "Certification Board of Infection Control and Epidemiology"){
@@ -184,10 +184,15 @@ test_sponsor.addEventListener("change", function(event){
     }
     else if(event.target.value == "Certification Commission for Healthcare Interpreters"){
         test_program.appendChild(set_options("Certification Commission for Healthcare Interpreters"));
-        test_program.appendChild(set_options("ETOE Interpret"));
+        // test_program.appendChild(set_options("ETOE Interpret"));
     }
     else if(event.target.value == "Certified Financial Planner"){
-        test_program.appendChild(set_options("Certified Financial Planne"));
+        test_program.appendChild(set_options("Certified Financial Planner"));
+    }
+    else if(event.target.value == "CFA Institute"){
+        test_program.appendChild(set_options("Certificate in Investment Performance Measurement (CIPM)"));
+        test_program.appendChild(set_options("CFA Program"));
+        test_program.appendChild(set_options("ESG"));
     }
     else if(event.target.value == "CFA Institute Test Drive (ESG exam only)"){
         test_program.appendChild(set_options("ESG Investing TEST DRIVE"));
@@ -202,7 +207,7 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("CMT Association"));
     }
     else if(event.target.value == "CMT Demo (ABC) Program"){
-        test_program.appendChild(set_options("Americal Board of Certification (CMT)"));
+        test_program.appendChild(set_options("American Board of Certification (CMT)"));
           test_program.appendChild(set_options("Configuration Management Team"));
     }
     else if(event.target.value == "College Board - AP Exams (India)"){
@@ -218,9 +223,9 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("Remote Compatibility Check"));
     }
     else if(event.target.value == "COLLEGE OF PHARMACISTS OF BRITISH COLUMBIA"){
-        test_program.appendChild(set_options("COLLEGE OF PHARMACISTS OF BRITISH COLUMBIAn"));
+        test_program.appendChild(set_options("COLLEGE OF PHARMACISTS OF BRITISH COLUMBIA"));
     }
-    else if(event.target.value == "Commission for Case Managers Certification"){
+    else if(event.target.value == "Commission for Case Manager Certification"){
         test_program.appendChild(set_options("Commission for Case Managers Certification"));
     }
     else if(event.target.value == "Confluent"){
@@ -1350,7 +1355,7 @@ test_program.addEventListener("change", function(event){
     else if(event.target.value == "Board for Global EHS Credentialing"){
         test_test.appendChild(set_options("CERTIFIED INDUSTRIAL HYGIENIST"));
     }
-    else if(event.target.value == "Board of Pharmacy Specialties Test Drive"){
+    else if(event.target.value == "Board Of Pharmacy Specialities Test  Drive"){
         test_test.appendChild(set_options("BPS Test Drive"));
     }
     else if(event.target.value == "Board of Pharmacy Specialties"){
@@ -1363,14 +1368,14 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Board Certified Emergency Medicine Pharmacist"));
         test_test.appendChild(set_options("Board Certified Geriatric Pharmacist"));
         test_test.appendChild(set_options("Board Certified Geriatric Pharmacist Recertification"));
-        test_test.appendChild(set_options("Board of Certified Infectious Diseases Pharmacist"));
+        test_test.appendChild(set_options("Board Certified Infectious Diseases Pharmacist"));
         test_test.appendChild(set_options("Board Certified Nuclear Pharmacist"));
         test_test.appendChild(set_options("Board Certified Nuclear Pharmacist Recertification"));
         test_test.appendChild(set_options("Board Certified Nutrition Support Pharmacist"));
         test_test.appendChild(set_options("Board Certified Nutrition Support Pharmacist Recertification"));
         test_test.appendChild(set_options("Board Certified Oncology Pharmacist Recertification"));
         test_test.appendChild(set_options("Board Certified Oncology Pharmacist"));
-        test_test.appendChild(set_options("Board Certified Pediatric Pharm Specialist"));
+        test_test.appendChild(set_options("Board Certified Pediatric Pharmacy Specialist"));
         test_test.appendChild(set_options("Board Certified Pediatric Pharmacy Specialist Recert"));
         test_test.appendChild(set_options("Board Certified Pharmacotherapy Specialist"));
         test_test.appendChild(set_options("Board Certified Pharmacotherapy Specialist Recertification"));
@@ -1393,7 +1398,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Professional Geophysicist"));
     }
     else if(event.target.value == "Canadian Alliance of Physiotherapy Regulators"){
-        test_test.appendChild(set_options("L'examen de competence en physiotherapie - Composante ecrite"));
+        test_test.appendChild(set_options("L'examen de compétence en physiothérapie - Composante écrite"));
         test_test.appendChild(set_options("Physiotherapy Competency Examination - Written Component"));
     }
     else if(event.target.value == "Canadian Alliance of Physiotherapy Regulators Practice Exams"){
@@ -1407,7 +1412,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Diagnostic Cytology"));
         test_test.appendChild(set_options("Diagnostic Cytology French"));
         test_test.appendChild(set_options("Medical Laboratory Assistant"));
-        test_test.appendChild(set_options("Medical Laboratory Assistant - French"));
+        test_test.appendChild(set_options("Medical Laboratory Assistant- French"));
         test_test.appendChild(set_options("Medical Laboratory Technologist General"));
         test_test.appendChild(set_options("Medical Laboratory Technologist General French"));
     }
@@ -1497,9 +1502,9 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("CIPM Level II"));
     }
     else if(event.target.value == "CFA Program"){
-      test_test.appendChild(set_options("CIPM Level I"));
-      test_test.appendChild(set_options("CIPM Level II"));
-      test_test.appendChild(set_options("CIPM Level III"));
+      test_test.appendChild(set_options("CFA Level I"));
+      test_test.appendChild(set_options("CFA Level II"));
+      test_test.appendChild(set_options("CFA Level III"));
     }
     else if(event.target.value == "ESG"){
         test_test.appendChild(set_options("Certificate in ESG Investing"));
@@ -1522,8 +1527,8 @@ test_program.addEventListener("change", function(event){
     }
     else if(event.target.value == "American Board of Certification (CMT)"){
         test_test.appendChild(set_options("Dummy"));
-        test_test.appendChild(set_options("SSecond exam name example ® PART 1 "));
-        test_test.appendChild(set_options("test"));
+        test_test.appendChild(set_options("Second exam name example ® PART 1"));
+        test_test.appendChild(set_options("Test"));
     }
     else if(event.target.value == "Configuration Management Team"){
         test_test.appendChild(set_options("Electrocardiograph"));
@@ -1585,56 +1590,56 @@ test_program.addEventListener("change", function(event){
       test_test.appendChild(set_options("AP World History: Modern"));
     }
     else if(event.target.value == "College Board - AP Exams (Singapore)"){
-      test_test.appendChild(set_options("AP Art History"));
-      test_test.appendChild(set_options("AP Biology"));
-      test_test.appendChild(set_options("AP Calculus AB"));
-      test_test.appendChild(set_options("AP Calculus BC"));
-      test_test.appendChild(set_options("AP Chemistry"));
-      test_test.appendChild(set_options("AP Comparative Government and Politics"));
-      test_test.appendChild(set_options("AP Computer Science A"));
-      test_test.appendChild(set_options("AP Computer Science Principles"));
-      test_test.appendChild(set_options("AP English Language and Composition"));
-      test_test.appendChild(set_options("AP English Literature and Composition"));
-      test_test.appendChild(set_options("AP Environmental Science"));
-      test_test.appendChild(set_options("AP European History"));
-      test_test.appendChild(set_options("AP Human Geography"));
-      test_test.appendChild(set_options("AP Macroeconomics"));
-      test_test.appendChild(set_options("AP Microeconomics"));
-      test_test.appendChild(set_options("AP Physics 1: Algebra-Based"));
-      test_test.appendChild(set_options("AP Physics 2: Algebra-Based"));
-      test_test.appendChild(set_options("AP Physics C: Electricity and Magnetism"));
-      test_test.appendChild(set_options("AP Physics C: Mechanics"));
-      test_test.appendChild(set_options("AP Psychology"));
-      test_test.appendChild(set_options("AP Statistics"));
-      test_test.appendChild(set_options("AP United States Government and Politics"));
-      test_test.appendChild(set_options("AP United States History"));
-      test_test.appendChild(set_options("AP World History: Modern"));
+        test_test.appendChild(set_options("AP Art History"));
+        test_test.appendChild(set_options("AP Biology"));
+        test_test.appendChild(set_options("AP Calculus AB"));
+        test_test.appendChild(set_options("AP Calculus BC"));
+        test_test.appendChild(set_options("AP Chemistry"));
+        test_test.appendChild(set_options("AP Comparative Government and Politics"));
+        test_test.appendChild(set_options("AP Computer Science A"));
+        test_test.appendChild(set_options("AP Computer Science Principles"));
+        test_test.appendChild(set_options("AP English Language and Composition"));
+        test_test.appendChild(set_options("AP English Literature and Composition"));
+        test_test.appendChild(set_options("AP Environmental Science"));
+        test_test.appendChild(set_options("AP European History"));
+        test_test.appendChild(set_options("AP Human Geography"));
+        test_test.appendChild(set_options("AP Macroeconomics"));
+        test_test.appendChild(set_options("AP Microeconomics"));
+        test_test.appendChild(set_options("AP Physics 1: Algebra-Based"));
+        test_test.appendChild(set_options("AP Physics 2: Algebra-Based"));
+        test_test.appendChild(set_options("AP Physics C: Electricity and Magnetism"));
+        test_test.appendChild(set_options("AP Physics C: Mechanics"));
+        test_test.appendChild(set_options("AP Psychology"));
+        test_test.appendChild(set_options("AP Statistics"));
+        test_test.appendChild(set_options("AP United States Government and Politics"));
+        test_test.appendChild(set_options("AP United States History"));
+        test_test.appendChild(set_options("AP World History: Modern"));
     }
     else if(event.target.value == "College Board - AP Exams (Singapore) - Late"){
-      test_test.appendChild(set_options("AP Art History"));
-      test_test.appendChild(set_options("AP Biology"));
-      test_test.appendChild(set_options("AP Calculus AB"));
-      test_test.appendChild(set_options("AP Calculus BC"));
-      test_test.appendChild(set_options("AP Chemistry"));
-      test_test.appendChild(set_options("AP Comparative Government and Politics"));
-      test_test.appendChild(set_options("AP Computer Science A"));
-      test_test.appendChild(set_options("AP Computer Science Principles"));
-      test_test.appendChild(set_options("AP English Language and Composition"));
-      test_test.appendChild(set_options("AP English Literature and Composition"));
-      test_test.appendChild(set_options("AP Environmental Science"));
-      test_test.appendChild(set_options("AP European History"));
-      test_test.appendChild(set_options("AP Human Geography"));
-      test_test.appendChild(set_options("AP Macroeconomics"));
-      test_test.appendChild(set_options("AP Microeconomics"));
-      test_test.appendChild(set_options("AP Physics 1: Algebra-Based"));
-      test_test.appendChild(set_options("AP Physics 2: Algebra-Based"));
-      test_test.appendChild(set_options("AP Physics C: Electricity and Magnetism"));
-      test_test.appendChild(set_options("AP Physics C: Mechanics"));
-      test_test.appendChild(set_options("AP Psychology"));
-      test_test.appendChild(set_options("AP Statistics"));
-      test_test.appendChild(set_options("AP United States Government and Politics"));
-      test_test.appendChild(set_options("AP United States History"));
-      test_test.appendChild(set_options("AP World History: Modern"));
+        test_test.appendChild(set_options("AP Art History"));
+        test_test.appendChild(set_options("AP Biology"));
+        test_test.appendChild(set_options("AP Calculus AB"));
+        test_test.appendChild(set_options("AP Calculus BC"));
+        test_test.appendChild(set_options("AP Chemistry"));
+        test_test.appendChild(set_options("AP Comparative Government and Politics"));
+        test_test.appendChild(set_options("AP Computer Science A"));
+        test_test.appendChild(set_options("AP Computer Science Principles"));
+        test_test.appendChild(set_options("AP English Language and Composition"));
+        test_test.appendChild(set_options("AP English Literature and Composition"));
+        test_test.appendChild(set_options("AP Environmental Science"));
+        test_test.appendChild(set_options("AP European History"));
+        test_test.appendChild(set_options("AP Human Geography"));
+        test_test.appendChild(set_options("AP Macroeconomics"));
+        test_test.appendChild(set_options("AP Microeconomics"));
+        test_test.appendChild(set_options("AP Physics 1: Algebra-Based"));
+        test_test.appendChild(set_options("AP Physics 2: Algebra-Based"));
+        test_test.appendChild(set_options("AP Physics C: Electricity and Magnetism"));
+        test_test.appendChild(set_options("AP Physics C: Mechanics"));
+        test_test.appendChild(set_options("AP Psychology"));
+        test_test.appendChild(set_options("AP Statistics"));
+        test_test.appendChild(set_options("AP United States Government and Politics"));
+        test_test.appendChild(set_options("AP United States History"));
+        test_test.appendChild(set_options("AP World History: Modern"));
     }
     else if(event.target.value == "College of Family Physicians of Canada"){
         test_test.appendChild(set_options("Certification Examination in Family Medicine (English)"));
@@ -1667,7 +1672,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Certified Construction Specifier"));
         test_test.appendChild(set_options("Construction Documents Technologist"));
     }
-    else if(event.target.value == "Contractor Workforce Qualification Assurance  Program"){
+    else if(event.target.value == "Contractor Workforce Qualification Assurance Program"){
         test_test.appendChild(set_options("CWQAP Electrician"));
         test_test.appendChild(set_options("CWQAP HVAC Technician Exam"));
         test_test.appendChild(set_options("CWQAP Instrumentation Exam"));
@@ -1677,7 +1682,7 @@ test_program.addEventListener("change", function(event){
     }
     else if(event.target.value == "Council of Interstate Testing Agencies"){
         test_test.appendChild(set_options("Computer Simulated Clinical Examination"));
-        test_test.appendChild(set_options("Diagnostic Skiils Exam"));
+        test_test.appendChild(set_options("Diagnostic Skills Exam"));
     }
     else if(event.target.value == "Council on Licensure, Enforcement and Regulation"){
         test_test.appendChild(set_options("NCIT Basic Exam"));
@@ -1717,7 +1722,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Plastic Surgery"));
         test_test.appendChild(set_options("Psychiatry"));
         test_test.appendChild(set_options("Radiology Technician"));
-        test_test.appendChild(set_options(" Radiology Technologist"));
+        test_test.appendChild(set_options("Radiology Technologist"));
         test_test.appendChild(set_options("Registered General Nurse"));
         test_test.appendChild(set_options("Registered Midwife"));
         test_test.appendChild(set_options("Sports Medicine"));
@@ -1766,42 +1771,42 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("The Civil War and Reconstruction"));
     }
     else if(event.target.value == "DANTES"){
-      test_test.appendChild(set_options("A History of the Vietnam War"));
-      test_test.appendChild(set_options("Art of the Western World"));
-      test_test.appendChild(set_options("Astronomy"));
-      test_test.appendChild(set_options("Business Ethics and Society"));
-      test_test.appendChild(set_options("Business Mathematics"));
-      test_test.appendChild(set_options("Computing & Information Technology"));
-      test_test.appendChild(set_options("Criminal Justice"));
-      test_test.appendChild(set_options("Environmental Science"));
-      test_test.appendChild(set_options("Ethics in America"));
-      test_test.appendChild(set_options("Ethics in Technology"));
-      test_test.appendChild(set_options("Foundations of Education"));
-      test_test.appendChild(set_options("Fundamentals of College Algebra"));
-      test_test.appendChild(set_options("Fundamentals of Counseling"));
-      test_test.appendChild(set_options("Fundamentals of Cybersecurity"));
-      test_test.appendChild(set_options("General Anthropology"));
-      test_test.appendChild(set_options("Health & Human Development"));
-      test_test.appendChild(set_options("History of the Soviet Union"));
-      test_test.appendChild(set_options("Human Resource Management"));
-      test_test.appendChild(set_options("Introduction to Business"));
-      test_test.appendChild(set_options("Introduction to Geography"));
-      test_test.appendChild(set_options("Introduction to Geology"));
-      test_test.appendChild(set_options("Introduction to Law Enforcement"));
-      test_test.appendChild(set_options("Introduction to World Religions"));
-      test_test.appendChild(set_options("Lifespan Development Psychology"));
-      test_test.appendChild(set_options("Management Information Systems"));
-      test_test.appendChild(set_options("Math for Liberal Arts"));
-      test_test.appendChild(set_options("Money and Banking"));
-      test_test.appendChild(set_options("Organizational Behavior"));
-      test_test.appendChild(set_options("Personal Finance"));
-      test_test.appendChild(set_options("Principals of Advanced English Composition"));
-      test_test.appendChild(set_options("Principals of Statistics"));
-      test_test.appendChild(set_options("Principles of Finance"));
-      test_test.appendChild(set_options("Principles of Supervision"));
-      test_test.appendChild(set_options("Substance Abuse"));
-      test_test.appendChild(set_options("Technical Writing"));
-      test_test.appendChild(set_options("The Civil War and Reconstruction"));
+        test_test.appendChild(set_options("A History of the Vietnam War"));
+        test_test.appendChild(set_options("Art of the Western World"));
+        test_test.appendChild(set_options("Astronomy"));
+        test_test.appendChild(set_options("Business Ethics and Society"));
+        test_test.appendChild(set_options("Business Mathematics"));
+        test_test.appendChild(set_options("Computing & Information Technology"));
+        test_test.appendChild(set_options("Criminal Justice"));
+        test_test.appendChild(set_options("Environmental Science"));
+        test_test.appendChild(set_options("Ethics in America"));
+        test_test.appendChild(set_options("Ethics in Technology"));
+        test_test.appendChild(set_options("Foundations of Education"));
+        test_test.appendChild(set_options("Fundamentals of College Algebra"));
+        test_test.appendChild(set_options("Fundamentals of Counseling"));
+        test_test.appendChild(set_options("Fundamentals of Cybersecurity"));
+        test_test.appendChild(set_options("General Anthropology"));
+        test_test.appendChild(set_options("Health & Human Development"));
+        test_test.appendChild(set_options("History of the Soviet Union"));
+        test_test.appendChild(set_options("Human Resource Management"));
+        test_test.appendChild(set_options("Introduction to Business"));
+        test_test.appendChild(set_options("Introduction to Geography"));
+        test_test.appendChild(set_options("Introduction to Geology"));
+        test_test.appendChild(set_options("Introduction to Law Enforcement"));
+        test_test.appendChild(set_options("Introduction to World Religions"));
+        test_test.appendChild(set_options("Lifespan Development Psychology"));
+        test_test.appendChild(set_options("Management Information Systems"));
+        test_test.appendChild(set_options("Math for Liberal Arts"));
+        test_test.appendChild(set_options("Money and Banking"));
+        test_test.appendChild(set_options("Organizational Behavior"));
+        test_test.appendChild(set_options("Personal Finance"));
+        test_test.appendChild(set_options("Principals of Advanced English Composition"));
+        test_test.appendChild(set_options("Principals of Statistics"));
+        test_test.appendChild(set_options("Principles of Finance"));
+        test_test.appendChild(set_options("Principles of Supervision"));
+        test_test.appendChild(set_options("Substance Abuse"));
+        test_test.appendChild(set_options("Technical Writing"));
+        test_test.appendChild(set_options("The Civil War and Reconstruction"));
     }
     else if(event.target.value == "Dubai Health Authority"){
         test_test.appendChild(set_options("Aesthetic/Beauty Therapy"));
@@ -1812,7 +1817,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Audiology"));
         test_test.appendChild(set_options("Cardiology"));
         test_test.appendChild(set_options("Cardiothoracic Surgery"));
-        test_test.appendChild(set_options(" Clinical Biochemistry"));
+        test_test.appendChild(set_options("Clinical Biochemistry"));
         test_test.appendChild(set_options("Clinical Biochemistry - Allied"));
         test_test.appendChild(set_options("Clinical pathology"));
         test_test.appendChild(set_options("Clinical psychology"));
@@ -1893,13 +1898,13 @@ test_program.addEventListener("change", function(event){
     else if(event.target.value == "Dubai Health Care City Authority"){
         test_test.appendChild(set_options("Anesthesia"));
         test_test.appendChild(set_options("Assistant Pharmacist"));
-        test_test.appendChild(set_options(" Cardiology"));
+        test_test.appendChild(set_options("Cardiology"));
         test_test.appendChild(set_options("Clinical Pathology"));
         test_test.appendChild(set_options("Dental Assistant"));
         test_test.appendChild(set_options("Dental Hygienest"));
-        test_test.appendChild(set_options(" Dermatology"));
+        test_test.appendChild(set_options("Dermatology"));
         test_test.appendChild(set_options("Diagnostic Radiology"));
-        test_test.appendChild(set_options(" Emergency MedicineEndocrinology Exam"));
+        test_test.appendChild(set_options("Emergency Medicine"));
         test_test.appendChild(set_options("Endocrinology Exam"));
         test_test.appendChild(set_options("Endodontics"));
         test_test.appendChild(set_options("Family Medicine"));
