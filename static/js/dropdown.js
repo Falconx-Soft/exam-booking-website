@@ -103,11 +103,11 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("American Welding Society"));
         test_program.appendChild(set_options("Prometric Test Drive-AWS"));
     }
-    else if(event.target.value == "Arkanas Certified Nursing Assistant"){
-        test_program.appendChild(set_options("Arkanas Certified Nursing Assistant"));
+    else if(event.target.value == "Arkansas Certified Nursing Assistant"){
+        test_program.appendChild(set_options("Arkansas Certified Nursing Assistant"));
     }
-    else if(event.target.value == "Arkanas Contractor Licensing Board"){
-        test_program.appendChild(set_options("Arkanas Contractor Licensing Board"));
+    else if(event.target.value == "Arkansas Contractor Licensing Board"){
+        test_program.appendChild(set_options("Arkansas Contractor Licensing Board"));
     }
     else if(event.target.value == "Ascend Learning, LLC"){
         test_program.appendChild(set_options("National Healthcareer Association"));
@@ -115,11 +115,11 @@ test_sponsor.addEventListener("change", function(event){
     else if(event.target.value == "ASIS International"){
         test_program.appendChild(set_options("ASIS International"));
     }
-    else if(event.target.value == "Associated Board Certification International"){
-        test_program.appendChild(set_options("Associated Board Certification International"));
+    else if(event.target.value == "Associated Board Certifications International"){
+        test_program.appendChild(set_options("Associated Board Certifications International"));
     }
-    else if(event.target.value == "Associated for Clinical Research Professionals"){
-        test_program.appendChild(set_options("Associated for Clinical Research Professionals"));
+    else if(event.target.value == "Association for Clinical Research Professionals"){
+        test_program.appendChild(set_options("Association for Clinical Research Professionals"));
     }
     else if(event.target.value == "Association for Facilities Engineering"){
         test_program.appendChild(set_options("Association for Facilities Engineering"));
@@ -838,7 +838,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Written Qualifying Examination"));
     }
 
-//  *************************************************************************************   
+
     else if(event.target.value == "American Board of Opticianry - National Contact Lens Examine"){
         test_test.appendChild(set_options("American Board of Opticianry Mock Exam"));
         test_test.appendChild(set_options("American Board of Opticianry Practical Exam"));
@@ -927,7 +927,7 @@ test_program.addEventListener("change", function(event){
     else if(event.target.value == "Cardiology Specialty Examination"){
         test_test.appendChild(set_options("Anatomy/Pathology"));
         test_test.appendChild(set_options("Case Studies"));
-        test_test.appendChild(set_options("Esay"));
+        test_test.appendChild(set_options("Essay"));
         test_test.appendChild(set_options("MC"));
         test_test.appendChild(set_options("Physiologic Recordings"));
         test_test.appendChild(set_options("Video"));
@@ -937,7 +937,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("General Examination, LA"));
         test_test.appendChild(set_options("General Examination, SA"));
     }
-    else if(event.target.value == "LIAM Specialty Exam"){
+    else if(event.target.value == "LAIM Specialty Exam"){
         test_test.appendChild(set_options("CM"));
         test_test.appendChild(set_options("MC1"));
         test_test.appendChild(set_options("MC2"));
@@ -982,7 +982,7 @@ test_program.addEventListener("change", function(event){
     else if(event.target.value == "American Electrology Association IBEC"){
         test_test.appendChild(set_options("AEA Licensure- Connecticut"));
         test_test.appendChild(set_options("AEA Licensure- Illinois"));
-        test_test.appendChild(set_options("AEA Licensure- Marylan"));
+        test_test.appendChild(set_options("AEA Licensure- Maryland"));
         test_test.appendChild(set_options("AEA Licensure- New Jersey"));
         test_test.appendChild(set_options("AEA Licensure- North Carolina"));
         test_test.appendChild(set_options("AEA Licensure- Vermont"));
@@ -1001,7 +1001,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Adult-Gerontology Clinical Nurse Specialist"));
         test_test.appendChild(set_options("Adult-Gerontology Clinical Nurse Specialist -Field Test"));
         test_test.appendChild(set_options("Adult-Gerontology Primary Care Nurse Practioner"));
-        test_test.appendChild(set_options("Adult-Gerontology Primary Care Nuse Practitioner- Field Test"));
+        test_test.appendChild(set_options("Adult-Gerontology Primary Care Nurse Practitioner- Field Test"));
         test_test.appendChild(set_options("Ambulatory Care Nursing"));
         test_test.appendChild(set_options("Ambulatory Care Nurse - Field Test"));
         test_test.appendChild(set_options("Cardiac Vascular Nursing"));
@@ -1027,7 +1027,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Pain Management Nursing - Field Test"));
         test_test.appendChild(set_options("Pediatric Nursing"));
         test_test.appendChild(set_options("Pediatric Nursing - Field Test"));
-        test_test.appendChild(set_options("Pediatric Primary Care Nuse Practioner"));
+        test_test.appendChild(set_options("Pediatric Primary Care Nurse Practioner"));
         test_test.appendChild(set_options("Pediatric Primary Care Nurse Practioner - Field Test"));
         test_test.appendChild(set_options("Psychiatric-Mental Health Nurse Practioner"));
         test_test.appendChild(set_options("Psychiatric-Mental Health Nursing - Field Test"));
@@ -1050,7 +1050,8 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("AOBEM Certification Examination Part 1"));
         test_test.appendChild(set_options("AOBEM Cognitive Assessment Examination"));
     }
-    else if(event.target.value == "American Osteopathic Board fo Internal Medicine"){
+  
+    else if(event.target.value == "American Osteopathic Board of Internal Medicine"){
         test_test.appendChild(set_options("AOBIM Cardiology (Certification)"));
         test_test.appendChild(set_options("AOBIM Cardiology (Recertification)"));
         test_test.appendChild(set_options("AOBIM Clinical Cardiac Electrophysiology (Certification)"));
@@ -1094,15 +1095,15 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("1169 - Pipeline Inspector Certification (Translated)"));
         test_test.appendChild(set_options("1184 - Pipeline Facility Construction Inspector"));
         test_test.appendChild(set_options("1184 - Pipeline Facility Construction Inspector (Translated)"));
-        test_test.appendChild(set_options("510 - Presssure Vessel Inspector Certification"));
-        test_test.appendChild(set_options("510 - Presssure Vessel Inspector Certification (Translated)"));
+        test_test.appendChild(set_options("510 - Pressure Vessel Inspector Certification"));
+        test_test.appendChild(set_options("510 - Pressure Vessel Inspector Certification (Translated)"));
         test_test.appendChild(set_options("570 - Pipeline Inspector Certification"));
         test_test.appendChild(set_options("579 - Piping Inspector Certification (Translated)"));
         test_test.appendChild(set_options("571 - Corrosion & Material"));
         test_test.appendChild(set_options("571 - Corrosion & Material (Translated)"));
         test_test.appendChild(set_options("577 - Welding Inspection Metallurgy"));
-        test_test.appendChild(set_options("580 - Risl Based Inspection"));
-        test_test.appendChild(set_options("580 - Risl Based Inspection (Translated)"));
+        test_test.appendChild(set_options("580 - Risk Based Inspection"));
+        test_test.appendChild(set_options("580 - Risk Based Inspection (Translated)"));
         test_test.appendChild(set_options("653 - Aboveground Storage Tanks"));
         test_test.appendChild(set_options("653 - Aboveground Storage Tanks (Translated)"));
         test_test.appendChild(set_options("939 - Refractory Personal Certification"));
@@ -1156,7 +1157,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Audiology Assistants"));
         test_test.appendChild(set_options("Speech-Language Pathology Assistants"));
     }
-    else if(event.target.value == "American Veterinary Medical Assoication"){
+    else if(event.target.value == "American Veterinary Medical Association"){
         test_test.appendChild(set_options("Basic and Clinical Sciences Exam"));
         test_test.appendChild(set_options("Basic and Clinical Sciences Exam French"));
     }
@@ -1196,10 +1197,10 @@ test_program.addEventListener("change", function(event){
     else if(event.target.value == "Prometric Test Drive-AWS"){
         test_test.appendChild(set_options("Prometric Test Drive"));
     }
-    else if(event.target.value == "Arkanas Contractor Licencing Board"){
+    else if(event.target.value == "Arkansas Contractor Licensing Board"){
         test_test.appendChild(set_options("Commercial Business and Law"));
     }
-    else if(event.target.value == "National Healthcare Association"){
+    else if(event.target.value == "National Healthcareer Association"){
         test_test.appendChild(set_options("NHA Certified Billing and Coding Specialist"));
         test_test.appendChild(set_options("NHA Certified Clinical Medical Assistant"));
         test_test.appendChild(set_options("NHA Certified EKG Technician"));
@@ -1209,18 +1210,19 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("NHA Certified Phlebotomy Technician"));;
         test_test.appendChild(set_options("NHA Electronic Health Record Specialist"));
     }
+
     else if(event.target.value == "ASIS International"){
         test_test.appendChild(set_options("APP-Associate Protection Professional"));
-        test_test.appendChild(set_options("APPS-Professional De Protection Asociado"));
+        test_test.appendChild(set_options("APPS-Profesional De Proteccion Asociado"));
         test_test.appendChild(set_options("CPP-Certified Protection Professional"));
-        test_test.appendChild(set_options("CPPS-Professional Certificate en Protection"));
+        test_test.appendChild(set_options("CPPS-Profesional Certificado en Protección"));
         test_test.appendChild(set_options("PCI - Professional Certified Investigator"));
-        test_test.appendChild(set_options("PCIS - Investigator Professional Certificado"));
+        test_test.appendChild(set_options("PCIS - Invesdigator Profesional Certificado"));
         test_test.appendChild(set_options("PSP- Physical Security Professional"));
-        test_test.appendChild(set_options("PSPS- Professional en Seguridad Fisica"));
+        test_test.appendChild(set_options("PSPS- Profesional en Seguridad Fisica"));
 
     }
-    else if(event.target.value == "Associated Board Certification International"){
+    else if(event.target.value == "Associated Board Certifications International"){
         test_test.appendChild(set_options("ABCI Demo Exam"));
         test_test.appendChild(set_options("PLT21"));
         test_test.appendChild(set_options("PLT6"));
@@ -1232,12 +1234,12 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("True Ability Integration"));
         test_test.appendChild(set_options("True Ability Integration Test"));
     }
-    else if(event.target.value == "Association for Clinical Reseach Professionals"){
+    else if(event.target.value == "Association for Clinical Research Professionals"){
         test_test.appendChild(set_options("ACRP Certified Professional"));
         test_test.appendChild(set_options("ACRP Project Manager"));
         test_test.appendChild(set_options("Certified Principal Investigator"));
-        test_test.appendChild(set_options("Clinical Reseach Associate"));
-        test_test.appendChild(set_options("Clinical Reseach Coordinator"));
+        test_test.appendChild(set_options("Clinical Research Associate"));
+        test_test.appendChild(set_options("Clinical Research Coordinator"));
         test_test.appendChild(set_options("Medical Device Professional Exam"));
     }
     else if(event.target.value == "Association for Facilities Engineering"){
@@ -1248,12 +1250,12 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Certified Professional Supervisor - Spanish"));
     }
     else if(event.target.value == "Certified Fraud Examiner"){
-        test_test.appendChild(set_options("2021 CFE Exam - Financial Transactions and Fruad Schemes"));
-        test_test.appendChild(set_options("2021 CFE Exam - Fruad Prevention and Deterrence"));
+        test_test.appendChild(set_options("2021 CFE Exam - Financial Transactions and Fraud Schemes"));
+        test_test.appendChild(set_options("2021 CFE Exam - Fraud Prevention and Deterrence"));
         test_test.appendChild(set_options("2021 CFE Exam - Investigation"));
         test_test.appendChild(set_options("2021 CFE Exam - Law"));
-        test_test.appendChild(set_options("2022 CFE Exam - Financial Transactions and Fruad Schemes"));
-        test_test.appendChild(set_options("2022 CFE Exam - Fruad Prevention and Deterrence"));
+        test_test.appendChild(set_options("2022 CFE Exam - Financial Transactions and Fraud Schemes"));
+        test_test.appendChild(set_options("2022 CFE Exam - Fraud Prevention and Deterrence"));
         test_test.appendChild(set_options("2022 CFE Exam - Investigation"));
         test_test.appendChild(set_options("2022 CFE Exam - Law"));
         test_test.appendChild(set_options("CFE Exam- Financial Transactions and Fraud Schemes"));
@@ -1271,7 +1273,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("PAYROLL RETEST"));
 
     }
-    else if(event.target.value == "m Institute of Professional Bookkeepers - Prepaid Students"){
+    else if(event.target.value == "Am Institute of Professional Bookkeepers - Prepaid Students"){
         test_test.appendChild(set_options("ADJUSTMENTS AND ERROR CORRECTION"));
         test_test.appendChild(set_options("Adjustments Retest"));
         test_test.appendChild(set_options("Depreciation Retest"));
@@ -1292,6 +1294,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("ISAT"));
         test_test.appendChild(set_options("ISATR"));
     }
+// *********************************************************************************
     else if(event.target.value == "Bahrain National Health Regulation Authority"){
         test_test.appendChild(set_options("Anastasia Tech"));
         test_test.appendChild(set_options("Anesthesia"));
@@ -1397,6 +1400,7 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("L'examen de préparation à la composante écrite de l'ECP"));
         test_test.appendChild(set_options("Written Component - Practice Exam"));
     }
+     
     else if(event.target.value == "Canadian Society for Medical Laboratory Science"){
         test_test.appendChild(set_options("Clinical Genetics French"));
         test_test.appendChild(set_options("Clinical Gentics"));
