@@ -2,6 +2,7 @@ import selenium
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
+import datetime
 import schedule
 from selenium import webdriver
 
@@ -22,8 +23,9 @@ from django.conf import settings
 from django.core.mail import send_mail
 
 from home.models import info, got_address, got_date, got_time
+from home.views import format_date
 
-def automation(driver,db_info,email):
+def automation(driver,db_info,email,start_date,end_date):
     # select dropdown element test_sponsor
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'test_sponsor')))
     select = Select(driver.find_element(By.ID,'test_sponsor'))
@@ -59,12 +61,12 @@ def automation(driver,db_info,email):
 
     time.sleep(3)
 
-    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys(db_info.start_date)
+    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys(start_date)
 
     time.sleep(3)
 
     driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').clear()
-    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys(db_info.end_date)
+    driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys(end_date)
 
     time.sleep(3)
     next_btn = driver.find_element(By.ID,'nextBtn')
@@ -148,7 +150,6 @@ def automation(driver,db_info,email):
 
 
 def run_script():
-
     try:
         info_obj = info.objects.filter(got_result = False)
 
@@ -160,24 +161,60 @@ def run_script():
         time.sleep(3)
 
         for i in info_obj:
-            print("****",i.id,"****")
-            try:
-                driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
+            date_time_obj_1 = datetime.datetime.strptime(i.start_date, '%m/%d/%Y')
+            date_time_obj_2 = datetime.datetime.strptime(i.end_date, '%m/%d/%Y')
+            today = datetime.datetime.today()
 
-                chk = automation(driver,i,i.user.email)
+            start_date = ""
+            end_date = ""
 
-                if chk == True:
-                    i.got_result = True
-                    i.save()
-            except Exception as e:
-                print("------Inner Except--------->",e,"<---------------")
+            if((date_time_obj_2 - today).days > 0):
+                if((date_time_obj_1 - today).days > 0):
+                    print("if",(date_time_obj_1 - today).days)
+                    if (date_time_obj_2 - date_time_obj_1).days > 14:
+                        print(1,date_time_obj_1.date(),"--",(date_time_obj_1 + datetime.timedelta(days=13)).date())
+                        start_date = format_date(str(date_time_obj_1.date()))
+                        end_date = format_date(str((date_time_obj_1 + datetime.timedelta(days=13)).date()))
+                    else:
+                        print(2,date_time_obj_1.date(),"--",date_time_obj_2.date())
+                        start_date = format_date(str(date_time_obj_1.date()))
+                        end_date = format_date(str(date_time_obj_2.date()))
+                else:
+                    print("if",(date_time_obj_1 - today).days)
+                    if (date_time_obj_2 - date_time_obj_1).days > 14:
+                        if (date_time_obj_2 - today).days > 14:
+                            print(3,(today + datetime.timedelta(days=1)).date(),(today + datetime.timedelta(days=13)).date())
+                            start_date = format_date(str((today + datetime.timedelta(days=1)).date()))
+                            end_date = format_date(str(date_time_obj_2.date()))
+                        else:
+                            print(4,(today + datetime.timedelta(days=1)).date(),date_time_obj_2.date())
+                            start_date = format_date(str((today + datetime.timedelta(days=1)).date()))
+                            end_date = format_date(str(date_time_obj_2.date()))
+                    else:
+                        print(5,(today + datetime.timedelta(days=1)).date(),date_time_obj_2.date())
+                        start_date = format_date(str((today + datetime.timedelta(days=1)).date()))
+                        end_date = format_date(str(date_time_obj_2.date()))
+
+                print("****",i.id,"****")
+                try:
+                    driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
+
+                    chk = automation(driver,i,i.user.email,start_date,end_date)
+
+                    if chk == True:
+                        i.got_result = True
+                        i.save()
+                except Exception as e:
+                    print("------Inner Except--------->",e,"<---------------")
+            else:
+                print("---------------Expire----------------")
 
         driver.quit()
     except Exception as e:
         print("------Outer Except--------->",e,"<---------------")
 
 
-# run_script()
+#run_script()
 
 schedule.every(30).minutes.do(run_script)
   
