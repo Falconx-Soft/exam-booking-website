@@ -566,9 +566,9 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("Commonwealth of Pennsylvania"));
     }
     else if(event.target.value == "Oklahoma Insurance"){
-        test_program.appendChild(set_options("Oklahoma Bails Bondsman "));
-        test_program.appendChild(set_options("Oklahoma Insurance Adjuster "));
-        test_program.appendChild(set_options("Oklahoma Insurance Producer "));
+        test_program.appendChild(set_options("Oklahoma Bails Bondsman"));
+        test_program.appendChild(set_options("Oklahoma Insurance Adjuster"));
+        test_program.appendChild(set_options("Oklahoma Insurance Producer"));
     }
     else if(event.target.value == "Oman Medical Specialty Board"){
         test_program.appendChild(set_options("Oman Medical Specialty Board"));
@@ -577,7 +577,7 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("Oncology Nursing Certification Corporation"));
     }
     else if(event.target.value == "Ontario College of Pharmacists"){
-        test_program.appendChild(set_options("Ontario College of Pharmacist"));
+        test_program.appendChild(set_options("Ontario College of Pharmacists"));
     }
     else if(event.target.value == "OutSystems"){
         test_program.appendChild(set_options("OutSystems"));
@@ -586,7 +586,7 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("Pediatric Nursing Certification Board"));
     }
     else if(event.target.value == "PeopleCert"){
-        test_program.appendChild(set_options("PeopleCerts"));
+        test_program.appendChild(set_options("PeopleCert"));
     }
     else if(event.target.value == "Pharmacy Examining Board of Canada"){
         test_program.appendChild(set_options("Non-Eligibility Remote Compatibility Check"));
@@ -647,19 +647,19 @@ test_sponsor.addEventListener("change", function(event){
         test_program.appendChild(set_options("Society for Marketing Professional Services"));
         test_program.appendChild(set_options("World Pet Association"));
     }
-    else if(event.target.value == "Professional Testing lnc"){
+    else if(event.target.value == "Professional Testing Inc"){
         test_program.appendChild(set_options("National Placement and Referral Alliance"));
     }
     else if(event.target.value == "PROMETRIC"){
         test_program.appendChild(set_options("Prometric Test Drive"));
     }
     else if(event.target.value == "Prometric English Language Proficiency"){
-        test_program.appendChild(set_options("Prometric English Language Proficiency"));
+        test_program.appendChild(set_options("Prometric English Language Proficiency Program"));
     }
     else if(event.target.value == "Public Relations Uni Acrd Board"){
         test_program.appendChild(set_options("Public Relations Uni Acrd Board"));
     }
-    else if(event.target.value == "Qualcomm Technologies, lnc."){
+    else if(event.target.value == "Qualcomm Technologies, Inc."){
         test_program.appendChild(set_options("Qualcomm Certification"));
     }
     else if(event.target.value == "QuantInsti Quantitative Learning Private Limited"){
@@ -668,7 +668,7 @@ test_sponsor.addEventListener("change", function(event){
     else if(event.target.value == "Rehabilitation Engineering and Assistive Technology Society"){
         test_program.appendChild(set_options("Rehabilitation Engineering and Assistive Technology Society"));
     }
-    else if(event.target.value == "Saudi Commission for Health Specialties"){
+    else if(event.target.value == "Saudi Commission for Health Specialities"){
         test_program.appendChild(set_options("Saudi Licencing Examination"));
         test_program.appendChild(set_options("SCHS Promotion Exams"));
     }
@@ -2396,666 +2396,14 @@ test_program.addEventListener("change", function(event){
     else if(event.target.value == "HydraFacial Connect Certification"){
         test_test.appendChild(set_options("HydraFacial Connect Certification Expert Level 2 Exam"));
         test_test.appendChild(set_options("HydraFacial Connect Certification Professional Level 1 Exam"));
-    }else if(event.target.value == "Institute of Certified Management Accountants"){
-        test_test.appendChild(set_options("Certified in Strategy and Competitive Analysis"));
-        test_test.appendChild(set_options("Chinese Part 1 CMA Exam"));
-        test_test.appendChild(set_options("Chinese Part 2 CMA Exam"));
-        test_test.appendChild(set_options("Part 1 CMA Exam"));
-        test_test.appendChild(set_options("Part 2 CMA Exam"));
-        test_test.appendChild(set_options("第一部分 – 财务规划、绩效与分析"));
-        test_test.appendChild(set_options("第二部分 – 战略财务管理"));
     }
-    else if(event.target.value == "International Board of Heart Rhythm Examiners"){
-        test_test.appendChild(set_options("Cardiac Device Remote Monitoring Specialist (CDRMS)"));
-        test_test.appendChild(set_options("Certified Cardiac Device Specialist (CCDS)"));
-        test_test.appendChild(set_options("Certified EP Specialist (CEPS) - Allied Professionals"));
-        test_test.appendChild(set_options("Certified EP Specialist (CEPS-A) - Physicians (Adult)"));
-        test_test.appendChild(set_options("Certified EP Specialist (CEPS-P) - Physicians (Pediatric)"));
-    }
-    else if(event.target.value == "International Board of Lactation Consultant Examiners"){
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Chinese"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Croatia"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Danish"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Dutch"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - English"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - French"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - German"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Greek"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Italian"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Korean"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Polish"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant - Spanish"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant Hungarian"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant Japanese"));
-        test_test.appendChild(set_options("International Board Certified Lactation Consultant Slovenian"));
-        test_test.appendChild(set_options("InternationalBoardCertifiedLactationConsultant - Indonesian"));
-        test_test.appendChild(set_options("InternationalBoardCertifiedLactationConsultant-Portuguese"));
-    }
-    else if(event.target.value == "International Board of Specialty Certification"){
-        test_test.appendChild(set_options("Certified Community Paramedic"));
-        test_test.appendChild(set_options("Certified Critical Care Paramedic"));
-        test_test.appendChild(set_options("Certified Flight Paramedic"));
-        test_test.appendChild(set_options("Certified Specialist in Trauma Registries"));
-        test_test.appendChild(set_options("Certified Specialist in Trauma Registries PBT"));
-        test_test.appendChild(set_options("Certified Tactical Paramedic"));
-        test_test.appendChild(set_options("Certified Tactical Responder"));
-        test_test.appendChild(set_options("Certified Wilderness Paramedic"));
-        test_test.appendChild(set_options("Certified Wilderness Paramedic Beta"));
-        test_test.appendChild(set_options("Critical Care Paramedic Course BETA"));
-        test_test.appendChild(set_options("Desginated Infection Control Officer (Live) Exam"));
-    }
-    else if(event.target.value == "International Council of Shopping Centers"){
-        test_test.appendChild(set_options("Certified Leasing Specialist Global Arabic"));
-        test_test.appendChild(set_options("Certified Leasing Specialist Global English"));
-        test_test.appendChild(set_options("Certified Marketing Director Global English"));
-        test_test.appendChild(set_options("Certified Retail Property Executive"));
-        test_test.appendChild(set_options("Certified Retail Real Estate Professional"));
-        test_test.appendChild(set_options("Certified Shopping Center Manager Arabic"));
-        test_test.appendChild(set_options("Certified Shopping Center Manager Global English"));
-        test_test.appendChild(set_options("Certified Shopping Center Manager Global Simplified Chinese"));
-        test_test.appendChild(set_options("Development, Design & Construction Professional English"));
-    }
-    else if(event.target.value == "International Facility Management Association"){
-        test_test.appendChild(set_options("CERTIFIED FACILITY MANAGER"));
-    }
-    else if(event.target.value == "International WELL Building Institute"){
-        test_test.appendChild(set_options("WELL Accredited Professional (WELL AP)"));
-        test_test.appendChild(set_options("WELL Accredited Professional (WELL AP) Chinese"));
-    }
-    else if(event.target.value == "IRS Special Enrollment Examination"){
-        test_test.appendChild(set_options("IRS Test Drive"));
-        test_test.appendChild(set_options("SEE Part 1 Individuals"));
-        test_test.appendChild(set_options("SEE Part 2 Businesses"));
-        test_test.appendChild(set_options("SEE Part 3 Representation Practices Procedures"));
-    }
-    else if(event.target.value == "ISA Certification & Security Certificate Exams"){
-        test_test.appendChild(set_options("CAP- Certified Automation Professional"));
-        test_test.appendChild(set_options("CAPA- CAP Associate Exam"));
-        test_test.appendChild(set_options("CCST1- Certified Control Systems Technician 1"));
-        test_test.appendChild(set_options("CCST2- Certified Control Systems Technician 2"));
-        test_test.appendChild(set_options("CCST3- Certified Control Systems Technician 3"));
-        test_test.appendChild(set_options("CST- CST Associate Technician Exam"));
-        test_test.appendChild(set_options("ISA/IEC 62443 Cybersecurity Fundamentals Specialist"));
-        test_test.appendChild(set_options("ISA/IEC 62443 Cybersecurity Maintenance"));
-        test_test.appendChild(set_options("ISA/IEC 62443 Cybersecurity Risk Assessment Specialist"));
-        test_test.appendChild(set_options("ISA/IEC 62443 Cybersecurity System Design Specialist"));
-    }
-    else if(event.target.value == "ISA84 Certificate Program"){
-        test_test.appendChild(set_options("ISA84 SIL Selection Specialist"));
-        test_test.appendChild(set_options("ISA84 SIL Selection Specialist Spanish"));
-        test_test.appendChild(set_options("ISA84 SIL Verification Specialist"));
-        test_test.appendChild(set_options("ISA84 SIL Verification Specialist Spanish"));
-        test_test.appendChild(set_options("ISA84 SIS Fundamentals Specialist"));
-        test_test.appendChild(set_options("ISA84 SIS Fundamentals Specialist Spanish"));
-    }
-    else if(event.target.value == "TOSA CERTIFICATION"){
-        test_test.appendChild(set_options("Tosa CyberCitizen (EN)"));
-        test_test.appendChild(set_options("Tosa DigComp (EN)"));
-        test_test.appendChild(set_options("Tosa Excel 365 (EN)"));
-        test_test.appendChild(set_options("Tosa Google Docs (EN)"));
-        test_test.appendChild(set_options("Tosa Google Sheets (EN)"));
-        test_test.appendChild(set_options("Tosa Google Slides (EN)"));
-        test_test.appendChild(set_options("Tosa Illustrator (EN)"));
-        test_test.appendChild(set_options("Tosa InDesign (EN)"));
-        test_test.appendChild(set_options("Tosa Photoshop (EN)"));
-        test_test.appendChild(set_options("Tosa PowerPoint 365 (EN)"));
-        test_test.appendChild(set_options("Tosa Word 365 (EN)"));
 
-    }
-    else if(event.target.value == "Kaplan Official Test Day Experience"){
-        test_test.appendChild(set_options("KGRE"));
-    }
-    else if(event.target.value == "ISTQB Certified Tester"){
-        test_test.appendChild(set_options("ISTQB AI Testing (CT-AI) for Native English Speaker"));
-        test_test.appendChild(set_options("ISTQB AI Testing (CT-AI) for Non-native English Speaker"));
-        test_test.appendChild(set_options("ISTQB Foundation Level (CTFL) for Native English Speaker"));
-        test_test.appendChild(set_options("ISTQB Foundation Level (CTFL) for Non-native English Speaker"));
-    }
-    else if(event.target.value == "Language Testing International - ProScheduler"){
-        test_test.appendChild(set_options("Listening & Reading Computer Adaptive Test"));
-        test_test.appendChild(set_options("Listening Proficiency Test"));
-        test_test.appendChild(set_options("Listening Proficiency Test"));
-        test_test.appendChild(set_options("Listening Proficiency Test"));
-        test_test.appendChild(set_options("Oral Proficiency Interview - Computer"));
-        test_test.appendChild(set_options("Reading Proficiency Test"));
-        test_test.appendChild(set_options("Reading Proficiency Test"));
-        test_test.appendChild(set_options("Reading Proficiency Test"));
-        test_test.appendChild(set_options("Writing Proficiency Test"));
-        test_test.appendChild(set_options("Writing Proficiency Test"));
-        test_test.appendChild(set_options("Writing Proficiency Test"));
 
-    }
-    else if(event.target.value == "Law School Admission Test"){
-        test_test.appendChild(set_options("Law School Admission Test"));
-        test_test.appendChild(set_options("Law School Admission Test International"));
-        test_test.appendChild(set_options("Law School Admission Test Paper"));
-        test_test.appendChild(set_options("Law School Admission Test Writing"));
-    }
-    else if(event.target.value == "Lymphology Association of North America"){
-        test_test.appendChild(set_options("Certified Lymphedema Therapist"));
-    }
-    else if(event.target.value == "Maryland Insurance Administration"){
-        test_test.appendChild(set_options("Accident and Health or Sickness Producer"));
-        test_test.appendChild(set_options("Adviser Life and Accident and Health or Sickness"));
-        test_test.appendChild(set_options("Adviser Property and Casualty"));
-        test_test.appendChild(set_options("Casualty Producer"));
-        test_test.appendChild(set_options("Life Producer"));
-        test_test.appendChild(set_options("Life and Accident and Health or Sickness Producer - Combo"));
-        test_test.appendChild(set_options("Personal Lines"));
-        test_test.appendChild(set_options("Property Producer"));
-        test_test.appendChild(set_options("Property and Casualty Producer - Combo"));
-        test_test.appendChild(set_options("Public Adjuster"));
-        test_test.appendChild(set_options("Title Producer"));
-    }
-    else if(event.target.value == "Maryland Insurance Administration Retake"){
-        test_test.appendChild(set_options("Adviser Life and Health General"));
-        test_test.appendChild(set_options("Adviser Life and Health State"));
-        test_test.appendChild(set_options("Adviser Property Casualty General"));
-        test_test.appendChild(set_options("Adviser Property Casualty State"));
-        test_test.appendChild(set_options("Casualty Producer General"));
-        test_test.appendChild(set_options("Casualty Producer State"));
-        test_test.appendChild(set_options("Health Producer General"));
-        test_test.appendChild(set_options("Health Producer State"));
-        test_test.appendChild(set_options("Life Producer General"));
-        test_test.appendChild(set_options("Life Producer State"));
-        test_test.appendChild(set_options("Life and Health Producer Combo General"));
-        test_test.appendChild(set_options("Life and Health Producer Combo State"));
-        test_test.appendChild(set_options("Personal Lines General"));
-        test_test.appendChild(set_options("Personal Lines State"));
-        test_test.appendChild(set_options("Property Casualty Producer Combo General"));
-        test_test.appendChild(set_options("Property Casualty Producer Combo State"));
-        test_test.appendChild(set_options("Property Producer General"));
-        test_test.appendChild(set_options("Property Producer State"));
-        test_test.appendChild(set_options("Public Adjuster General"));
-        test_test.appendChild(set_options("Public Adjuster State"));
-        test_test.appendChild(set_options("Title General"));
-        test_test.appendChild(set_options("Title State"));
-    }
-    else if(event.target.value == "Massachusetts Insurance"){
-        test_test.appendChild(set_options("1651 - PRODUCER LIFE INSURANCE"));
-        test_test.appendChild(set_options("1652 - PROD ACC/HLTH OR SICK"));
-        test_test.appendChild(set_options("1653 - PRODUCER PROPERTY"));
-        test_test.appendChild(set_options("1654 - PRODUCER CASUALTY"));
-        test_test.appendChild(set_options("1655 - ADVISER LIFE"));
-        test_test.appendChild(set_options("1656 - ADV ACC/HLTH OR SICK"));
-        test_test.appendChild(set_options("1657 - ADV PROPERTY & CASUALTY"));
-        test_test.appendChild(set_options("1658 - PUBLIC ADJUSTER"));
-        test_test.appendChild(set_options("1659 - PROD LIM LINES CREDIT"));
-        test_test.appendChild(set_options("1660 - MOT VEH DMG APPRAISER"));
-        test_test.appendChild(set_options("1661 - PROD PERSONAL LINES"));
-        test_test.appendChild(set_options("1662 - PRODUCER LIFE (SPANISH)"));
-        test_test.appendChild(set_options("1663 - PROD ACC/HLTH OR SICK (SPANISH)"));
-        test_test.appendChild(set_options("1664 - PRODUCER PROPERTY (SPANISH)"));
-        test_test.appendChild(set_options("1665 - PRODUCER CASUALITY (SPANISH)"));
-        test_test.appendChild(set_options("1666 - ADVISOR LIFE (SPANISH)"));
-        test_test.appendChild(set_options("1667 - ADV ACC/HLTH OR SICK (SPANISH)"));
-        test_test.appendChild(set_options("1668 - ADV PROPERTY & CASUALTY (SPANISH)"));
-        test_test.appendChild(set_options("1669 - PUBLIC ADJUSTER (SPANISH)"));
-        test_test.appendChild(set_options("1670 - PROD LIM LINES CREDIT (SPANISH)"));
-        test_test.appendChild(set_options("1671 - MOT VEH DMG APPRAISER (SPANISH)"));
-        test_test.appendChild(set_options("1672 - PROD PERSONAL LINES (SPANISH)"));
-    }
-    else if(event.target.value == "Matrix42"){
-        test_test.appendChild(set_options("EndPoint Security Level 1"));
-        test_test.appendChild(set_options("Service Management Level 1"));
-        test_test.appendChild(set_options("Software Asset Management Level 1"));
-        test_test.appendChild(set_options("Unified Endpoint Management Level 1"));
-    }
-    else if(event.target.value == "Qualifying Examination - Part I"){
-        test_test.appendChild(set_options("Examen d'aptitude CMC - partie I"));
-        test_test.appendChild(set_options("MCC Qualifying Examination - Part I"));
-    }
-    else if(event.target.value == "Therapeutics Decision-Making Examination"){
-        test_test.appendChild(set_options("Therapeutics Decision-Making Examination"));
-    }
-    else if(event.target.value == "Medical Dosimetrist Certification Board"){
-        test_test.appendChild(set_options("Certified Medical Dosimetrist"));
-    }
-    else if(event.target.value == "Medical Surgical Nursing Certification Board"){
-        test_test.appendChild(set_options("Certified Medical-Surgical Registered Nurse"));
-        test_test.appendChild(set_options("Coordination and Transition Management"));
-    }
-    else if(event.target.value == "Michigan English Test (MET)"){
-        test_test.appendChild(set_options("MET 2 Skill (Remotely Proctored)"));
-        test_test.appendChild(set_options("MET 2 Skill (Test Center)"));
-        test_test.appendChild(set_options("MET 4 Retake Listening"));
-        test_test.appendChild(set_options("MET 4 Retake Reading"));
-        test_test.appendChild(set_options("MET 4 Retake Writing"));
-        test_test.appendChild(set_options("MET 4 Skill (Remotely Proctored)"));
-        test_test.appendChild(set_options("MET 4 Skill (Test Center)"));
-        test_test.appendChild(set_options("MET 4 Skill Exemption Form (Remotely Proctored)"));
-        test_test.appendChild(set_options("MET 4 Skill Exemption Form (Test Center)"));
-    }
-    else if(event.target.value == "Moody’s Analytics"){
-        test_test.appendChild(set_options("Accelerated 10"));
-        test_test.appendChild(set_options("Accelerated 15"));
-        test_test.appendChild(set_options("CDMS Certification Exam"));
-        test_test.appendChild(set_options("CFITS Certification Exam"));
-        test_test.appendChild(set_options("Cards and Payments I"));
-        test_test.appendChild(set_options("Cards and Payments II"));
-        test_test.appendChild(set_options("Cards and Payments III (Constructed Response)"));
-        test_test.appendChild(set_options("Certified Branch Manager"));
-        test_test.appendChild(set_options("Certified Wealth Practitioner"));
-        test_test.appendChild(set_options("Commercial Credit Certification Exam"));
-        test_test.appendChild(set_options("Commercial Credit Certification Exam Bahasa"));
-        test_test.appendChild(set_options("Commercial Credit Certification Exam Simplified Chinese"));
-        test_test.appendChild(set_options("Commercial Credit Certification Exam Thai"));
-        test_test.appendChild(set_options("Examen para el Certificado en Crédito Comercial"));
-        test_test.appendChild(set_options("Examen pour le certificat en services bancaires pour PME"));
-        test_test.appendChild(set_options("Examen sur le crédit commercial"));
-        test_test.appendChild(set_options("Professional Retail Banker Exam"));
-        test_test.appendChild(set_options("Retail Banking I Exam"));
-        test_test.appendChild(set_options("Retail Banking II Exam"));
-        test_test.appendChild(set_options("Retail Banking III Exam"));
-        test_test.appendChild(set_options("Retail Risk I"));
-        test_test.appendChild(set_options("Small Business Banking Certificate Examination"));
-        test_test.appendChild(set_options("Small Business Banking Certificate Examination (Indonesian)"));
-    }
-    else if(event.target.value == "Moody's"){
-        test_test.appendChild(set_options("Corporate Finance & Project and Infrastructure Finance"));
-        test_test.appendChild(set_options("Executive Form"));
-        test_test.appendChild(set_options("FAM"));
-        test_test.appendChild(set_options("Financial Institutions Group-Banking & Managed Funds"));
-        test_test.appendChild(set_options("Financial Institutions Group-Insurance"));
-        test_test.appendChild(set_options("MIS Core Exam"));
-        test_test.appendChild(set_options("PPIF-Sovereign, Sub-Sovereign and PFG"));
-        test_test.appendChild(set_options("Structured Finance"));
-        test_test.appendChild(set_options("Structured Finance Group"));
-        test_test.appendChild(set_options("Team Asset Class -Banking"));
-        test_test.appendChild(set_options("Team Asset Class -Insurance"));
-        test_test.appendChild(set_options("Team Asset Class -Managed Investments"));
-        test_test.appendChild(set_options("Team Asset Class -Project Finance"));
-        test_test.appendChild(set_options("Team Asset Class -Public Finance"));
-        test_test.appendChild(set_options("Team Asset Class -Sovereign"));
-        test_test.appendChild(set_options("Team Asset Class -Structured Finance"));
-        test_test.appendChild(set_options("Team Asset Class -Sub-Sovereign"));
-    }
-    else if(event.target.value == "National Board for Certification of School Nurses"){
-        test_test.appendChild(set_options("National Certification for School Nurses"));
-    }
-    else if(event.target.value == "American Association of Medical Assistants"){
-        test_test.appendChild(set_options("CMA Certification/Recertification Examination"));
-    }
-    else if(event.target.value == "American Board of Medical Genetics and Genomics"){
-        test_test.appendChild(set_options("Clinical Cytogenetics & Genomics Exam"));
-        test_test.appendChild(set_options("Clinical Genetics & Genomics Exam"));
-        test_test.appendChild(set_options("Clinical Molecular Genetics & Genomics Exam"));
-        test_test.appendChild(set_options("Clinical/Medical Biochemical Genetics & Genomics Exam"));
-        test_test.appendChild(set_options("General Examination"));
-        test_test.appendChild(set_options("Laboratory Genetics & Genomics Examination"));
-    }
-    else if(event.target.value == "American Board of Obesity Medicine"){
-        test_test.appendChild(set_options("Certification Examination for Obesity Medicine Physician"));
-    }
-    else if(event.target.value == "American Board of Orthopaedic Surgery"){
-        test_test.appendChild(set_options("Adult Reconstruction Practice Profiled Recertification Exam"));
-        test_test.appendChild(set_options("American Board of Orthopaedic Surgery, Inc. Certifying Exam"));
-        test_test.appendChild(set_options("Foot & Ankle Practice Profiled Recertification Examination"));
-        test_test.appendChild(set_options("General Clinical Recertification Examination"));
-        test_test.appendChild(set_options("Musculoskeletal Oncology Practice Profiled Recert Exam"));
-        test_test.appendChild(set_options("Orthopaedic Sports Medicine Certification Examination"));
-        test_test.appendChild(set_options("Orthopaedic Sports Medicine Recertification Examination"));
-        test_test.appendChild(set_options("Orthopaedic Trauma Practice Profiled Recert Examination"));
-        test_test.appendChild(set_options("Pediatric Orthopaedic Practice Profiled Recert Examination"));
-        test_test.appendChild(set_options("Shoulder/Elbow Practice Profiled Recert Examination"));
-        test_test.appendChild(set_options("Surgery of the Hand Recertification Examination"));
-        test_test.appendChild(set_options("Surgery of the Spine Practice Profiled Recertification Exam"));
-    }
-    else if(event.target.value == "American Board of Physical Therapy Specialties"){
-        test_test.appendChild(set_options("CARDIOVASCULAR AND PULMONARY PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("ELECTROPHYSIOLOGIC  PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("GERIATRIC PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("NEUROLOGIC PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("ORTHOPAEDIC PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("Oncology Physical Therapy"));
-        test_test.appendChild(set_options("PEDIATRIC PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("SPORTS PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("WOMEN'S HEALTH PHYSICAL THERAPY"));
-        test_test.appendChild(set_options("Wound Management Physical Therapy"));
-    }
-    else if(event.target.value == "American Board of Preventive Medicine"){
-        test_test.appendChild(set_options("Addiction Medicine Examination"));
-        test_test.appendChild(set_options("Aerospace Medicine Examination"));
-        test_test.appendChild(set_options("Clinical Informatics Examination"));
-        test_test.appendChild(set_options("Core Examination"));
-        test_test.appendChild(set_options("Occupational Medicine Examination"));
-        test_test.appendChild(set_options("Public Health/General Preventive Medicine Examination"));
-        test_test.appendChild(set_options("Undersea and Hyperbaric Medicine Examination"));
-    }
-    else if(event.target.value == "American Board of Quality & Utilization Review Physicians"){
-        test_test.appendChild(set_options("HCQM Certification Exam"));
-    }
-    else if(event.target.value == "American Board of Surgery"){
-        test_test.appendChild(set_options("Hand Surgery Certification/Recertification Examination"));
-    }
-    else if(event.target.value == "American Osteopathic Board Of Orthopedic Surgery"){
-        test_test.appendChild(set_options("AMER OSTEOPATHIC WRITTEN CERT EXAM"));
-        test_test.appendChild(set_options("Osteopathic Continuous Certification Exam"));
-    }
-    else if(event.target.value == "Health & Wellness Coach Certifying Examination Program"){
-        test_test.appendChild(set_options("Health & Wellness Coach Certifying Examination"));
-    }
-    else if(event.target.value == "International Board of Heart Rhythm Examiners"){
-        test_test.appendChild(set_options("Certification Exam in Cardiac Electrophysiology"));
-        test_test.appendChild(set_options("Certified Cardiac Device Specialist Exam (CCDS)"));
-        test_test.appendChild(set_options("Certified EP Specialist (CEPS)  Allied Professionals"));
-    }
-    else if(event.target.value == "International Council for Veterinary Assessment"){
-        test_test.appendChild(set_options("North American Veterinary Licensing Exam"));
-        test_test.appendChild(set_options("North American Veterinary Licensing Exam - French"));
-    }
-    else if(event.target.value == "Nat. Commission for Cert. of Anesthesiologist Assistants"){
-        test_test.appendChild(set_options("Certification Examination"));
-        test_test.appendChild(set_options("Examination for Continued Demonstration of Qualifications"));
-    }
-    else if(event.target.value == "National Board of Echocardiography"){
-        test_test.appendChild(set_options("Examination in Special Competence in Advanced PTE"));
-        test_test.appendChild(set_options("Examination in Special Competence in Basic PTE"));
-        test_test.appendChild(set_options("Examination of Special Competence in Adult Echo"));
-        test_test.appendChild(set_options("Recertification Exam in Adult Echocardiography"));
-        test_test.appendChild(set_options("Recertification Exam of Special Competence in Advance PTE"));
-        test_test.appendChild(set_options("Special Competency in Critical Care Echocardiography Exam"));
-    }
-    else if(event.target.value == "NBME Subject Examination Program"){
-        test_test.appendChild(set_options("Clinical Neurology"));
-        test_test.appendChild(set_options("Comprehensive Basic Science"));
-        test_test.appendChild(set_options("Emergency Medicine Advanced Clinical"));
-        test_test.appendChild(set_options("Family Medicine Modular Exams"));
-        test_test.appendChild(set_options("IFOM-Basic Sciences Examination - English"));
-        test_test.appendChild(set_options("IFOM-Clinical Sciences  Examination - English"));
-        test_test.appendChild(set_options("IFOM-Clinical Sciences  Examination - Italian"));
-        test_test.appendChild(set_options("IFOM-Clinical Sciences  Examination - Portuguese"));
-        test_test.appendChild(set_options("IFOM-Clinical Sciences  Examination - Spanish"));
-        test_test.appendChild(set_options("Medicine"));
-        test_test.appendChild(set_options("Obstetrics and Gynecology"));
-        test_test.appendChild(set_options("Pediatrics"));
-        test_test.appendChild(set_options("Psychiatry"));
-        test_test.appendChild(set_options("Surgery"));
-    }
-    else if(event.target.value == "Special Purposes Exam"){
-        test_test.appendChild(set_options("COMP SPECIAL PURPOSE EXAM"));
-    }
-    else if(event.target.value == "STEP1"){
-        test_test.appendChild(set_options("Step 1 - United States Medical Licensing Examination"));
-    }
-    else if(event.target.value == "STEP2"){
-        test_test.appendChild(set_options("Step 2 - United States Medical Licensing Examination"));
-    }
-    else if(event.target.value == "STEP3"){
-        test_test.appendChild(set_options("Step 3 - United States Medical Licensing Examination"));
-    }
-    else if(event.target.value == "Surgery of the Hand Subspecialty Certification Examination"){
-        test_test.appendChild(set_options("Surgery of the Hand Subspecialty Certification Examination"));
-    }
-    else if(event.target.value == "USMLE Practice Tests"){
-        test_test.appendChild(set_options("STEP 3 PRACTICE TEST"));
-        test_test.appendChild(set_options("Step 1 Practice Test"));
-        test_test.appendChild(set_options("Step 2 Practice Test"));
-    }
-    else if(event.target.value == "AMERICAN BOARD OF HAIR RESTORATION SURGERY"){
-        test_test.appendChild(set_options("AMERICAN BOARD OF HAIR RESTORATION SURGERY"));
-    }
-    else if(event.target.value == "National Commission for Health Education Credentialing"){
-        test_test.appendChild(set_options("Certified Health Education Specialist"));
-        test_test.appendChild(set_options("Master Certified Health Education Specialist"));
-    }
-    else if(event.target.value == "National Council for Certified Personal Trainers"){
-        test_test.appendChild(set_options("Certified Group Exercise Instructor"));
-        test_test.appendChild(set_options("Certified Indoor Cycling Instructor"));
-        test_test.appendChild(set_options("Certified Personal Trainer"));
-        test_test.appendChild(set_options("Certified Strength Training Specialist"));
-        test_test.appendChild(set_options("Certified Yoga Instructor"));
-        test_test.appendChild(set_options(""));
-    }
-    // else if(event.target.value == "National Council of Architect Registration Boards"){
-    //     // test_test.appendChild(set_options(""));
-    // }
-    // else if(event.target.value == "NCARB ProProctor Test Run"){
-    //     test_test.appendChild(set_options(""));
-    // }
-    else if(event.target.value == "National Council on Strength & Fitness"){
-        test_test.appendChild(set_options("Certified Fitness Instructor"));
-        test_test.appendChild(set_options("Certified Personal Trainer"));
-        test_test.appendChild(set_options("Certified Strength Coach"));
-        test_test.appendChild(set_options("Entrenador Personal Certificado"));
-        test_test.appendChild(set_options("Sport Nutrition Specialist"));
 
-    }
-    else if(event.target.value == "National Dental Assisting Examining Board"){
-      test_test.appendChild(set_options("L'examen ecrit du BNEAD"));
-      test_test.appendChild(set_options("NDAEB Written Examination"));
 
-    }
-    else if(event.target.value == "National Dental Examining Board of Canada"){
-        test_test.appendChild(set_options("Assessment of Clinical Judgement"));
-        test_test.appendChild(set_options("Assessment of Fundamental Knowledge"));
-        test_test.appendChild(set_options("Chirurgie buccale et maxillo-faciale"));
-        test_test.appendChild(set_options("Dental Public Health"));
-        test_test.appendChild(set_options("Dental Specialty Core Knowledge Examination"));
-        test_test.appendChild(set_options("Dentisterie pediatrique"));
-        test_test.appendChild(set_options("Endodontics"));
-        test_test.appendChild(set_options("Endodontie"));
-        test_test.appendChild(set_options("Examen des connaissances communes aux specialites dentaires"));
-        test_test.appendChild(set_options("Medecine buccale"));
-        test_test.appendChild(set_options("Medecine buccale et/ou pathologie buccale"));
-        test_test.appendChild(set_options("Oral Medicine"));
-        test_test.appendChild(set_options("Oral Medicine and/or Oral Pathology"));
-        test_test.appendChild(set_options("Oral Pathology"));
-        test_test.appendChild(set_options("Oral and Maxillofacial Radiology"));
-        test_test.appendChild(set_options("Oral and Maxillofacial Surgery"));
-        test_test.appendChild(set_options("Orthodontics"));
-        test_test.appendChild(set_options("Orthodontie"));
-        test_test.appendChild(set_options("Parodontie"));
-        test_test.appendChild(set_options("Pathologie buccale"));
-        test_test.appendChild(set_options("Pediatric Dentistry"));
-        test_test.appendChild(set_options("Periodontics"));
-        test_test.appendChild(set_options("Prosthodontics"));
-        test_test.appendChild(set_options("Prosthodontie"));
-        test_test.appendChild(set_options("Radiologie buccale et maxillo-faciale"));
-        test_test.appendChild(set_options("Sante publique dentaire"));
-        test_test.appendChild(set_options("Évaluation des connaissances fondamentales"));
-        test_test.appendChild(set_options("Évaluation du jugement clinique"));
-    }
-    else if(event.target.value == "National Elevator Industry Educational Program"){
-        test_test.appendChild(set_options("100-Trade Skills"));
-        test_test.appendChild(set_options("200-Hoistway Structures"));
-        test_test.appendChild(set_options("300-Electrical Fundamentals"));
-        test_test.appendChild(set_options("400-Electrical Theory & Application"));
-        test_test.appendChild(set_options("500-Installation"));
-        test_test.appendChild(set_options("600-Solid State"));
-        test_test.appendChild(set_options("700-Power & Logic"));
-        test_test.appendChild(set_options("800-Advanced Topics in Elevators"));
-        test_test.appendChild(set_options("Mechanic Exam"));
-        test_test.appendChild(set_options("Mechanic Exam - Audio"));
-    }
-    else if(event.target.value == "National Federation of Paralegal Associations"){
-        test_test.appendChild(set_options("Paralegal Advanced Competency Exam"));
-        test_test.appendChild(set_options("Paralegal Core Competency Exam"));
-    }
-    else if(event.target.value == "National Fire Protection Assoc"){
-        test_test.appendChild(set_options("Electrical Safety Compliance Professional"));
-        test_test.appendChild(set_options("Electrical Safety Technician"));
-        test_test.appendChild(set_options("Electrical Safety Worker"));
-        test_test.appendChild(set_options("Emergency Power Systems Specialist"));
-        test_test.appendChild(set_options("Emergency Power Systems Specialist - Health Care"));
-        test_test.appendChild(set_options("Especialistas en IPM de Sistemas de Rociadores"));
-        test_test.appendChild(set_options("Fire Alarm ITM Specialist"));
-        test_test.appendChild(set_options("Fire Inspector 1"));
-        test_test.appendChild(set_options("Fire Inspector 2"));
-        test_test.appendChild(set_options("Fire Plan Examiner"));
-        test_test.appendChild(set_options("Fire Protection Specialist"));
-        test_test.appendChild(set_options("Hazard Recognition Specialist"));
-        test_test.appendChild(set_options("Life Safety Specialist for Health Care"));
-        test_test.appendChild(set_options("Sprinkler ITM Specialist"));
-        test_test.appendChild(set_options("Water-Based Inspection, Testing, and Maintenance"));
-        test_test.appendChild(set_options("Water-Based Systems Professional"));
-        test_test.appendChild(set_options("Wildfire Mitigation Specialist"));
-    }
-    else if(event.target.value == "National Football League Players Association"){
-        test_test.appendChild(set_options("NFLPA Contract Advisor Examination"));
-    }
-    // else if(event.target.value == "National Inspection Testing and Certification Corporation"){
-    //     test_test.appendChild(set_options(""));
-    // }
-    // else if(event.target.value == "National Institute for Automotive Service Excellence"){
-    //     test_test.appendChild(set_options(""));
-    // }
-    else if(event.target.value == "National Registry of Certified Medical Examiners"){
-        test_test.appendChild(set_options("Medical Examiner Certification Test"));
-    }
-    else if(event.target.value == "National Roofing Contractors Association"){
-        test_test.appendChild(set_options("01. ProCertified Asphalt Shingle Systems Installer"));
-        test_test.appendChild(set_options("02. Instalador ProCertified en sistemas de tejas asfalticas"));
-        test_test.appendChild(set_options("03. ProCertified Thermoplastic Systems Installer"));
-        test_test.appendChild(set_options("04. Instalador ProCertified en sistemas termoplasticos"));
-        test_test.appendChild(set_options("05. ProCertified Roofing Foreman"));
-        test_test.appendChild(set_options("06. Jefe de grupo de techado ProCertified"));
-        test_test.appendChild(set_options("07. Qualified Assessor: Asphalt Shingle Systems"));
-        test_test.appendChild(set_options("08. Asesor Cualificado: Sistemas de tejas asfalticas"));
-        test_test.appendChild(set_options("09. Qualified Assessor: Thermoplastic Systems"));
-        test_test.appendChild(set_options("10. Asesor Cualificado: Sistemas termoplasticos"));
-        test_test.appendChild(set_options("11. ProCertified EPDM Systems Installer"));
-        test_test.appendChild(set_options("12.  Instalador ProCertified en sistemas de EPDM"));
-    }
-    else if(event.target.value == "NCIDQ"){
-        test_test.appendChild(set_options("Interior Design Fundamentals Exam"));
-        test_test.appendChild(set_options("Interior Design Fundamentals Exam French"));
-        test_test.appendChild(set_options("Interior Design Professional Exam"));
-        test_test.appendChild(set_options("Interior Design Professional Exam French"));
-        test_test.appendChild(set_options("Practicum"));
-        test_test.appendChild(set_options("Practicum French"));
-    }
-    else if(event.target.value == "NCTRC"){
-        test_test.appendChild(set_options("CERT THERAPEUTIC RECREATION SPECIALIST"));
-    }
-    else if(event.target.value == "Nebraska Insurance"){
-        test_test.appendChild(set_options("1301 - PROD LIFE & ANNUITIES"));
-        test_test.appendChild(set_options("1302 - PROD ACC HLTH OR SICKNESS"));
-        test_test.appendChild(set_options("1303 - PROD LIFE & ANNUITIES ACC HLTH OR SICKNESS"));
-        test_test.appendChild(set_options("1304 - PROD PC"));
-        test_test.appendChild(set_options("1307 - CONSULT LIFE & ANNUITIES ACC HLTH OR SICKNESS"));
-        test_test.appendChild(set_options("1308 - CONSULT PC"));
-        test_test.appendChild(set_options("1309 - PROD CROP"));
-        test_test.appendChild(set_options("1310 - PRODUCER'S PUBLIC ADJUSTERS"));
-        test_test.appendChild(set_options("1313 - PROD MOTOR CLUB"));
-        test_test.appendChild(set_options("1316 - PROD TITLE"));
-        test_test.appendChild(set_options("1321 - PROD PERSONAL LINES"));
-        test_test.appendChild(set_options("1322 - PROD PROPERTY"));
-        test_test.appendChild(set_options("1323 - PROD CASUALTY"));
-        test_test.appendChild(set_options("1324- PRE-NEED FUNERAL INSURANCE"));
-        test_test.appendChild(set_options("1326- VIATICAL INSURANCE"));
 
-    }
-    else if(event.target.value == "GB"){
-        test_test.appendChild(set_options("GB0191 - Constructing Small and Med-Sized ENT Network (CHS)"));
-        test_test.appendChild(set_options("GB0191 - Constructing Small and Med-Sized ENT Network (ENU)"));
-        test_test.appendChild(set_options("GB0192 - 路由交换技术基础V1.0"));
-        test_test.appendChild(set_options("GB0342-构建H3C无线网络"));
-        test_test.appendChild(set_options("GB0371 - Constructing H3C High-Perf Campus Networks (CHS)"));
-        test_test.appendChild(set_options("GB0371 - Constructing H3C High-Perf Campus Networks (ENU)"));
-        test_test.appendChild(set_options("GB0381 - H3C Large-Scale Routing Network Tech v2.0 (CHS)"));
-        test_test.appendChild(set_options("GB0381 - H3C Large-Scale Routing Network Tech v2.0 (ENU)"));
-        test_test.appendChild(set_options("GB0391 - Constructing Secure Optimized WANs v2.0 (CHS)"));
-        test_test.appendChild(set_options("GB0391 - Constructing Secure Optimized WANs v2.0 (ENU)"));
-        test_test.appendChild(set_options("GB0510-Constructing Small and Med-Sized ENT Security Network"));
-        test_test.appendChild(set_options("GB0510-构建中小企业安全网络"));
-        test_test.appendChild(set_options("GB0530-构建安全网络架构"));
-        test_test.appendChild(set_options("GB0551-部署内容安全系统"));
-        test_test.appendChild(set_options("GB0713-Deploy and manage the H3C CAS virtualization platform"));
-        test_test.appendChild(set_options("GB0713-部署与管理H3C CAS虚拟化平台V3.0"));
-        test_test.appendChild(set_options("GB0801-H3C Internetwork Expert for R&S Plus written exam"));
-        test_test.appendChild(set_options("GB0801-H3C认证路由交换互联网络专家综合笔试"));
-    }
-    else if(event.target.value == "New Hampshire Insurance"){
-        test_test.appendChild(set_options("1261 - PRODUCER'S LIFE INSURANCE"));
-        test_test.appendChild(set_options("1262 - PRODUCER'S ACCIDENT & HEALTH INSURANCE"));
-        test_test.appendChild(set_options("1263 - PRODUCER'S LIFE, ACCIDENT, & HEATLH INSURANCE"));
-        test_test.appendChild(set_options("1264 - PRODUCER'S PROPERTY AND CASUALTY INSURANCE"));
-        test_test.appendChild(set_options("1272 - PRODUCER'S TITLE INSURANCE"));
-        test_test.appendChild(set_options("1273 - PUBLIC  ADJUSTER"));
-        test_test.appendChild(set_options("1275 - ADJUSTER'S PROPERTY AND CASUALTY INSURANCE"));
-        test_test.appendChild(set_options("1276 - ADJUSTER'S WORKERS COMPESATION INSURANCE"));
-        test_test.appendChild(set_options("1278 - NEW HAMPSHIRE LIFE INSURANCE LAWS/REGULATIONS"));
-        test_test.appendChild(set_options("1279-NEW HAMPSHIRE ACCIDENT&HEALTH INSURANCE LAWS/REGULATION"));
-        test_test.appendChild(set_options("1280 -NEW HAMP LIFE, ACCIDENT & HEALTH INS. LAWS/REGULATIONS"));
-        test_test.appendChild(set_options("1281- NEW HAMP PROPERTY & CASUALTY INSURANCE LAWS/REGULATIOS"));
-        test_test.appendChild(set_options("1283 - NEW HAMP. ADJUSTERS PROPERTY & CASUALTY INS. LAWS/REG"));
-        test_test.appendChild(set_options("1284 - PRODUCERS PROPERTY"));
-        test_test.appendChild(set_options("1285 - PRODUCERS CASUALTY"));
-        test_test.appendChild(set_options("1286 - PRODUCERS PERSONAL LINES"));
-        test_test.appendChild(set_options("1287 - PRODUCERS CREDIT"));
-
-    }
-    else if(event.target.value == "New Mexico Insurance"){
-        test_test.appendChild(set_options("1825 - Life Insurance Producer"));
-        test_test.appendChild(set_options("1826 - Accident and Health or Sickness Insurance Producer"));
-        test_test.appendChild(set_options("1827 - Life, Accident and Health or Sickness Insurance Produ"));
-        test_test.appendChild(set_options("1828 - Property Insurance Producer"));
-        test_test.appendChild(set_options("1829 - Casualty Insurance Producer"));
-        test_test.appendChild(set_options("1831 - Property, and Casualty Insurance Producer"));
-        test_test.appendChild(set_options("1833 - Title"));
-        test_test.appendChild(set_options("1834 - Bail"));
-        test_test.appendChild(set_options("1838 - Personal Lines Insurance Producer"));
-        test_test.appendChild(set_options("1839 - Public Adjuster"));
-        test_test.appendChild(set_options("1840 - Independent and Staff Adjuster"));
-        test_test.appendChild(set_options("1841- Vida, "));
-        test_test.appendChild(set_options("1842 - Vida"));
-        test_test.appendChild(set_options("1843 - Accidente y Salud o Enfermedad"));
-        test_test.appendChild(set_options("1844 - Propiedad y Siniestros"));
-        test_test.appendChild(set_options("1845 - Propiedad"));
-        test_test.appendChild(set_options("1846 - Siniestros"));
-        test_test.appendChild(set_options("1847 -  Lineas Personales"));
-        test_test.appendChild(set_options("1848 - Ajustador Publico"));
-        test_test.appendChild(set_options("1849 -  Ajustador de Compania o Independente"));
-        test_test.appendChild(set_options("1850 - Seguros de Títulos"));
-        test_test.appendChild(set_options("1851- Seguros de Fianza"));
-    }
-    else if(event.target.value == "Nokia Partner Skills"){
-        test_test.appendChild(set_options("5G NPO Intermediate"));
-        test_test.appendChild(set_options("5G NPO Senior"));
-        test_test.appendChild(set_options("5G RAN Intermediate"));
-        test_test.appendChild(set_options("5G RAN Senior"));
-        test_test.appendChild(set_options("5G RAN Specialist"));
-        test_test.appendChild(set_options("Backend Development"));
-        test_test.appendChild(set_options("Big Data"));
-        test_test.appendChild(set_options("CS (move to NFV) Intermediate"));
-        test_test.appendChild(set_options("CS (move to NFV) Senior"));
-        test_test.appendChild(set_options("CS (move to NFV) Specialist"));
-        test_test.appendChild(set_options("DHLR Intermediate"));
-        test_test.appendChild(set_options("DHLR Senior"));
-        test_test.appendChild(set_options("Database"));
-        test_test.appendChild(set_options("Front-end Development"));
-        test_test.appendChild(set_options("GDC Radio planning intermediate"));
-        test_test.appendChild(set_options("GDC Radio planning senior"));
-        test_test.appendChild(set_options("GDC TRS Planning Senior"));
-        test_test.appendChild(set_options("NPO LTE Intermediate"));
-        test_test.appendChild(set_options("NPO LTE Senior"));
-        test_test.appendChild(set_options("Operation & Maintenance"));
-        test_test.appendChild(set_options("RAN 2G BSC Senior"));
-        test_test.appendChild(set_options("RAN LTE Intermediate"));
-        test_test.appendChild(set_options("RAN LTE Senior"));
-        test_test.appendChild(set_options("RAN LTE Specialist"));
-        test_test.appendChild(set_options("RAN W RNC Senior"));
-        test_test.appendChild(set_options("VAS Intermediate"));
-        test_test.appendChild(set_options("VAS Junior"));
-        test_test.appendChild(set_options("VAS Senior"));
-        test_test.appendChild(set_options("VAS Specialist"));
-        test_test.appendChild(set_options("VOLTE Intermediate"));
-        test_test.appendChild(set_options("VOLTE Senior"));
-    }
-    // else if(event.target.value == "North Dakota Insurance"){
-    //     test_test.appendChild(set_options(""));
-    // }
-    else if(event.target.value == "North Dakota Insurance Retake"){
-        test_test.appendChild(set_options("Accident and Health Insurance Part I Product"));
-        test_test.appendChild(set_options("Accident and Health Insurance Part II - Laws and Regulations"));
-        test_test.appendChild(set_options("Casualty Insurance Part I - Product"));
-        test_test.appendChild(set_options("Casualty Insurance Part II - Laws and Regulations"));
-        test_test.appendChild(set_options("Life and Annuity Insurance Part I Product"));
-        test_test.appendChild(set_options("Life and Annuity Insurance Part II - Laws and Regulations"));
-        test_test.appendChild(set_options("Property Insurance Part I - Product"));
-        test_test.appendChild(set_options("Property Insurance Part II - Laws and Regulations"));
-    }else if(event.target.value == "NGA Operator Qualification Program"){
+    
+    else if(event.target.value == "NGA Operator Qualification Program"){
         test_test.appendChild(set_options("1 Hour Session"));
         test_test.appendChild(set_options("1.5 Hour Session"));
         test_test.appendChild(set_options("2 Hour Session"));
@@ -3559,7 +2907,17 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("UTD POC2"));
         test_test.appendChild(set_options("Urology"));
         test_test.appendChild(set_options("Vascular Surgery"));
-    }else if(event.target.value == "SCHS Promotion Exams"){
+    }
+
+
+
+
+
+
+
+
+    
+    else if(event.target.value == "SCHS Promotion Exams"){
         test_test.appendChild(set_options("Obstetrics and Gynecology"));
         test_test.appendChild(set_options("Obstetrics and Gynecology"));
     }else if(event.target.value == "Secuencias de cursos verificados de ABA Espana"){
@@ -3606,7 +2964,8 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Home Care Coding Specialist-Hospice"));
     }else if(event.target.value == "National Association of Healthcare Revenue Integrity"){
         test_test.appendChild(set_options("Certification in Healthcare Revenue Integrity"));
-    }else if(event.target.value == "SOA"){
+    }
+    else if(event.target.value == "SOA"){
         test_test.appendChild(set_options("Advanced Long-Term Actuarial Mathematics"));
         test_test.appendChild(set_options("Advanced Short-Term Actuarial Mathematics"));
         test_test.appendChild(set_options("Advanced Topics in General Insurance Exam"));
@@ -3651,6 +3010,8 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Statistics for Risk Modeling: English or French/Canada"));
         test_test.appendChild(set_options("Statistics for Risk Modeling: English, U.S./Intl"));
         test_test.appendChild(set_options("Strategic Decision-Making Exam"));
+        test_test.appendChild(set_options("Valuation and Regulation Exam - Canada"));
+        test_test.appendChild(set_options("Valuation and Regulation Exam - US"));
     }else if(event.target.value == "Society for Human Resource Management"){
         test_test.appendChild(set_options("SHRM Certified Professional (in the US)"));
         test_test.appendChild(set_options("SHRM Certified Professional (outside the US)"));
