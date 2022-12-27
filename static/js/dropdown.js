@@ -2402,8 +2402,8 @@ test_program.addEventListener("change", function(event){
         test_test.appendChild(set_options("Chinese Part 2 CMA Exam"));
         test_test.appendChild(set_options("Part 1 CMA Exam"));
         test_test.appendChild(set_options("Part 2 CMA Exam"));
-        test_test.appendChild(set_options("第一部分 – 财务规划、绩效与分析"));
-        test_test.appendChild(set_options("第二部分 – 战略财务管理"));
+        test_test.appendChild(set_options("第一部分 - 财务规划、绩效与分析"));
+        test_test.appendChild(set_options("第二部分 - 战略财务管理"));
     }
     else if(event.target.value == "International Board of Heart Rhythm Examiners"){
         test_test.appendChild(set_options("Cardiac Device Remote Monitoring Specialist (CDRMS)"));
