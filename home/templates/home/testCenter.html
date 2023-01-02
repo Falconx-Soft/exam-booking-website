@@ -121,6 +121,9 @@
                     <option value="American Welding Society">
                         American Welding Society
                     </option>
+
+                    <!-- Issue in website -->
+
                     <!-- <option value="Arkansas Certified Nursing Assistant">
                         Arkansas Certified Nursing Assistant
                     </option> -->
@@ -193,9 +196,9 @@
                     <option value="Certification Board of Infection Control and Epidemiology">
                         Certification Board of Infection Control and Epidemiology
                     </option>
-                    <option value="Certification Commission for Healthcare Interpreters">
+                    <!-- <option value="Certification Commission for Healthcare Interpreters">
                         Certification Commission for Healthcare Interpreters
-                    </option>
+                    </option> -->
                     <option value="Certified Financial Planner">
                         Certified Financial Planner
                     </option>
@@ -418,6 +421,9 @@
                     <option value="National Council for Certified Personal Trainers">
                         National Council for Certified Personal Trainers
                     </option>
+
+                    <!-- Issue in website -->
+
                     <!-- <option value="National Council of Architectural Registration Boards">
                         National Council of Architectural Registration Boards
                     </option> -->
@@ -442,9 +448,9 @@
                     <option value="National Football League Players Association">
                         National Football League Players Association
                     </option>
-                    <!-- <option value="National Inspection Testing and Certification Corporation">
+                    <option value="National Inspection Testing and Certification Corporation">
                         National Inspection Testing and Certification Corporation
-                    </option> -->
+                    </option>
                     <!-- <option value="National Institute for Automotive Service Excellence">
                         National Institute for Automotive Service Excellence
                     </option> -->
@@ -642,19 +648,30 @@
                 </select>
             </div>
 
-            <div class="dropdown-inner-div">
+            <div class="dropdown-inner-div" id="third-dropdown">
                 <h2>Select a Test</h2>
                 <select id="test_test" name="test_test" required>
                 </select>
             </div>
+
+            <div class="dropdown-inner-div" id="multioption-div">
+
+            </div>
+
             <div class="home-btn-div">
                 <button type="button" id="add-btn" name="button" class="next_button">Add</button>
             </div>
+
+            <!-- Hidden Inputs -->
+            <input type="text" style="width: 100%;" id="checkbox-value" name="checkbox-value">
+            <input type="text" style="width: 100%;" id="radiobtn-value" name="radiobtn-value">
 
             <!-- Button trigger modal -->
             <button type="button" style="display: none;" id="modal-btn" class="btn btn-primary" data-toggle="modal"
                 data-target="#exampleModalCenter">
             </button>
+
+
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -685,10 +702,15 @@
     const add_btn = document.getElementById("add-btn");
 
     add_btn.addEventListener("click", function () {
+        console.log(document.getElementById("checkbox-value").value,document.getElementById("radiobtn-value").value,"****************");
         if (
             document.getElementById("test_sponsor").value != "" &&
             document.getElementById("test_program").value != "" &&
-            document.getElementById("test_test").value != ""
+            
+            (document.getElementById("test_test").value != "" ||
+            document.getElementById("checkbox-value").value != "" ||
+            document.getElementById("radiobtn-value").value != ""
+            )
 
         ) {
             $.ajax({
@@ -698,6 +720,8 @@
                     'test_sponsor': document.getElementById("test_sponsor").value,
                     'test_program': document.getElementById("test_program").value,
                     'test_test': document.getElementById("test_test").value,
+                    'checkbox_value': document.getElementById("checkbox-value").value,
+                    'radiobtn_value': document.getElementById("radiobtn-value").value,
                     'address': '{{address}}',
                     'start_date': '{{start_date}}',
                     'end_date': '{{end_date}}',
@@ -706,6 +730,10 @@
                     document.getElementById("test_sponsor").value = "";
                     document.getElementById("test_program").value = "";
                     document.getElementById("test_test").value = "";
+                    document.getElementById("checkbox-value").value = "";
+                    document.getElementById("radiobtn-value").value = "";  
+                    document.getElementById("multioption-div").style.display = "none";
+                    document.getElementById("third-dropdown").style.display = "block"; 
                     document.getElementById("modal-btn").click();
                 },
                 error: function () {

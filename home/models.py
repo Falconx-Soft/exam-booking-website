@@ -4,9 +4,9 @@ from authentication.models import Account as User
 
 class info(models.Model):
     user                        = models.ForeignKey(User, on_delete=models.CASCADE)
-    test_sponsor                = models.CharField(max_length=50)
-    test_program                = models.CharField(max_length=50)
-    test_test                   = models.CharField(max_length=50)
+    test_sponsor                = models.CharField(max_length=100)
+    test_program                = models.CharField(max_length=100)
+    test_test                   = models.CharField(max_length=100, null=True, blank=True)
     address                     = models.CharField(max_length=50)
     start_date                  = models.CharField(max_length=50)
     end_date                    = models.CharField(max_length=50)
@@ -14,6 +14,20 @@ class info(models.Model):
 
     def __str__(self):
         return str(self.user.email)
+
+class check_box(models.Model):
+    info                        = models.ForeignKey(info, on_delete=models.CASCADE)
+    value                       = models.CharField(max_length=100)
+
+    def __str__(self):
+        return str(self.value)
+
+class radio_btn(models.Model):
+    info                        = models.ForeignKey(info, on_delete=models.CASCADE)
+    value                       = models.CharField(max_length=100)
+
+    def __str__(self):
+        return str(self.value)
 
 class got_address(models.Model):
     info                        = models.ForeignKey(info, on_delete=models.CASCADE)

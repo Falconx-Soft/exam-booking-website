@@ -1,42 +1,49 @@
-section{
+section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
 }
 
-.info-div, .form-div{
+.info-div,
+.form-div {
   width: 100%;
   max-width: 950px;
 }
 
-.one, .form-div{
+.one,
+.form-div {
   padding: 0px 10%;
   margin-top: 13px;
 }
 
-input{
-  width:100%;
+input {
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-.input2{
-  width:100%;
+
+.input2 {
+  width: 100%;
   display: flex;
   gap: 10px;
 }
-.start{
-  width:100%;
+
+.start {
+  width: 100%;
 }
-.note{
+
+.note {
   line-height: 16px;
   font-size: 12px;
   word-spacing: 1px;
 }
-.img1{
+
+.img1 {
   width: 40px;
   height: 40px;
-  margin:-45px 0px 0px 360px;
+  margin: -45px 0px 0px 360px;
 
 }
+

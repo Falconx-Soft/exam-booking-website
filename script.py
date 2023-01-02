@@ -185,7 +185,7 @@ def run_script():
                         if (date_time_obj_2 - today).days > 14:
                             print(3,(today + datetime.timedelta(days=1)).date(),(today + datetime.timedelta(days=13)).date())
                             start_date = format_date(str((today + datetime.timedelta(days=1)).date()))
-                            end_date = format_date(str(date_time_obj_2.date()))
+                            end_date = format_date(str((today + datetime.timedelta(days=13)).date()))
                         else:
                             print(4,(today + datetime.timedelta(days=1)).date(),date_time_obj_2.date())
                             start_date = format_date(str((today + datetime.timedelta(days=1)).date()))
@@ -196,6 +196,7 @@ def run_script():
                         end_date = format_date(str(date_time_obj_2.date()))
 
                 print("****",i.id,"****")
+                print("*****",start_date,"<--->",end_date,"*******")
                 try:
                     driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
 

@@ -1473,3 +1473,60 @@ JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FA
 JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1672096716537	Marionette	INFO	Stopped listening on port 63867
 console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1672677182025	geckodriver	INFO	Listening on 127.0.0.1:51584
+1672677185112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51585" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofile2fqMK3"
+1672677185453	Marionette	INFO	Marionette enabled
+1672677185458	Marionette	INFO	Listening on port 51596
+WebDriver BiDi listening on ws://127.0.0.1:51585
+Read port: 51596
+1672677185715	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofile2fqMK3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51585/devtools/browser/f5c1e13e-2553-43d1-89ac-136832f08f9d
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672677341852	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:204:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:425:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
+1672677406481	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:204:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:425:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
+1672677470934	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:204:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:425:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
+1672677511430	Marionette	INFO	Stopped listening on port 51596
+1672678104162	geckodriver	INFO	Listening on 127.0.0.1:51879
+1672678107226	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51880" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofileKQkldg"
+1672678107527	Marionette	INFO	Marionette enabled
+1672678107531	Marionette	INFO	Listening on port 51891
+Read port: 51891
+WebDriver BiDi listening on ws://127.0.0.1:51880
+1672678107615	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofileKQkldg\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51880/devtools/browser/fa3d0ec5-dd28-4a20-9f7d-65db99648a6c
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672678280138	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:204:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:425:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:173:31
+1672678743309	geckodriver	INFO	Listening on 127.0.0.1:52026
+1672678746380	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52027" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofileKPOOit"
+1672678746743	Marionette	INFO	Marionette enabled
+1672678746748	Marionette	INFO	Listening on port 52038
+WebDriver BiDi listening on ws://127.0.0.1:52027
+Read port: 52038
+1672678747017	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofileKPOOit\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52027/devtools/browser/d8457bc8-bb5e-4bc2-919d-7e2328f53a8e
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672678961688	Marionette	INFO	Stopped listening on port 52038

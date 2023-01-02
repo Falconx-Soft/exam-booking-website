@@ -32,3 +32,69 @@ select>option{
     align-items: center;
     gap: 20px;
 }
+
+/************************************** Check boxes and radio buttons */
+
+/* section1 css starts */
+.chunk {
+    margin-top: 30px;
+  }
+  
+  .chunk-div1 {
+    padding-top: 20px;
+    background-color: #EFF2F4;
+    margin-left: 30px;
+    margin-top: -25px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .chunk-div1>label {
+    margin-left: 30px;
+  }
+  
+  .testing-window {
+    margin-left: 50px;
+    padding-top: 12px;
+  
+  }
+  
+  .chunk-div2 {
+    margin-top: 20px;
+  }
+  
+  .chunk-div2-2 {
+    padding-top: 20px;
+    background-color: #EFF2F4;
+    margin-left: 30px;
+    margin-top: -25px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .chunk-div2-2>label {
+    margin-left: 30px;
+  }
+  
+  .testing-window {
+    margin-left: 50px;
+    padding-top: 12px;
+  
+  }
+  
+  .chunk-bottom-border {
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+  }
+  
+  /* section 2 css starts */
+  
+  .section2 {
+    margin-top: 30px;
+  }
+  
+  /* section3 css starts */
+  
+  .section3 {
+    margin-top: 30px;
+  }
