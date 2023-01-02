@@ -1530,3 +1530,47 @@ JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, l
 JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 1672678961688	Marionette	INFO	Stopped listening on port 52038
+1672693117016	geckodriver	INFO	Listening on 127.0.0.1:55265
+1672693120069	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55266" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofilenDKg1u"
+1672693120427	Marionette	INFO	Marionette enabled
+1672693120433	Marionette	INFO	Listening on port 55278
+Read port: 55278
+WebDriver BiDi listening on ws://127.0.0.1:55266
+1672693120577	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofilenDKg1u\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55266/devtools/browser/5d5e5696-1b6e-4599-be85-15c22f127563
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+1672693292196	geckodriver	INFO	Listening on 127.0.0.1:55347
+1672693295277	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55348" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofilecxOgkk"
+1672693295561	Marionette	INFO	Marionette enabled
+1672693295565	Marionette	INFO	Listening on port 55359
+Read port: 55359
+WebDriver BiDi listening on ws://127.0.0.1:55348
+1672693295647	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofilecxOgkk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55348/devtools/browser/2fe5d988-3c72-47a7-9f30-83d5d4ccf740
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+1672693406786	Marionette	INFO	Stopped listening on port 55359
+1672693575590	geckodriver	INFO	Listening on 127.0.0.1:55445
+1672693578631	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55446" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofile5VLm7N"
+1672693578910	Marionette	INFO	Marionette enabled
+1672693578914	Marionette	INFO	Listening on port 55457
+Read port: 55457
+WebDriver BiDi listening on ws://127.0.0.1:55446
+1672693579020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofile5VLm7N\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55446/devtools/browser/d8699993-4fdb-4533-b4a4-bc47becf7bf4
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+1672693908373	geckodriver	INFO	Listening on 127.0.0.1:55635
+1672693911446	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55636" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofileIjx4uB"
+1672693911762	Marionette	INFO	Marionette enabled
+1672693911768	Marionette	INFO	Listening on port 55647
+Read port: 55647
+WebDriver BiDi listening on ws://127.0.0.1:55636
+1672693911861	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SHAN\\AppData\\Local\\Temp\\rust_mozprofileIjx4uB\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55636/devtools/browser/b3f4b1df-98ff-473d-83ef-0ec89a405e10
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 302: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.bing.com/rp/sRckmjqRkmbErtTZ6mbWOTB9sM8.br.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1672694160239	Marionette	INFO	Stopped listening on port 55647

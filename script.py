@@ -22,7 +22,7 @@ django.setup()
 from django.conf import settings
 from django.core.mail import send_mail
 
-from home.models import info, got_address, got_date, got_time
+from home.models import info, got_address, got_date, got_time, check_box, radio_btn
 from home.views import format_date
 
 def automation(driver,db_info,email,start_date,end_date):
@@ -42,17 +42,76 @@ def automation(driver,db_info,email,start_date,end_date):
 
     time.sleep(3)
 
-    # select dropdown element testSelector
-    WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
-    select = Select(driver.find_element(By.ID,'testSelector'))
-    # select by visible text
-    select.select_by_visible_text(db_info.test_test)
+    if db_info.test_test != "":
+        print("Working with third dropdown")
+        # select dropdown element testSelector
+        WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
+        select = Select(driver.find_element(By.ID,'testSelector'))
+        # select by visible text
+        select.select_by_visible_text(db_info.test_test)
+    else:
+        check_box_obj = check_box.objects.filter(info=db_info)
+        if check_box_obj:
+            check_box_db = []
+            for obj in check_box_obj:
+                check_box_db.append(obj.value)
 
+            # To select radio buttons
+            select_form = driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability/div[2]/div[1]/div/app-exam-context/div/div/app-exam-set-selector/div')
+
+            check_box_list = select_form.find_elements(By.CLASS_NAME,'justify-content-end')
+
+            for box in check_box_list:
+                inner_box = box.find_elements(By.CLASS_NAME,'exam-detail-block')
+                print('exam detail box',len(inner_box))
+                row_div = inner_box[1].find_elements(By.CLASS_NAME,'custom-position')
+                print("custom-position",len(row_div))
+                for row in row_div:
+                    div_text = row.find_element(By.TAG_NAME,'h5')
+                    driver.execute_script("arguments[0].scrollIntoView(true);", div_text)
+                    scroll = int(driver.execute_script("return window.pageYOffset"))
+                    driver.execute_script('window.scrollTo(0,'+str(scroll - 250)+')')
+                    time.sleep(2)
+                    if div_text.text in check_box_db:
+                        print(div_text.text)
+                        check_input = row.find_element(By.CLASS_NAME,'custom-checkbox')
+                        check_input.click()
+        else:
+            radio_btn_obj = radio_btn.objects.filter(info=db_info)
+            radio_btn_db = []
+            for obj in radio_btn_obj:
+                radio_btn_db.append(obj.value)
+            # To select radio buttons
+            select_form = driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability/div[2]/div[1]/div/app-exam-context/div/div/app-exam-set-selector/div')
+            rows = select_form.find_elements(By.XPATH,("./*"))
+            index_sub = 0
+            index_add = 0
+            if db_info.test_program == "National Inspection Testing and Certification Corporation":
+                index_sub = 3
+                index_add = 2
+            else:
+                index_sub = 5
+                index_add = 4
+            for row in range(len(rows)-index_sub):
+                try:
+                    div_text = rows[row+index_add].find_element(By.TAG_NAME,'h5')
+                    driver.execute_script("arguments[0].scrollIntoView(true);", div_text)
+                    scroll = int(driver.execute_script("return window.pageYOffset"))
+                    driver.execute_script('window.scrollTo(0,'+str(scroll - 250)+')')
+                    time.sleep(2)
+                    if div_text.text in radio_btn_db:
+                        print(div_text.text)
+                        check_input = rows[row+index_add].find_element(By.CLASS_NAME,'custom-checkbox')
+                        check_input.click()
+                except Exception as e:
+                    print(e)
     time.sleep(3)
 
     # next button
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'nextBtn')))
-    driver.find_element(By.ID,'nextBtn').click()
+    next_btn_1 = driver.find_element(By.ID,'nextBtn')
+    driver.execute_script("arguments[0].scrollIntoView(true);", next_btn_1)
+    next_btn_1.click()
 
     # next page
     # You must select an end date that is within 2 weeks of the selected start date. MM-DD-YYYY
@@ -155,7 +214,7 @@ def run_script():
 
         print("<-----------------")
         options = Options()
-        options.headless = True
+        options.headless = False
 
         driver = webdriver.Firefox(options=options)
         time.sleep(3)
@@ -215,9 +274,9 @@ def run_script():
         print("------Outer Except--------->",e,"<---------------")
 
 
-#run_script()
+run_script()
 
-schedule.every(30).minutes.do(run_script)
+# schedule.every(30).minutes.do(run_script)
   
-while True:
-   schedule.run_pending()
+# while True:
+#    schedule.run_pending()
