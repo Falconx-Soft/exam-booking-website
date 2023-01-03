@@ -13,7 +13,7 @@ class info(models.Model):
     got_result                  = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.user.email)
+        return str(self.test_sponsor)
 
 class check_box(models.Model):
     info                        = models.ForeignKey(info, on_delete=models.CASCADE)

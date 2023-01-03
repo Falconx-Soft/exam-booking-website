@@ -16,5 +16,21 @@ admin.site.register(got_address)
 admin.site.register(got_date)
 admin.site.register(got_time)
 
-admin.site.register(check_box)
-admin.site.register(radio_btn)
+class check_box_Admin(admin.ModelAdmin):
+	list_display = ('info', 'value')
+	search_fields = ('info',)
+
+	filter_horizontal = ()
+	list_filter = ()
+	fieldsets = ()
+
+admin.site.register(check_box,check_box_Admin)
+
+class radio_btn_Admin(admin.ModelAdmin):
+	list_display = ('info', 'value')
+	search_fields = ('info',)
+
+	filter_horizontal = ()
+	list_filter = ()
+	fieldsets = ()
+admin.site.register(radio_btn,radio_btn_Admin)

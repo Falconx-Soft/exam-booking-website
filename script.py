@@ -42,7 +42,9 @@ def automation(driver,db_info,email,start_date,end_date):
 
     time.sleep(3)
 
-    if db_info.test_test != "":
+    print(db_info.test_test,"<------------")
+
+    if db_info.test_test != "" and db_info.test_test != None:
         print("Working with third dropdown")
         # select dropdown element testSelector
         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
@@ -90,8 +92,8 @@ def automation(driver,db_info,email,start_date,end_date):
                 index_sub = 3
                 index_add = 2
             else:
-                index_sub = 5
-                index_add = 4
+                index_sub = 6
+                index_add = 6
             for row in range(len(rows)-index_sub):
                 try:
                     div_text = rows[row+index_add].find_element(By.TAG_NAME,'h5')
@@ -100,11 +102,15 @@ def automation(driver,db_info,email,start_date,end_date):
                     driver.execute_script('window.scrollTo(0,'+str(scroll - 250)+')')
                     time.sleep(2)
                     if div_text.text in radio_btn_db:
-                        print(div_text.text)
-                        check_input = rows[row+index_add].find_element(By.CLASS_NAME,'custom-checkbox')
-                        check_input.click()
+                        try:
+                            print(div_text.text)
+                            check_input = rows[row+index_add].find_element(By.CLASS_NAME,'custom-checkbox')
+                            check_input.click()
+                        except Exception as e:
+                            print(e)
                 except Exception as e:
-                    print(e)
+                    print("*******Empty Element*******")
+                time.sleep(5)
     time.sleep(3)
 
     # next button
