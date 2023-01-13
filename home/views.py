@@ -1,8 +1,13 @@
 from django.shortcuts import render,redirect
 from .models import info, check_box, radio_btn
+from authentication.models import Account , MyAccountManager
 import datetime
 from django.http import JsonResponse
-
+from django.conf import settings
+from django.core.mail import send_mail, EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 
@@ -75,7 +80,29 @@ def home(request):
         address = request.POST.get('address')
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
+        # print("start date" , start_date)
+        # print("end date", end_date)
+        date_time_obj_1 = datetime.datetime.strptime(start_date,'%Y-%m-%d')
+        date_time_obj_2 = datetime.datetime.strptime(end_date,'%Y-%m-%d')
         
+        difference = date_time_obj_2 - date_time_obj_1
+        print("email",request.user.email)
+        print("paid",request.user.paid)
+
+
+        if request.user.paid == False: 
+
+            if difference.days > 2:
+                context = {
+                    'title': 'home',
+                    'min_date': str(datetime.date.today() + datetime.timedelta(days=1)),
+                    'date_msg': 'Date range exceed.'
+                    
+                }
+
+            return render(request,'home/home.html',context)
+        
+
         context = {
             'title': 'Info',
             'address': address,
@@ -90,3 +117,31 @@ def home(request):
     }
 
     return render(request,'home/home.html',context)
+
+def results(request):
+    return render(request, 'home/results.html')
+
+def landingPage(request):
+    return render(request,'home/landingPage.html')
+
+def emailSend(request):
+    
+    subject = 'Seats are available'
+    message = ['Exam Name','Exam details in 1st line']
+    message = '<b> Exam Name <b>'+ 'Exam details in 1st line'+ '\n'+ 'Center Name' + '\n' + 'Date 1'+ '\n' + 'Date 2' + '\n' + 'Visit this link to book this seat:'
+
+
+    email_from = settings.EMAIL_HOST_USER
+    recipient_list = ['email']
+    send_mail(subject, message, email_from, recipient_list)
+    return HttpResponse('email send')
+#     send_mail(
+#     'try email',
+#     'That’s your message body',
+#     'cedemi8519@themesw.com',
+#     ['cedemi8519@themesw.com'],
+#     fail_silently=False,
+#     )
+#     return render(request,'home/email.html')
+
+        

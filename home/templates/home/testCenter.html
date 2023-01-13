@@ -13,11 +13,13 @@
 
 <section class="dropdown-section">
     <div class="dropdown-section-inner-div">
-        <h1 class="search-title">Search Availability</h1>
+        
+        <h3 class="mb-5 font-heading text-xl font-bold font-heading leading-normal" style="color:#4338CA;">Search Availability</h3>
         <div class="dropdown-div">
             <div class="dropdown-inner-div">
-                <h2>Select a Test Sponsor</h2>
-                <select id="test_sponsor" name="test_sponsor" required>
+                <h3 class="mb-5 font-heading text-xl font-bold font-heading leading-normal">Find a Test Center</h3>
+                <h4 style="margin-bottom: 30px;">Select a Test Sponsor</h4>
+                <select class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="test_sponsor" name="test_sponsor" required>
                     <option value="">Select a Test Sponsor</option>
                     <option value="AAPC">
                         AAPC
@@ -643,14 +645,14 @@
                 </select>
             </div>
             <div class="dropdown-inner-div">
-                <h2>Select a Program</h2>
-                <select id="test_program" name="test_program" required>
+                <h4 style="margin-bottom: 30px;">Select a Program</h4>
+                <select  class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="test_program" name="test_program" required>
                 </select>
             </div>
 
             <div class="dropdown-inner-div" id="third-dropdown">
-                <h2>Select a Test</h2>
-                <select id="test_test" name="test_test" required>
+                <h4 style="margin-bottom: 30px;">Select a Test</h4>
+                <select class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="test_test" name="test_test" required>
                 </select>
             </div>
 
@@ -659,7 +661,13 @@
             </div>
 
             <div class="home-btn-div">
-                <button type="button" id="add-btn" name="button" class="next_button">Add</button>
+                <!-- <button type="button" id="add-btn" name="button" class="next_button">Add</button> -->
+                <div class="p-9 bg-white" style="margin-top: -10px;">
+         
+                      <button type="submit" id="add-btn" name="button" class="py-4 px-5 w-full text-white font-semibold rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200">Add</button>
+                      
+                    </div>
+                </div>
             </div>
 
             <!-- Hidden Inputs -->
@@ -682,8 +690,8 @@
                             You data is submitted successfully shortly we will notify you by email.
                         </div>
                         <div class="modal-footer">
-                            <a href="{% url 'home' %}"><button type="button" class="btn btn-danger">Back</button></a>
-                            <button type="button" class="btn btn-success" data-dismiss="modal">Add more</button>
+                            <a  href="{% url 'home' %}"><button style="background-color:#4338CA;" type="button" class="btn btn-danger">Back</button></a>
+                            <button style="background-color:#4338CA;" type="button" class="btn btn-success" data-dismiss="modal">Add more</button>
                         </div>
                     </div>
                 </div>

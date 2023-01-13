@@ -4,15 +4,116 @@
 {% block head %}
 
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+    <link rel="stylesheet" href="{% static 'css/authentication/auth.css' %}">
 
 {% endblock %}
 
 {% block title %} {{title}} {% endblock %}
 
 {% block content %}
+<section class="py-16 xl:pb-56 bg-white overflow-hidden" style="margin-top: -70px;">
+    <div class="container px-4 mx-auto">
+      <div class="text-center max-w-md mx-auto">
+        <a class="mb-36 inline-block" href="#">
+          
+        </a>
+        <h2 class="mb-4 text-6xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight" style="margin-top: -120px;">Verification</h2>
+        
+       
+            <form method="post" style="margin-top: 60px;">
+                {% csrf_token %}
+                <label class="block mb-5">
+                    <input class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signInInput2-1" type="email" name="email" placeholder="Enter email">
+                    {% if msg %}
+                    <p class="auth-error">{{ msg }}</p>
+                    {% endif %}
+                
+                </label>
 
-<section class="dropdown-section">
+                
+                  <label class="relative block mb-5">
+                    <input class="px-4 pr-36 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signInInput2-2" type="password" name="password" placeholder="Enter password">
+                  </label>
+
+            
+
+                  <div class="p-9 bg-white" style="margin-top: -60px;">
+             
+                    <div class="mt-9">
+                      
+                      <button class="py-4 px-5 w-full text-white font-semibold rounded-xl
+                       focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200" 
+                       type="submit">Sign Up</button>
+
+                      <div class="p-9 bg-white">
+                      <span style="font-size: 14px;">Already have an account? </span>
+                      <a style="font-size: 14px; color: #4338CA;" href="{% url 'login' %}"> Login</a>
+                      </div>
+                  </div>
+                  </div>
+            
+            </form>
+
+
+        
+      </div>
+    </div>
+  </section>
+
+
+<!-- <section class="relative py-36 bg-blueGray-50 overflow-hidden" >
+    <div class="relative z-10 container px-4 mx-auto">
+      <div class="flex flex-wrap lg:items-center -m-8">
+        
+          <div class="md:max-w-md mx-auto overflow-hidden rounded-3xl shadow-8xl">
+            <div class="p-9">
+              <span class="mb-7 inline-block text-sm text-gray-500 font-semibold uppercase tracking-px">Verification</span>
+              <ul>
+                <form method="post">
+                    {% csrf_token %}
+    
+                    <div class="aut-input-div">
+                        <h3 class="aut-label">Email:</h3>
+                        <input class="aut-field" type="email" name="email" placeholder="Enter email" required>
+                        {% if msg %}
+                            <p class="auth-error">{{ msg }}</p>
+                        {% endif %}
+                    </div>
+    
+                    <div class="aut-input-div">
+                        <h3 class="aut-label">Password:</h3>
+                        <input class="aut-field" type="password" name="password" placeholder="Enter password" min="8" required>
+                    </div>
+                
+                    <div class="p-9 bg-white">
+             
+                        <div class="mt-9">
+                          
+                          <button class="py-4 px-5 w-full text-white font-semibold rounded-xl
+                           focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200" 
+                           type="submit">Sign Up</button>
+
+                          <div class="p-9 bg-white">
+                          <span style="font-size: 14px;">Already have an account? </span>
+                          <a style="font-size: 14px; color: #4338CA;" href="{% url 'login' %}"> Login</a>
+                          </div>
+                      </div>
+                      </div>
+                    
+                </form>
+              </ul>
+            </div>
+            
+          </div>
+        
+      </div>
+    </div>
+  </section> -->
+
+
+<!-- 
+        sir tayyab code
+    <section class="dropdown-section">
     <div class="dropdown-section-inner-div">
         <h1 class="search-title">Sign up</h1>
         <div class="aut-form-div">
@@ -40,7 +141,7 @@
             </form>
         </div>
     </div>
-</section>
+</section> -->
 {% endblock %}
 
 

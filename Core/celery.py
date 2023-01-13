@@ -1,22 +1,22 @@
-from __future__ import absolute_import, unicode_literals
-from datetime import timezone
+# from __future__ import absolute_import, unicode_literals
+# from datetime import timezone
 
-import os
+# import os
 
-from celery import Celery
-from django.conf import settings
+# from celery import Celery
+# from django.conf import settings
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Core.settings')
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Core.settings')
 
-app = Celery('Core')
+# app = Celery('Core')
 
-app.conf.enable_utc = False
-app.conf.update(timezone = 'Asia/Kolkata')
+# app.conf.enable_utc = False
+# app.conf.update(timezone = 'Asia/Kolkata')
 
-app.config_from_object(settings, namespace='CELERY')
+# app.config_from_object(settings, namespace='CELERY')
 
-app.autodiscover_tasks()
+# app.autodiscover_tasks()
 
-@app.task(bind=True)
-def debug_task(self):
-	print(f'Request: {self.request!r}')
+# @app.task(bind=True)
+# def debug_task(self):
+# 	print(f'Request: {self.request!r}')

@@ -1,0 +1,26 @@
+li a{
+    font-size: 10px;
+}
+.hover-text-gray-700 > a:hover{
+    
+    text-decoration: none;
+    color: rgba(55,65,81);
+    
+}
+.hover-text-gray-00 {
+    
+    margin-left: 56px;    
+}
+.hover-text-gray-00:hover{
+    text-decoration: none;
+    color: rgba(55,65,81);
+
+}
+
+
+.days:hover{
+    border: 1px solid rgb(0, 0, 0)!important;
+    background-color: rgba(249,250,251,var(--tw-bg-opacity)) !important;
+    
+}
+

@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'authentication',
-    'django_celery_results',
     'user_profile',
 ]
 
@@ -133,13 +132,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/images')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # celery setting
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-CELERY_ACCEPT_CONTENT = ['application/json']
-CELERY_RESULT_SERIALIZER = 'json'
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_TIMEZONE = 'Asia/Kolkata'
+# CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+# CELERY_ACCEPT_CONTENT = ['application/json']
+# CELERY_RESULT_SERIALIZER = 'json'
+# CELERY_TASK_SERIALIZER = 'json'
+# CELERY_TIMEZONE = 'Asia/Kolkata'
 
-CELERY_RESULT_BACKEND = 'django-db'
+# CELERY_RESULT_BACKEND = 'django-db'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -151,3 +150,9 @@ EMAIL_HOST_PASSWORD = 'gqzhcrxtcpmurpkw'
 
 # setting authantication from abstract model
 AUTH_USER_MODEL = 'authentication.Account'
+
+
+STRIPE_PUBLIC_KEY = "pk_test_51MKUmcJI41jR8IwrknBaXvdMxcr716ktJsiHHetCSnWII65QtZBROLE6p4OMjb07MODIW92RHqyT5KQsre2wXUG000obL9pa5P"
+STRIPE_SECRET_KEY = "sk_test_51MKUmcJI41jR8Iwr1AeSVOsnMVRIUK9EomwOMiG0tGUIQV6ccGiZPIGR2mU8RQOMDeocp5J3aCcr3cXzokLSwwxR00zhYPd9kX"
+STRIPE_WEBHOOK_SECRET = "whsec_b21333866fd10d76741890e82bd8f9a0f208ac3a139c15bfdb181b67bd5b4966"
+

@@ -51,3 +51,11 @@
     margin-top: 20px;
     cursor: pointer;
 }
+
+.login-signup{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
