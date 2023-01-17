@@ -8,22 +8,22 @@
 
 {% endblock %}
 
-{% block title %} {{title}} {% endblock %}
+{% block title %}  {{title}} {% endblock %}
 
 {% block content %}
-<section class="py-16 xl:pb-56 bg-white overflow-hidden" style="margin-top: -70px;">
+<section class="py-16 xl:pb-56 bg-white overflow-hidden" style="margin-top: -150px;">
     <div class="container px-4 mx-auto">
       <div class="text-center max-w-md mx-auto">
         <a class="mb-36 inline-block" href="#">
           
         </a>
-        <h2 class="mb-4 text-6xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight" style="margin-top: -120px;">Verification</h2>
+        <h2 class="mb-4 text-6xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight" style="margin-top: -120px;">Join for free</h2>
         
        
-            <form method="post" style="margin-top: 60px;">
+            <form method="post" style="margin-top: 60px; font-family: general sans">
                 {% csrf_token %}
                 <label class="block mb-5">
-                    <input class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signInInput2-1" type="email" name="email" placeholder="Enter email">
+                    <input class="px-4 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signInInput2-1" type="email" name="email" placeholder="Email address">
                     {% if msg %}
                     <p class="auth-error">{{ msg }}</p>
                     {% endif %}
@@ -32,7 +32,7 @@
 
                 
                   <label class="relative block mb-5">
-                    <input class="px-4 pr-36 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signInInput2-2" type="password" name="password" placeholder="Enter password">
+                    <input class="px-4 pr-36 py-3.5 w-full text-gray-500 font-medium placeholder-gray-500 bg-white outline-none border border-gray-300 rounded-lg focus:ring focus:ring-indigo-300" id="signInInput2-2" type="password" name="password" placeholder="Password">
                   </label>
 
             

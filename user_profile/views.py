@@ -21,4 +21,4 @@ def user_profile(request):
         'got_time_obj': got_time_obj
     }
     
-    return render(request,'user_profile/profile.html',context)
+    return render(request,'user_profile/results.html',context)

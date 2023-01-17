@@ -84,10 +84,12 @@ def subscribe(request):
     return redirect(checkout_session.url)
 
 def success(request):
-    return JsonResponse({'success':True})
+    return render (request, 'authentication/success.html')
+    # return JsonResponse({'success':True})
 
 def cancel(request):
-    return JsonResponse({'success':False})
+    return render (request, 'authentication/cancel.html')
+    # return JsonResponse({'success':False})
 
 @csrf_exempt
 def stripe_webhook(request):

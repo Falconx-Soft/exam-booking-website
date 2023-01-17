@@ -86,8 +86,8 @@ def home(request):
         date_time_obj_2 = datetime.datetime.strptime(end_date,'%Y-%m-%d')
         
         difference = date_time_obj_2 - date_time_obj_1
-        print("email",request.user.email)
-        print("paid",request.user.paid)
+        # print("email",request.user.email)
+        # print("paid",request.user.paid)
 
 
         if request.user.paid == False: 
@@ -100,7 +100,7 @@ def home(request):
                     
                 }
 
-            return render(request,'home/home.html',context)
+                return render(request,'home/home.html',context)
         
 
         context = {
@@ -118,11 +118,15 @@ def home(request):
 
     return render(request,'home/home.html',context)
 
-def results(request):
-    return render(request, 'home/results.html')
+# def results(request):
+#     return render(request, 'userPrfile/results.html')
 
 def landingPage(request):
-    return render(request,'home/landingPage.html')
+    context = {
+        'title': 'home',
+        'min_date': str(datetime.date.today() + datetime.timedelta(days=1))
+    }
+    return render(request,'home/landingPage.html',context)
 
 def emailSend(request):
     

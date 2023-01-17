@@ -1,6 +1,8 @@
-section {
-  display: flex;
+.section1,
+.section2 {
+  display: flex !important;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding-bottom: 20px;
 }
@@ -8,13 +10,17 @@ section {
 .info-div,
 .form-div {
   width: 100%;
-  max-width: 950px;
+  max-width: 750px;
+  padding: 10px;
 }
 
-.one,
-.form-div {
+.one{
   padding: 0px 10%;
   margin-top: 13px;
+}
+
+.form-div{
+  padding: 10px;
 }
 
 
@@ -23,6 +29,7 @@ input {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  border: solid 1px #ccc;
 }
 
 .input2 {
@@ -46,5 +53,18 @@ input {
   height: 40px;
   margin: -45px 0px 0px 360px;
 
+}
+
+.header {
+  padding: 15px 30px 119px !important;
+}
+
+@media (max-width: 503px) {
+  .input2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 

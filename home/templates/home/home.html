@@ -6,158 +6,92 @@
 {% block head %}
 
 <link rel="stylesheet" href="{% static 'css/test_center.css' %}">
+
+<style>
+  .header{
+    padding: 15px 30px 35px !important;
+  }
+</style>
 {% endblock %}
 
 {% block title %} {{title}} {% endblock %}
 
 {% block content %}
 
-<section>
-  <div class="info-div">
-    <h2 class="mb-5 text-6xl md:text-5xl text-center font-bold font-heading tracking-px-n leading-tight" style="color: #4338CA;">Search Availability</h2>
+<section class="section1">
+  <div class="info-div font-heading">
+    <h2 class="mb-5 text-6xl md:text-5xl  font-bold font-heading tracking-px-n leading-tight"
+      style="color: #4338CA; text-align:center">Search Availability</h2>
     <!-- <h1>Search Availability</h1> -->
-    
-    <h3 class="mb-5 font-heading text-xl font-bold font-heading leading-normal">Find a Test Center</h3>
 
-    <p class="one">
-      Enter your preferred location and date range to find a test center. Until your appointment is <br>scheduled,
+    <h3 class="">Find a Test Center</h3>
+
+    <p>
+      Enter your preferred location and date range to find a test center. Until your appointment is scheduled,
       availability is
       subject to change.
     </p>
-    <p class="one">
-      The location and date range can be updated on the next page if the available dates and times <br> returned are not
+    <p>
+      The location and date range can be updated on the next page if the available dates and times returned are not
       suitable
       to your schedule.
     </p>
   </div>
 
-  
-  <div class="login-signup" style="margin-top: 20px;" >
-    <section class="relative py-36 bg-blueGray-50 overflow-hidden" style="width: 800px;">
-        <div class="relative z-10 container px-4 mx-auto" >
-          <div class="flex flex-wrap lg:items-center -m-8" >
-            
-              <div class="md:max-w-md mx-auto overflow-hidden rounded-3xl shadow-8xl" style="padding: 10px 550px 30px 0px;">
-                <div class="p-9" >
-                 
-                  <ul>
-                    <div class="form-div" >
-                      <form class="forms" method="post" style="width: 350px; margin-left: -20px;" >
-                        {% csrf_token %}
-                        <div class="input1" >
-                          <label style="font-size: large;" for="">Scheduling For: <b></b></label><br>
-                          <input style="width: 450px;" type="text" name="address" value="" placeholder="Address, City or Zip/Postal Code" required>
-                        </div>
-                        <br>
-                        <div class="input2">
-                          <div class="start">
-                            
-                            
-                            
-                             
-                            <label style="font-size: large;" for="">Start Date</b></label><br>
-                            <input style="width: 220px;" type="date" name="start_date" id="start-date" min="{{min_date}}" placeholder="MM/DD/YYYY" required>
-                            
-                          </div> 
-                          <div class="start">
-                            
-                            <label style="font-size: large;" for="">End Date</b></label><br>
-                              
-                            <input style="width: 220px;" type="date" name="end_date" id="end-date" placeholder="MM/DD/YYYY" disabled required>
-                            
-                            
-                            {% if date_msg %}
-                              <p style="color: red;">Date range exceed.</p>
-                            {% endif %}
+</section>
 
-                            
-                            
-                             
-                            
-                          </div>
-                        </div>
-                  
-                        <button type="submit" name="button" id="submit-btn" class="next_button" style="margin-top: 20px; background-color:#4338CA; margin-bottom: 15px; margin-right: -100px;" disabled>Submit</button>
-                  
-                        <input type="hidden" value="{{test_sponsor}}" name="test_sponsor">
-                        <input type="hidden" value="{{test_program}}" name="test_program">
-                        <input type="hidden" value="{{test_test}}" name="test_test">
-                  
-                      </form>
-                  
-                    </div>
-                  </ul>
-                </div>
-                
-              </div>
-            
-          </div>
+
+<section class="section2">
+
+  <div class="form-div">
+    <form class="forms" method="post">
+      {% csrf_token %}
+      <div class="input1 font-heading">
+        <label style="font-size: large;" for="">Scheduling For: <b></b></label><br>
+        <input type="text" name="address" value="" placeholder="Address, City or Zip/Postal Code"
+          required>
+      </div>
+      <br>
+      <div class="input2">
+        <div class="start font-heading">
+
+          <label style="font-size: large;" for="">Start Date</b></label><br>
+          <input  type="date" name="start_date" id="start-date" min="{{min_date}}"
+            placeholder="MM/DD/YYYY" required>
+
         </div>
-      </section>
-    
-  </div>
-  
-  
-  
+        <div class="start font-heading">
 
-</section> 
+          <label style="font-size: large;" for="">End Date</b></label><br>
+
+          <input type="date" name="end_date" id="end-date" placeholder="MM/DD/YYYY" disabled
+            required>
+
+
+          {% if date_msg %}
+          <p style="color: red;">Date range exceed.</p>
+          {% endif %}
+
+        </div>
+      </div>
+
+      <button type="submit" name="button" id="submit-btn" class="next_button font-heading"
+        style="margin-top: 20px; background-color:#4338CA;"
+        disabled>Submit</button>
+
+      <input type="hidden" value="{{test_sponsor}}" name="test_sponsor">
+      <input type="hidden" value="{{test_program}}" name="test_program">
+      <input type="hidden" value="{{test_test}}" name="test_test">
+
+    </form>
+
+  </div>
+</section>
 
 {% endblock %}
 
 {% block js %}
 
-    <script src="{% static 'js/home.js' %}"></script>
+<script src="{% static 'js/home.js' %}"></script>
 
-<!--     
-    <section>
-      <div class="info-div">
-        <h1>Search Availability</h1>
-        <h3 class="one">Find a Test Center</h3>
-    
-        <p class="one">
-          Enter your preferred location and date range to find a test center. Until your appointment is <br>scheduled,
-          availability is
-          subject to change.
-        </p>
-        <p class="one">
-          The location and date range can be updated on the next page if the available dates and times <br> returned are not
-          suitable
-          to your schedule.
-        </p>
-      </div>
-    
-      <div class="form-div">
-        <form class="forms" method="post">
-          {% csrf_token %}
-          <div class="input1">
-            <label for="">Scheduling For: <b></b></label><br>
-            <input type="text" name="address" value="" placeholder="Address, City or Zip/Postal Code" required>
-          </div>
-          <br>
-          <div class="input2">
-            <div class="start">
-              <label for="">Start Date</b></label><br>
-              <input type="date" name="start_date" id="start-date" min="{{min_date}}" placeholder="MM/DD/YYYY" required>
-            </div>
-            <div class="start">
-              <label for="">End Date</b></label><br>
-              <input type="date" name="end_date" id="end-date" placeholder="MM/DD/YYYY" disabled required>
-              
-              {% if date_msg %}
-                <p style="color: red;">Date range exceed.</p>
-              {% endif %}
-            </div>
-          </div>
-    
-          <button type="submit" name="button" id="submit-btn" class="next_button" style="margin-top: 20px;" disabled>Submit</button>
-    
-          <input type="hidden" value="{{test_sponsor}}" name="test_sponsor">
-          <input type="hidden" value="{{test_program}}" name="test_program">
-          <input type="hidden" value="{{test_test}}" name="test_test">
-    
-        </form>
-    
-      </div>
-    
-    </section>  -->
 {% endblock %}
