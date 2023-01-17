@@ -100,6 +100,8 @@
       
       {% if not user.is_authenticated %}
       <a href="{% url 'sign_up' %}" class="button-2 w-button">Get started</a>
+      {% elif  user.is_authenticated and not user.paid%}
+      <a href="https://payhip.com/b/1dXKq" class="button-2 w-button">Get subscribed</a>
       {% else %}
       <a  class="button-2 w-button">{{user.email}}</a>
       {% endif %}
@@ -132,7 +134,7 @@
               {% if user.is_authenticated and user.paid %}
               <a  class="button-2 w-button">{{user.email}}</a>
               {% elif  user.is_authenticated and not user.paid%}
-              <a href="{% url 'subscribe' %}" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
+              <a href="https://payhip.com/b/1dXKq" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
               {% elif not user.is_authenticated %}
               <a href="{% url 'login'%}" class="sidebar-button-copy w-button">Sign In</a>
               {% endif %}
@@ -265,7 +267,7 @@ select {
             {% if user.is_authenticated and user.paid %}
             <a href="{% url 'landingPage' %}" target="_blank" class="pricign-button-copy w-button">Subscribed </a>
             {% elif  not user.paid and user.is_authenticated %}
-            <a href="{% url 'subscribe' %}" target="_blank" class="pricign-button-copy w-button">Subscribe </a>
+            <a href="https://payhip.com/b/1dXKq" target="_blank" class="pricign-button-copy w-button">Subscribe </a>
             {% else %}
             <a href="{% url 'sign_up' %}" target="_blank" class="pricign-button-copy w-button">Subscribe </a>
             {% endif %}

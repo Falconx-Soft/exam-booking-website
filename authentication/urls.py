@@ -15,4 +15,6 @@ urlpatterns = [
     path('cancel/', views.cancel, name="cancel"),
 
     path('stripe-webhook/', views.stripe_webhook, name="stripe_webhook"),
+
+    path('payhip-webhook/', views.payhip_webhook, name="payhip_webhook"),
 ]

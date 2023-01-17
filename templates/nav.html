@@ -90,7 +90,7 @@
       {% if user.is_authenticated and user.paid %}
       <a  class="button-2 w-button">{{user.email}}</a>
       {% elif  user.is_authenticated and not user.paid%}
-      <a href="{% url 'subscribe' %}" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
+      <a href="https://payhip.com/b/1dXKq" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
       {% elif not user.is_authenticated %}
       <a href="{% url 'sign_up' %}" class="button-2 w-button" style="text-decoration:none">Get started</a>
       {% endif %}
@@ -123,7 +123,7 @@
               {% if user.is_authenticated and user.paid %}
               <a  class="button-2 w-button">{{user.email}}</a>
               {% elif  user.is_authenticated and not user.paid%}
-              <a href="{% url 'subscribe' %}" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
+              <a href="https://payhip.com/b/1dXKq" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
               {% elif not user.is_authenticated %}
               <a href="{% url 'login'%}" class="sidebar-button-copy w-button">Sign In</a>
               {% endif %}

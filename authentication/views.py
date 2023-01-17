@@ -5,6 +5,7 @@ from django.conf import settings
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 import stripe
+import json
 stripe.api_key = settings.STRIPE_SECRET_KEY
 # Create your views here.
 
@@ -123,4 +124,15 @@ def stripe_webhook(request):
   # Passed signature verification
   return JsonResponse({'status':200})
 
+@csrf_exempt
+def payhip_webhook(request):
+    print(request.body)
+    json_data = json.loads(request.body)
+    print(json_data,"********")
+    print(json_data['email'],"<-----")
+    email = json_data['email']
+    user_obj = User.objects.get(email=email)
+    user_obj.paid = True
+    user_obj.save()
+    return JsonResponse({'status':200})
 
