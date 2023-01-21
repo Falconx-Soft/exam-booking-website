@@ -280,9 +280,9 @@ def run_script():
         print("------Outer Except--------->",e,"<---------------")
 
 
-run_script()
+#run_script()
 
-# schedule.every(30).minutes.do(run_script)
+schedule.every(30).minutes.do(run_script)
   
-# while True:
-#    schedule.run_pending()
+while True:
+   schedule.run_pending()
