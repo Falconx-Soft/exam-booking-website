@@ -44,7 +44,8 @@ def sign_up(request):
             password = request.POST['password']
             user_obj = User.objects.create_user(email=email, password=password)
             user_obj.save()
-            return redirect('login')
+            login(request, user_obj)
+            return redirect('results')
         except:
             context = {
                 'msg': 'Email is already in use',

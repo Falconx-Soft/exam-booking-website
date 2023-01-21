@@ -518,6 +518,7 @@ body {
   text-decoration: none;
   background-clip: border-box;
   -webkit-text-fill-color: inherit;
+  width: fit-content;
 }
 
 .nav-link-2 {
@@ -2669,5 +2670,6 @@ body {
   .form-3 {
     width: auto;
   }
+  
 }
 

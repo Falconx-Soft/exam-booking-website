@@ -220,7 +220,7 @@ def run_script():
 
         print("<-----------------")
         options = Options()
-        options.headless = False
+        options.headless = True
 
         driver = webdriver.Firefox(options=options)
         time.sleep(3)

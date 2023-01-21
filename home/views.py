@@ -74,7 +74,7 @@ def add_date(request):
             })
 
 
-@login_required(login_url='login')
+@login_required(login_url='sign_up')
 def home(request):
     if request.method == "POST":
         address = request.POST.get('address')

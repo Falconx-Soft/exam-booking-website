@@ -24,6 +24,13 @@
   <link href="{% static 'images/favicon.png' %}" rel="shortcut icon" type="image/x-icon">
   <link href="{% static 'images/webclip.png' %}" rel="apple-touch-icon">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <style>
+    @media screen and (max-width: 479px) {
+      .heading {
+        padding: 13px 8px !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="header wf-section" style="background-color:white;">
@@ -97,7 +104,9 @@
 
     </div>
     <div class="mobile-nav">
-      <a href="#" class="logo w-inline-block"><img src="images/asset-0_1asset-0.png" alt=""></a>
+      <a href="{% url 'landingPage' %}" class="header-logo w-inline-block">
+        <h1 class="heading" >Prometric.io</h1>
+      </a>
       <div id="mobile_sidebar_button" onclick="$('#sidebar_div').toggleClass('mobile_sidebar_show')" data-w-id="53687699-2cbe-2641-de70-cc198129bccf" class="mobile-menu">
         <div class="mobile-menu-bars">
           <div class="mobile-menu-bar"></div>
