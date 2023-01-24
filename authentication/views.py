@@ -13,7 +13,6 @@ def user_login(request):
 
     if request.user.is_authenticated:
         return redirect('home')
-
     context = {
         'title': 'login'
     }
@@ -29,7 +28,6 @@ def user_login(request):
                 login(request, user)
                 return redirect('home')
         except Exception as e:
-            print(e,"<----- Error message")
             context = {
                 'msg': e,
                 'title': 'login'
@@ -38,6 +36,16 @@ def user_login(request):
 
 
 def sign_up(request):
+    if request.session.get('address'):
+        print("Setting date***************")
+        address = request.session.get('address')
+        start_date = request.session.get('start_date')
+        end_date = request.session.get('end_date')
+    else:
+        print("No date***************")
+        address = ""
+        start_date = ""
+        end_date = ""
     if request.method == 'POST':
         try:
             email = request.POST['email']
@@ -45,7 +53,10 @@ def sign_up(request):
             user_obj = User.objects.create_user(email=email, password=password)
             user_obj.save()
             login(request, user_obj)
-            return redirect('results')
+            request.session['address'] = address
+            request.session['start_date'] = start_date
+            request.session['end_date'] = end_date
+            return redirect('home')
         except:
             context = {
                 'msg': 'Email is already in use',

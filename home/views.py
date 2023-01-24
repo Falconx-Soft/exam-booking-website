@@ -74,9 +74,30 @@ def add_date(request):
             })
 
 
-@login_required(login_url='sign_up')
 def home(request):
+    if not request.user.is_authenticated:
+        request.session['address'] = request.POST.get('address')
+        request.session['start_date'] = request.POST.get('start_date')
+        request.session['end_date'] = request.POST.get('end_date')
+        return redirect('sign_up')
+
+    if request.session.get('address'):
+        print("Setting date***************")
+        address = request.session.get('address')
+        start_date = request.session.get('start_date')
+        end_date = request.session.get('end_date')
+    else:
+        print("No date***************")
+        address = ""
+        start_date = ""
+        end_date = ""
+
     if request.method == "POST":
+        if request.session.get('address'):
+            del request.session['address']
+            del request.session['start_date']
+            del request.session['end_date']
+
         address = request.POST.get('address')
         start_date = request.POST.get('start_date')
         end_date = request.POST.get('end_date')
@@ -97,9 +118,7 @@ def home(request):
                     'title': 'home',
                     'min_date': str(datetime.date.today() + datetime.timedelta(days=1)),
                     'date_msg': 'Date range exceed.'
-                    
                 }
-
                 return render(request,'home/home.html',context)
         
 
@@ -113,7 +132,10 @@ def home(request):
 
     context = {
         'title': 'home',
-        'min_date': str(datetime.date.today() + datetime.timedelta(days=1))
+        'min_date': str(datetime.date.today() + datetime.timedelta(days=1)),
+        'address': address,
+        'start_date': start_date,
+        'end_date': end_date,
     }
 
     return render(request,'home/home.html',context)
