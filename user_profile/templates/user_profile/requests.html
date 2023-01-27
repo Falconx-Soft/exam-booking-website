@@ -25,47 +25,22 @@
     <section style="background-color: white;">
         <div class="container">
             <div class="hero-wrapper-two ">
-                <p class="resultpage"><b> Result updated every 1 hour</b></p>
-                <h1 style="color: black; " class="resultpage1"><b> Result</b> </h1>
+                <h1 style="color: black; " class="resultpage1"><b> Requests made</b> </h1>
             </div>
         </div>
     </section>
     <div>
         <div class="w-container " style="width:100%; margin-top: 40px; ">
             {% for info in info_obj %}
-            {% for address in got_address_obj %}
-            {% if address.info.id == info.id %}
             <div
                 class=" mb-4 text-lg  font-heading leading-snug p-10 h-full bg-blueGray-100 hover:bg-blueGray-200 bg-opacity-70 rounded-xl transition ease-in-out duration-200 ">
                 <div>
-                    <p class="heading-3" style="color:black;"> <b> {{address.address}}</b></p>
+                    <p class="heading-3" style="color:black;"> <b> {{info.address}}</b></p>
                     <p class="heading-3_2" style="margin-top:20px; color:black">{{info.test_sponsor}},
                         {{info.test_program}}, {{info.test_test}}
                     </p>
                 </div>
-                <div class="div-block-2" style="margin-top:20px; display: flex; flex-wrap: wrap;">
-                    {% for date in got_date_obj %}
-                    {% if date.address.id == address.id %}
-                    {% for time in got_time_obj %}
-                    {% if time.date.id == date.id %}
-                    <div style="margin-top:15px; width:350px;">
-                        <div class="" style="text-transform: lowercase;">
-                            {% comment %} class="div-block" {% endcomment %}
-                            <p style="margin-top:5px;">
-                                <i class='far fa-clock' style="color:#BDC0C9; margin-right:8px;"></i>
-                                <b>{{date.date}} - {{time.time}}</b>
-                            </p>
-
-                        </div>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endfor %}
-                </div>
             </div>
-            {% endif %}
-            {% endfor %}
             {% endfor %}
         </div>
     </div>

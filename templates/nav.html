@@ -82,7 +82,8 @@
           <a href="mailto:support@Prometric.io?subject=Support" class="nav-link">Support</a>
           {% if user.is_authenticated %}
           <a href="{% url 'home' %}" class="nav-link">Home</a>
-          <a href="{% url 'results' %}" class="nav-link">Profile</a>
+          <a href="{% url 'results' %}" class="nav-link">Results</a>
+          <a href="{% url 'requests' %}" class="nav-link">Requests</a>
           
           {%endif%}
 
@@ -122,7 +123,8 @@
             {% comment %} <a href="https://uxtheme.net/shade" target="_blank" class="sidebar-link">Support</a> {% endcomment %}
             {% if  user.is_authenticated %}
             <a href="{% url 'home' %}" class="sidebar-link">Home</a>
-            <a href="{% url 'results' %}" class="sidebar-link">Profile</a>
+            <a href="{% url 'results' %}" class="sidebar-link">Results</a>
+            <a href="{% url 'requests' %}" class="sidebar-link">Requests</a>
             {% endif %}
             {% if user.is_authenticated %}
             <a href="{% url 'logout' %}" class="sidebar-button-copy w-button">Logout</a>
@@ -134,7 +136,7 @@
               {% elif  user.is_authenticated and not user.paid%}
               <a href="https://payhip.com/b/1dXKq" class="button-2 w-button" style="text-decoration:none">Get subscribed</a>
               {% elif not user.is_authenticated %}
-              <a href="{% url 'login'%}" class="sidebar-button-copy w-button">Sign In</a>
+              <a href="{% url 'login'%}" class="sidebar-button-copy w-button">Login</a>
               {% endif %}
             </div>
           </div>
