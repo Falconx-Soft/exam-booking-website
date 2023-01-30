@@ -204,9 +204,12 @@ def automation(driver,db_info,email,start_date,end_date):
 
         print("***************")
         print(info)
+        available_seats = ""
+        for i in info:
+            available_seats += '\n'.join(map(str,i))
 
         subject = 'Seats are available'
-        message = 'Your seats are available'+'\n'.join(map(str,info))
+        message = 'Your seats are available'+ available_seats
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [email,]
         send_mail(subject, message, email_from, recipient_list)

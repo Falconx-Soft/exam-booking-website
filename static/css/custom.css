@@ -1,0 +1,27 @@
+.no-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-data-msg-holder{
+    border: solid 1px#ccc;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.make-request-link{
+    border: 2px solid #258aff;
+    border-radius: 3px;
+    background-color: #258aff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.make-request-link:hover{
+    color: white;
+    text-decoration: none;
+}

@@ -15,6 +15,8 @@
     }
 </style>
 
+<link href="{% static 'css/custom.css' %}" rel="stylesheet" type="text/css">
+
 {% endblock %}
 
 {% block title %} {{title}} {% endblock %}
@@ -31,6 +33,7 @@
     </section>
     <div>
         <div class="w-container " style="width:100%; margin-top: 40px; ">
+            {% if info_obj %}
             {% for info in info_obj %}
             <div
                 class=" mb-4 text-lg  font-heading leading-snug p-10 h-full bg-blueGray-100 hover:bg-blueGray-200 bg-opacity-70 rounded-xl transition ease-in-out duration-200 ">
@@ -42,6 +45,15 @@
                 </div>
             </div>
             {% endfor %}
+            {% else %}
+            <div class="no-data">
+                <div class="no-data-msg-holder">
+                    <h3>No requests found, <br> Please go to this link to make the request</h3>
+                    <br>
+                    <a href="{% url 'home' %}" class="make-request-link">Make a Request</a>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
 </body>

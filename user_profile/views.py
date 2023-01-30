@@ -8,6 +8,12 @@ from home.models import *
 def user_profile(request):
 
     info_obj = info.objects.filter(user=request.user)
+    have_requests = False
+
+    for obj in info_obj:
+        hold_obj = got_address.objects.filter(info=obj)
+        if hold_obj:
+            have_requests = True
     
     got_address_obj = got_address.objects.all()
     got_date_obj = got_date.objects.all()
@@ -18,7 +24,8 @@ def user_profile(request):
         'info_obj': info_obj,
         'got_address_obj': got_address_obj,
         'got_date_obj': got_date_obj,
-        'got_time_obj': got_time_obj
+        'got_time_obj': got_time_obj,
+        'have_requests':have_requests
     }
     
     return render(request,'user_profile/results.html',context)
