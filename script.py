@@ -270,13 +270,14 @@ def run_script():
 
                     chk = automation(driver,i,i.user.email,start_date,end_date)
 
-                    if chk == True:
-                        i.got_result = True
-                        i.save()
+                    print(chk)
                 except Exception as e:
                     print("------Inner Except--------->",e,"<---------------")
             else:
                 print("---------------Expire----------------")
+                i.got_result = True
+                i.save()
+                        
 
         driver.quit()
     except Exception as e:
