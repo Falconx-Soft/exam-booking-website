@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 
 def format_date(date):
     temp = date.split("-")
-    new_date = temp[1]+"/"+temp[2]+"/"+temp[0]
+    new_date = temp[2]+"/"+temp[1]+"/"+temp[0]
     return new_date
 
 

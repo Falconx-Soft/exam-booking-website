@@ -25,7 +25,7 @@ from django.core.mail import send_mail
 from home.models import info, got_address, got_date, got_time, check_box, radio_btn
 from home.views import format_date
 
-def automation(driver,db_info,email,start_date,end_date):
+def automation(driver,db_info,email,start_date,end_date, all_seats_list):
     # select dropdown element test_sponsor
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'test_sponsor')))
     select = Select(driver.find_element(By.ID,'test_sponsor'))
@@ -49,6 +49,7 @@ def automation(driver,db_info,email,start_date,end_date):
         # select dropdown element testSelector
         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'testSelector')))
         select = Select(driver.find_element(By.ID,'testSelector'))
+        print('----------->',select,'<-----------')
         # select by visible text
         select.select_by_visible_text(db_info.test_test)
     else:
@@ -112,7 +113,7 @@ def automation(driver,db_info,email,start_date,end_date):
                     print("*******Empty Element*******")
                 time.sleep(5)
     time.sleep(3)
-
+    
     # next button
     WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.ID,'nextBtn')))
     next_btn_1 = driver.find_element(By.ID,'nextBtn')
@@ -127,12 +128,15 @@ def automation(driver,db_info,email,start_date,end_date):
     time.sleep(3)
 
     driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').send_keys(start_date)
-
+    
     time.sleep(3)
-
+    print('-------> Clicking next btn 1 <--------',driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[1]/label/datepicker-demo/div/input').get_attribute("value"))
+   
     driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').clear()
+    
     driver.find_element(By.XPATH,'/html/body/app-root/app-scheduling/div/div[1]/app-find-availability-location/div/app-location-selector/div/div[3]/div[2]/label[1]/datepicker-demo/div/input').send_keys(end_date)
-
+    
+    
     time.sleep(3)
     next_btn = driver.find_element(By.ID,'nextBtn')
     driver.execute_script("arguments[0].scrollIntoView(true);", next_btn)
@@ -145,12 +149,14 @@ def automation(driver,db_info,email,start_date,end_date):
         driver.find_element(By.XPATH,'//*[@id="content-wrapper"]/div[3]/div[1]/div/h2').get_attribute("innerHTML") == "No availability found. Please select a new location or date range above."
         print("BS khtam ta ta bye bye finish")
         return False
-    except:
-        print("-------> In except")
+    except Exception as e1:
+        print("-------> In except",'<------------')
         WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.XPATH,'//*[@id="content-wrapper"]/div[3]/div[2]/div')))
+        print("-------> In except 1 <------------")
         get_content_div = driver.find_element(By.XPATH,'//*[@id="content-wrapper"]/div[3]/div[2]/div')
+        print("-------> In except 2 <------------")
         list = get_content_div.find_elements(By.TAG_NAME,'fieldset')
-
+        print("-------> In except 3 <------------")
         info = []
         for l in list:
             temp_info = []
@@ -158,24 +164,25 @@ def automation(driver,db_info,email,start_date,end_date):
             WebDriverWait(driver, 30).until(EC.presence_of_element_located((By.TAG_NAME,'h2')))
 
             print(l.find_element(By.TAG_NAME,'h2').text)
+            address = l.find_element(By.TAG_NAME,'h2').text
+            # got_address_obj = got_address.objects.create(info=db_info, address=l.find_element(By.TAG_NAME,'h2').text)
+            # got_address_obj.save()
 
-            got_address_obj = got_address.objects.create(info=db_info, address=l.find_element(By.TAG_NAME,'h2').text)
-            got_address_obj.save()
-
-            temp_info.append(l.find_element(By.TAG_NAME,'h2').text)
+            # temp_info.append(l.find_element(By.TAG_NAME,'h2').text)
             box_div = l.find_elements(By.TAG_NAME,'div')[7]
             list_btn = box_div.find_elements(By.XPATH,'div[@role = "button"]')
             print(len(list_btn),"Button")
             date_list = []
+            address_count = 0
             for btn in list_btn:
                 date = btn.text
                 print("-----------> 1")
                 print(date.replace("\n", " "))
 
-                got_date_obj = got_date.objects.create(address=got_address_obj, date=date.replace("\n", " "))
-                got_date_obj.save()
+                # got_date_obj = got_date.objects.create(address=got_address_obj, date=date.replace("\n", " "))
+                # got_date_obj.save()
 
-                date_list.append(date.replace("\n", " "))
+                # date_list.append(date.replace("\n", " "))
                 driver.execute_script("arguments[0].scrollIntoView(true);", btn)
                 print("-----------> 2")
                 time.sleep(5)
@@ -187,32 +194,54 @@ def automation(driver,db_info,email,start_date,end_date):
                     print("-----------> 4")
                     time_list = time_div.find_elements(By.CLASS_NAME,"testCentreTimeSlot")
                     info_time_list = []
+                    count = 0
                     for t in time_list:
                         print("-----------> 5")
                         print(t.text)
-                        got_time_obj = got_time.objects.create(date=got_date_obj,time=t.text)
-                        got_time_obj.save()
-                        info_time_list.append(t.text)
+                        # got_time_obj = got_time.objects.create(date=got_date_obj,time=t.text)
+                        # got_time_obj.save()
+                        check_seats_list_temp = {'info':db_info.id, 'address':address,'date':date.replace("\n", " "),'time':t.text }
+                        if check_seats_list_temp in all_seats_list:
+                            print('seat already available')
+                        else:
+                            if address_count == 0:
+                                got_address_obj = got_address.objects.create(info=db_info, address=address)
+                                got_address_obj.save()
+                                temp_info.append(l.find_element(By.TAG_NAME,'h2').text)
+                            if count == 0:
+                                got_date_obj = got_date.objects.create(address=got_address_obj, date=date.replace("\n", " "))
+                                got_date_obj.save()
+                                date_list.append(date.replace("\n", " "))
+
+                            got_time_obj = got_time.objects.create(date=got_date_obj,time=t.text)
+                            got_time_obj.save()
+                            info_time_list.append(t.text)
+                            count = count+1
+                            address_count = address_count +1
                         print("-----------> 6")
-                    date_list.append(info_time_list)
+                    if len(info_time_list) > 0:
+                        date_list.append(info_time_list)
                 except:
                     info_time_list = []
                     info_time_list.append("No seat available")
                     date_list.append(info_time_list)
-            temp_info.append(date_list)
-            info.append(temp_info)
+            if len(date_list) > 0 :
+                temp_info.append(date_list)
+            if len(temp_info) > 0:
+                info.append(temp_info)
 
         print("***************")
         print(info)
         available_seats = ""
-        for i in info:
-            available_seats += '\n'.join(map(str,i))
+        if len(info) > 0 :
+            for i in info:
+                available_seats += '\n'.join(map(str,i))
 
-        subject = 'Seats are available'
-        message = 'Your seats are available'+ available_seats
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = [email,]
-        send_mail(subject, message, email_from, recipient_list)
+            subject = 'Seats are available'
+            message = 'Your seats are available'+ available_seats
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = [email,]
+            send_mail(subject, message, email_from, recipient_list)
 
         return True
 
@@ -220,15 +249,25 @@ def automation(driver,db_info,email,start_date,end_date):
 def run_script():
     try:
         info_obj = info.objects.filter(got_result = False)
-
+        
         print("<-----------------")
         options = Options()
         options.headless = True
-
+        
         driver = webdriver.Firefox(options=options)
         time.sleep(3)
-
+        all_seats_list = []
         for i in info_obj:
+            got_address_objects = got_address.objects.filter(info = i)
+            for add_ob in got_address_objects:
+                got_date_objects = got_date.objects.filter(address = add_ob)
+                for date_ob in got_date_objects:
+                    got_time_objects = got_time.objects.filter(date = date_ob )
+                    print('---------- Got time objects',got_time_objects)
+                    for time_ob in got_time_objects:
+                        temp = {'info':i.id, 'address':add_ob.address,'date':date_ob.date,'time':time_ob.time }
+                        all_seats_list.append(temp)
+            print(all_seats_list)
             date_time_obj_1 = datetime.datetime.strptime(i.start_date, '%m/%d/%Y')
             date_time_obj_2 = datetime.datetime.strptime(i.end_date, '%m/%d/%Y')
             today = datetime.datetime.today()
@@ -267,8 +306,8 @@ def run_script():
                 print("*****",start_date,"<--->",end_date,"*******")
                 try:
                     driver.get('https://proscheduler.prometric.com/scheduling/searchAvailability')
-
-                    chk = automation(driver,i,i.user.email,start_date,end_date)
+                    
+                    chk = automation(driver,i,i.user.email,start_date,end_date, all_seats_list)
 
                     print(chk)
                 except Exception as e:

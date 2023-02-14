@@ -20,3 +20,4 @@ start_date.addEventListener('change', function (){
     end_date.disabled = false;
     submit_btn.disabled = false;
 })
+
